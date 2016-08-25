@@ -1,45 +1,68 @@
 package imo;
 
-import imo.paint.PaintListener;
+import imo.common.ImageList;
 
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
+import javax.inject.Inject;
+import javax.inject.Named;
+import javax.inject.Singleton;
 
-import javax.swing.JComponent;
-
-import mine.awt.GraphicsAWT;
-import mine.awt.MineAwtUtils;
+import imo.paint.EndImoEvent;
+import imo.paint.GameImoEvent;
+import imo.paint.StartImoEvent;
+import mine.event.KeyManager;
+import mine.event.PaintComponent;
+import mine.event.PaintListener;
+import mine.paint.MineGraphics;
+import mine.paint.MineImageLoader;
 import mine.thread.Engine;
 
-public class ImoCanvas extends JComponent implements KeyListener {
+@Singleton
+public class ImoCanvas implements PaintListener, ImoWorks {
 
-	private static final long serialVersionUID = 8726641543332205618L;
+	public static final int WIDTH = 300;
+	public static final int HEIGHT = 300;
 
-	private PaintListener pl;
+	private PaintComponent panel;
+
+	private ImoEventListener pl;
 	private Engine engine;
 
-	/**
-	 * コンストラクタ
-	 * @param mw MainWorks
-	 */
-	ImoCanvas() {
+	private ImoListener il;
+	private GameImoEvent gp;
+	private String name;
+	private int level;
+	private ImageList imageList;
+
+	@Inject
+	ImoCanvas(@Named("imoC") PaintComponent panel, KeyManager km, MineImageLoader mil) {
+		this.panel = panel;
 		engine = new Engine();
-		addKeyListener(this);
-		MineAwtUtils.setSize(this, 300, 300);
+		imageList = new ImageList(mil);
+		gp = new GameImoEvent(this, km, imageList);
+		gameReset(name, level);
+
+		panel.setPaintListener(this);
 	}
 
+	public void setup(String name, int level) {
+		this.name = name;
+		this.level = level;
+	}
+
+	public void setImoListener(ImoListener il) {
+		this.il = il;
+	}
 	/**
 	 * ペイントリスナーをセットする。
 	 * @param pl PaintListener
 	 */
-	public void setPaintListener(PaintListener pl) {
+	public void setEventListener(ImoEventListener pl) {
 		this.pl = pl;
 		engine.setRunner(pl);
 	}
-
+	public void setVisible(boolean flag) {
+		panel.setVisible(flag);
+	}
 	/**
 	 * スレッドを開始する。
 	 */
@@ -57,22 +80,62 @@ public class ImoCanvas extends JComponent implements KeyListener {
 	/**
 	 * 描画
 	 */
-	protected void paintComponent(Graphics g){
-		Dimension d = getSize();
-		g.setColor(new Color(180, 240, 180));
-		g.fillRect(0, 0, d.width, d.height);
-		pl.paint(new GraphicsAWT(g));
-		requestFocus();
+	@Override
+	public void paint(MineGraphics g){
+		g.setColor(180, 240, 180);
+		g.fillRect(0, 0, WIDTH, HEIGHT);
+		pl.paint(g);
 	}
 
+	/**
+	 * Reset
+	 */
+	public void gameReset(String name_, int level_){
+		this.name = name_;
+		this.level = level_;
+		setEventListener(new StartImoEvent(this));
+		start();
+	}
 
-	public void keyReleased(KeyEvent e) {
-		pl.keyReleased(e.getKeyChar(), e.getKeyCode());
+	/**
+	 * Start
+	 */
+	public void gameStart() {
+		stop();
+		gp.resetData(name, level);
+		setEventListener(gp);
+		start();
 	}
-	public void keyPressed(KeyEvent e) {
-		pl.keyPressed(e.getKeyChar(), e.getKeyCode());
+
+	/**
+	 * End
+	 */
+	public void gameEnd(int n) {
+		stop();
+		imageList.setEndImage(n);
+		setEventListener(new EndImoEvent(this, imageList));
+		start();
 	}
-	public void keyTyped(KeyEvent e){
+
+	/**
+	 * Game Exit
+	 */
+	public void gameExit() {
+		il.gameExit(gp.getEXP());
+	}
+
+	/**
+	 * Repaint
+	 */
+	public void repaint() {
+		panel.repaint();
+	}
+
+	public void keyPressed(char character, int keyCode) {
+		pl.keyPressed(character, keyCode);
+	}
+	public void keyReleased(char character, int keyCode) {
+		pl.keyReleased(character, keyCode);
 	}
 
 }

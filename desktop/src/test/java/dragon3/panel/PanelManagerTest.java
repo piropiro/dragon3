@@ -110,24 +110,24 @@ public class PanelManagerTest {
 		pm.closeSmall();
 	}
 
-	@Test
+	//@Test
 	public void testHelp1() {
 		pm.setHelpVisible(true);
 		pm.displayHelp(new Point(10, 10), GameColor.BLUE, "Hello, World!", "こんにちわ世界！");
 	}
 
-	@Test
+	//@Test
 	public void testHelp2() {
 		pm.setHelpVisible(true);
 		pm.displayHelp(new Point(1, 1), GameColor.RED, "Hello, World!", "こんにちわ世界！");
 	}
 
-	@Test
+	//@Test
 	public void testLarge() {
 		pm.displayLarge("Largeでかい", GameColor.BLUE, 1500);
 	}
 
-	@Test
+	//@Test
 	public void testSmall1() {
 		Body body = new Body();
 		body.setX(5);
@@ -135,7 +135,7 @@ public class PanelManagerTest {
 		pm.displaySmall("攻撃", GameColor.WHITE, body);
 	}
 
-	@Test
+	//@Test
 	public void testSmall2() {
 		Body body = new Body();
 		body.setX(10);
@@ -143,7 +143,7 @@ public class PanelManagerTest {
 		pm.displaySmall("火炎輪", GameColor.RED, body);
 	}
 
-	@Test
+	//@Test
 	public void testHp1() {
 		Body ba = new Body();
 		ba.setColor(GameColor.BLUE);
@@ -166,7 +166,7 @@ public class PanelManagerTest {
 
 	}
 
-	@Test
+	//@Test
 	public void testMessage() {
 		Body ba = new Body();
 		ba.setColor(GameColor.BLUE);
@@ -184,17 +184,17 @@ public class PanelManagerTest {
 		pm.startMessage(ba);
 	}
 
-	@Test
+	//@Test
 	public void testDataData() {
 		pm.displayData(tm, 1, 1);
 	}
 
-	@Test
+	//@Test
 	public void testDataPlace() {
 		pm.displayPlace(tm, 1, 1);
 	}
 
-	@Test
+	//@Test
 	public void testDataWazaList() {
 		Body ba = new Body();
 		ba.setColor(GameColor.BLUE);
@@ -211,7 +211,7 @@ public class PanelManagerTest {
 		pm.displayWazaList(ba);
 	}
 
-	@Test
+	//@Test
 	public void testDataAnalyze() {
 		Body ba = new Body();
 		ba.setColor(GameColor.BLUE);
@@ -224,7 +224,7 @@ public class PanelManagerTest {
 		pm.displayAnalyze(ba);
 	}
 
-	@Test
+	//@Test
 	public void testDataStatus() {
 		Body ba = new Body();
 		ba.setColor(GameColor.BLUE);
@@ -244,12 +244,12 @@ public class PanelManagerTest {
 		pm.displayStatus(ba);
 	}
 
-	@Test
+	//@Test
 	public void testDataCamp() {
 		pm.displayCampData(5, 5, CampDataPaint.C_CHARA1, GameColor.BLUE);
 	}
 
-	@Test
+	//@Test
 	public void testDataWaza() {
 		Body ba = new Body();
 		ba.setColor(GameColor.BLUE);

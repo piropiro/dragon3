@@ -30,7 +30,7 @@ public class DragonFrame implements FrameWorks, ActionListener, KeyListener {
 	private MineCanvas mc;
 	private MouseAllListener mal;
 	
-	@Setter private CommandListener commandListener;
+	private CommandListener commandListener;
 	
 	/*** Constructer *****************************************************/
 
@@ -195,5 +195,9 @@ public class DragonFrame implements FrameWorks, ActionListener, KeyListener {
 	
 	public void repaint() {
 		mc.repaint();
+	}
+
+	public void setCommandListener(CommandListener commandListener) {
+		this.commandListener = commandListener;
 	}
 }

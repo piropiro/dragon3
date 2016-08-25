@@ -2,18 +2,19 @@ package imo.paint;
 
 
 
-import imo.MainWorks;
+import imo.ImoEventListener;
+import imo.ImoWorks;
 import mine.paint.MineColor;
 import mine.paint.MineGraphics;
 import mine.thread.Engine;
 
 
-public class StartPaint implements PaintListener {
+public class StartImoEvent implements ImoEventListener {
 
-	private MainWorks mw;
+	private ImoWorks mw;
 	private int count;
 
-	public StartPaint(MainWorks mw) {
+	public StartImoEvent(ImoWorks mw) {
 		this.mw = mw;
 		count = 0;
 	}

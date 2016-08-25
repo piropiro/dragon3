@@ -1,6 +1,7 @@
 package imo.paint;
 
-import imo.MainWorks;
+import imo.ImoEventListener;
+import imo.ImoWorks;
 import imo.common.ImageList;
 
 import java.awt.event.KeyEvent;
@@ -9,18 +10,18 @@ import mine.paint.MineColor;
 import mine.paint.MineGraphics;
 import mine.thread.Engine;
 
-public class EndPaint implements PaintListener {
+public class EndImoEvent implements ImoEventListener {
 
 	private int count;
 
-	private MainWorks mw;
+	private ImoWorks mw;
 
 	private ImageList imageList;
 
 	/**
 	 * Constructer
 	 */
-	public EndPaint(MainWorks mw, ImageList imageList) {
+	public EndImoEvent(ImoWorks mw, ImageList imageList) {
 		this.mw = mw;
 		this.imageList = imageList;
 		count = 0;

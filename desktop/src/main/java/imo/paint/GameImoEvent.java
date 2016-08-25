@@ -2,7 +2,8 @@ package imo.paint;
 
 import java.util.Random;
 
-import imo.MainWorks;
+import imo.ImoEventListener;
+import imo.ImoWorks;
 import imo.body.Body;
 import imo.body.Imo;
 import imo.body.Jiki;
@@ -15,7 +16,7 @@ import mine.event.KeyManager;
 import mine.paint.MineGraphics;
 import mine.thread.Engine;
 
-public class GamePaint implements PaintListener {
+public class GameImoEvent implements ImoEventListener {
 
 	private Jiki ore;
 	private Sister sister;
@@ -29,11 +30,11 @@ public class GamePaint implements PaintListener {
 	private int love;
 	private boolean clearFlag;
 
-	private MainWorks mw;
+	private ImoWorks mw;
 	private KeyManager km;
 	private ImageList imageList;
 
-	public GamePaint(MainWorks mw, KeyManager km, ImageList imageList) {
+	public GameImoEvent(ImoWorks mw, KeyManager km, ImageList imageList) {
 		this.mw = mw;
 		this.km = km;
 		this.imageList = imageList;

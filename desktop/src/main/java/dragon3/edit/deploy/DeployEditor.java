@@ -170,7 +170,7 @@ public class DeployEditor extends JFrame implements MainWorks<DeployData>, Comma
 		mapPanel.repaint();
 	}
 
-	/*** MainWorks - BasicPaint ***************************************/
+	/*** ImoWorks - BasicPaint ***************************************/
 
 	public void addUnit(int x, int y) {
 		DeployData deploy = new DeployData();
@@ -202,7 +202,7 @@ public class DeployEditor extends JFrame implements MainWorks<DeployData>, Comma
 		}
 	}
 
-	/*** MainWorks - SortPaint ***************************************/
+	/*** ImoWorks - SortPaint ***************************************/
 
 	@Override
 	public void moveUnit(int x, int y, List<DeployData> dstData) {
@@ -244,7 +244,7 @@ public class DeployEditor extends JFrame implements MainWorks<DeployData>, Comma
 		}
 	}
 
-	/*** MainWorks - GoalPaint ***************************************/
+	/*** ImoWorks - GoalPaint ***************************************/
 
 	@Override
 	public void setGoal(int x, int y) {
