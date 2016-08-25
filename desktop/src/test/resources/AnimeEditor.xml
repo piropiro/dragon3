@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editor class="dragon3.bean.AnimeData">
+
+	<title>AnimeEditor</title>
+	<historyFile>animes.xml</historyFile>
+	<defaultFile>dragon3/data/anime/data.xml</defaultFile>
+
+	<string name="id" label="ID" location="center"/>
+	<string name="name" label="名前" location="center"/>
+	<string name="image" label="画像" location="center"/>
+	<string name="type" label="タイプ" location="center">
+		<itemFile>dragon3/text/animeRange.txt</itemFile>
+	</string>
+	<int name="sleep" label="ウエイト" location="center">
+		<max>100</max>
+	</int>
+</editor>

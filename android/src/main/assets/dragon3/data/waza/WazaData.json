@@ -1,0 +1,2296 @@
+[
+	{
+		"animeId": "NONE.none",
+		"damageType": "NONE",
+		"effect": [
+			"NONE",
+			"NONE",
+			"NONE",
+			"NONE",
+			"NONE"
+		],
+		"energyCost": 0,
+		"energyType": "NONE",
+		"id": "none",
+		"image": "none.png",
+		"label": "none",
+		"labelColor": "WHITE",
+		"name": "none",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SINGLE.slash",
+		"damageType": "SWORD",
+		"effect": [
+			"COUNTER_ABLE",
+			"COMBO"
+		],
+		"energyCost": 0,
+		"energyType": "NONE",
+		"id": "waza_001",
+		"image": "waza_sword.png",
+		"label": "攻撃",
+		"labelColor": "WHITE",
+		"name": "剣",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SINGLE.press_green",
+		"damageType": "SWORD",
+		"effect": [
+			"RIKU_150",
+			"COUNTER_ABLE"
+		],
+		"energyCost": 0,
+		"energyType": "NONE",
+		"id": "waza_002",
+		"image": "waza_ax.png",
+		"label": "攻撃",
+		"labelColor": "YELLOW",
+		"name": "斧",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SINGLE.ice",
+		"damageType": "SWORD",
+		"effect": [
+			"COUNTER_ABLE",
+			"COMBO"
+		],
+		"energyCost": 0,
+		"energyType": "NONE",
+		"id": "waza_003",
+		"image": "waza_body.png",
+		"label": "突進",
+		"labelColor": "WHITE",
+		"name": "突進",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SINGLE.slash",
+		"damageType": "SWORD",
+		"effect": [
+			"HIT_4",
+			"COUNTER_ABLE",
+			"COMBO"
+		],
+		"energyCost": 0,
+		"energyType": "NONE",
+		"id": "waza_004",
+		"image": "waza_knife.png",
+		"label": "攻撃",
+		"labelColor": "WHITE",
+		"name": "短剣",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SINGLE_ARROW.spear_blue",
+		"damageType": "SWORD",
+		"effect": [
+			"COUNTER_ABLE",
+			"COMBO",
+			"MIZU_100"
+		],
+		"energyCost": 0,
+		"energyType": "NONE",
+		"id": "waza_005",
+		"image": "waza_spear.png",
+		"label": "攻撃",
+		"labelColor": "WHITE",
+		"name": "槍",
+		"targetType": "SINGLE_2"
+	},
+	{
+		"animeId": "SINGLE_ARROW.arrow",
+		"damageType": "SWORD",
+		"effect": [
+			"COUNTER_ABLE",
+			"COMBO",
+			"SORA_200"
+		],
+		"energyCost": 0,
+		"energyType": "NONE",
+		"id": "waza_006",
+		"image": "waza_bow.png",
+		"label": "攻撃",
+		"labelColor": "WHITE",
+		"name": "弓",
+		"targetType": "LONG_2"
+	},
+	{
+		"animeId": "SINGLE.magic_blue",
+		"damageType": "MAGIC",
+		"effect": [],
+		"energyCost": 0,
+		"energyType": "NONE",
+		"id": "waza_007",
+		"image": "waza_magic.png",
+		"label": "魔法",
+		"labelColor": "WHITE",
+		"name": "魔法",
+		"targetType": "LONG_2"
+	},
+	{
+		"animeId": "SOME_ARROW.arrow_green",
+		"damageType": "MAGIC",
+		"effect": [
+			"HICHU"
+		],
+		"energyCost": 0,
+		"energyType": "NONE",
+		"id": "waza_008",
+		"image": "waza_breath.png",
+		"label": "ブレス",
+		"labelColor": "GREEN",
+		"name": "ブレス",
+		"targetType": "BREATH"
+	},
+	{
+		"animeId": "SINGLE.slash_upper",
+		"damageType": "SWORD",
+		"effect": [
+			"DAMAGE_150",
+			"COUNTER_ONLY",
+			"HICHU",
+			"SORA_200"
+		],
+		"energyCost": 0,
+		"energyType": "NONE",
+		"id": "waza_009",
+		"image": "waza_sword.png",
+		"label": "反撃",
+		"labelColor": "SKY",
+		"name": "つばめ返し",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "ALL.magic_blue",
+		"damageType": "MAGIC",
+		"effect": [
+			"HICHU"
+		],
+		"energyCost": 1,
+		"energyType": "MST",
+		"id": "waza_010",
+		"image": "waza_magic.png",
+		"label": "大魔法",
+		"labelColor": "YELLOW",
+		"name": "大魔法",
+		"targetType": "SPREAD"
+	},
+	{
+		"animeId": "LASER_ARROW_3.arrow_blue",
+		"damageType": "SWORD",
+		"effect": [
+			"TAME",
+			"HIT_4"
+		],
+		"energyCost": 1,
+		"energyType": "STR",
+		"id": "waza_011",
+		"image": "waza_sword.png",
+		"label": "直斬り",
+		"labelColor": "SKY",
+		"name": "直斬り",
+		"targetType": "LASER_3"
+	},
+	{
+		"animeId": "SINGLE_ARROW.arrow",
+		"damageType": "SWORD",
+		"effect": [
+			"DAMAGE_150",
+			"SORA_200",
+			"CHOP",
+			"COUNTER_ABLE"
+		],
+		"energyCost": 1,
+		"energyType": "STR",
+		"id": "waza_012",
+		"image": "waza_bow.png",
+		"label": "強弓",
+		"labelColor": "WHITE",
+		"name": "強弓",
+		"targetType": "LONG_2"
+	},
+	{
+		"animeId": "SINGLE.ice",
+		"damageType": "MAGIC",
+		"effect": [
+			"ICE"
+		],
+		"energyCost": 0,
+		"energyType": "NONE",
+		"id": "waza_013",
+		"image": "waza_magic.png",
+		"label": "氷玉",
+		"labelColor": "BLUE",
+		"name": "アイスボール",
+		"targetType": "LONG_2"
+	},
+	{
+		"animeId": "ALL.ice",
+		"damageType": "MAGIC",
+		"effect": [
+			"DAMAGE_300",
+			"HICHU",
+			"TAME",
+			"ICE"
+		],
+		"energyCost": 2,
+		"energyType": "MST",
+		"id": "waza_014",
+		"image": "waza_magic.png",
+		"label": "零砲",
+		"labelColor": "BLUE",
+		"name": "ゼロキャノン",
+		"targetType": "LASER_2"
+	},
+	{
+		"animeId": "SINGLE.slash_red",
+		"damageType": "SWORD",
+		"effect": [
+			"COMBO",
+			"COUNTER_ABLE",
+			"FIRE"
+		],
+		"energyCost": 0,
+		"energyType": "NONE",
+		"id": "waza_015",
+		"image": "waza_sword.png",
+		"label": "火剣",
+		"labelColor": "RED",
+		"name": "ファイアソード",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SINGLE.magic_blue",
+		"damageType": "MAGIC_ALL",
+		"effect": [
+			"HEAL",
+			"HICHU",
+			"NONE",
+			"NONE",
+			"NONE"
+		],
+		"energyCost": 3,
+		"energyType": "MST",
+		"id": "waza_016",
+		"image": "waza_magic.png",
+		"label": "回復",
+		"labelColor": "SKY",
+		"name": "ヒーリング",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SOME_ARROW.arrow_fire",
+		"damageType": "MAGIC",
+		"effect": [
+			"HICHU",
+			"FIRE"
+		],
+		"energyCost": 1,
+		"energyType": "MST",
+		"id": "waza_017",
+		"image": "waza_breath.png",
+		"label": "火炎",
+		"labelColor": "RED",
+		"name": "ファイヤーブレス",
+		"targetType": "BREATH"
+	},
+	{
+		"animeId": "SINGLE.refresh",
+		"damageType": "SWORD",
+		"effect": [
+			"COUNTER_ABLE",
+			"COMBO"
+		],
+		"energyCost": 0,
+		"energyType": "NONE",
+		"id": "waza_018",
+		"image": "waza_body.png",
+		"label": "鋼牙",
+		"labelColor": "YELLOW",
+		"name": "鋼の牙",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SINGLE.slash_blue",
+		"damageType": "SWORD",
+		"effect": [
+			"COMBO",
+			"COUNTER_ABLE",
+			"ICE"
+		],
+		"energyCost": 0,
+		"energyType": "NONE",
+		"id": "waza_019",
+		"image": "waza_sword.png",
+		"label": "氷剣",
+		"labelColor": "BLUE",
+		"name": "アイスソード",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SINGLE_ARROW.arrow_thunder",
+		"damageType": "SWORD",
+		"effect": [
+			"THUNDER",
+			"SORA_200",
+			"COUNTER_ABLE",
+			"COMBO"
+		],
+		"energyCost": 0,
+		"energyType": "NONE",
+		"id": "waza_020",
+		"image": "waza_bow.png",
+		"label": "雷弓",
+		"labelColor": "YELLOW",
+		"name": "雷神の弓",
+		"targetType": "LONG_2"
+	},
+	{
+		"animeId": "SINGLE.slash",
+		"damageType": "SWORD",
+		"effect": [
+			"COUNTER_ABLE",
+			"COMBO",
+			"CRITICAL"
+		],
+		"energyCost": 0,
+		"energyType": "NONE",
+		"id": "waza_021",
+		"image": "waza_sword.png",
+		"label": "攻撃",
+		"labelColor": "RED",
+		"name": "ムラマサ",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SINGLE.magic_blue",
+		"damageType": "NONE",
+		"effect": [
+			"REFRESH",
+			"NO_ATTACK",
+			"HEAL",
+			"HICHU"
+		],
+		"energyCost": 3,
+		"energyType": "MST",
+		"id": "waza_022",
+		"image": "waza_magic.png",
+		"label": "KISS",
+		"labelColor": "RED",
+		"name": "プリティキッス",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SINGLE.magic_blue",
+		"damageType": "NONE",
+		"effect": [
+			"CHARM",
+			"NO_ATTACK",
+			"HICHU"
+		],
+		"energyCost": 1,
+		"energyType": "MST",
+		"id": "waza_023",
+		"image": "waza_magic.png",
+		"label": "魅了",
+		"labelColor": "RED",
+		"name": "チャーム",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SINGLE.slash_upper",
+		"damageType": "SWORD",
+		"effect": [
+			"UPPER",
+			"DAMAGE_150",
+			"COUNTER_ABLE"
+		],
+		"energyCost": 1,
+		"energyType": "STR",
+		"id": "waza_024",
+		"image": "waza_sword.png",
+		"label": "昇斬",
+		"labelColor": "SKY",
+		"name": "スマッシュ",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "ALL.magic_blue",
+		"damageType": "NONE",
+		"effect": [
+			"SLEEP",
+			"HICHU",
+			"NO_ATTACK"
+		],
+		"energyCost": 2,
+		"energyType": "MST",
+		"id": "waza_025",
+		"image": "waza_magic.png",
+		"label": "子守唄",
+		"labelColor": "YELLOW",
+		"name": "子守唄",
+		"targetType": "ALL_2"
+	},
+	{
+		"animeId": "SINGLE_ARROW.spear_blue",
+		"damageType": "SWORD",
+		"effect": [
+			"COUNTER_ABLE",
+			"COMBO",
+			"SLEEP",
+			"MIZU_100"
+		],
+		"energyCost": 1,
+		"energyType": "MST",
+		"id": "waza_026",
+		"image": "waza_spear.png",
+		"label": "魚槍",
+		"labelColor": "BLUE",
+		"name": "人魚の槍",
+		"targetType": "SINGLE_2"
+	},
+	{
+		"animeId": "LASER_ARROW_2.spear_blue",
+		"damageType": "SWORD",
+		"effect": [
+			"HIT_4",
+			"DAMAGE_150",
+			"MIZU_100"
+		],
+		"energyCost": 1,
+		"energyType": "STR",
+		"id": "waza_027",
+		"image": "waza_spear.png",
+		"label": "串刺",
+		"labelColor": "YELLOW",
+		"name": "串刺し",
+		"targetType": "LASER_2"
+	},
+	{
+		"animeId": "SINGLE.fire",
+		"damageType": "MAGIC",
+		"effect": [
+			"FIRE"
+		],
+		"energyCost": 0,
+		"energyType": "NONE",
+		"id": "waza_028",
+		"image": "waza_magic.png",
+		"label": "火玉",
+		"labelColor": "RED",
+		"name": "ファイヤーボール",
+		"targetType": "LONG_2"
+	},
+	{
+		"animeId": "SINGLE.slash_yellow",
+		"damageType": "SWORD",
+		"effect": [
+			"COUNTER_ABLE",
+			"DAMAGE_200"
+		],
+		"energyCost": 2,
+		"energyType": "STR",
+		"id": "waza_029",
+		"image": "waza_sword.png",
+		"label": "倍斬り",
+		"labelColor": "YELLOW",
+		"name": "倍斬り",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "ALL.fire",
+		"damageType": "MAGIC",
+		"effect": [
+			"FIRE",
+			"HICHU"
+		],
+		"energyCost": 1,
+		"energyType": "MST",
+		"id": "waza_030",
+		"image": "waza_magic.png",
+		"label": "火輪",
+		"labelColor": "RED",
+		"name": "ファイヤーリング",
+		"targetType": "RING_2"
+	},
+	{
+		"animeId": "SINGLE_ARROW.arrow_ice",
+		"damageType": "MAGIC",
+		"effect": [
+			"WET"
+		],
+		"energyCost": 1,
+		"energyType": "MST",
+		"id": "waza_031",
+		"image": "waza_magic.png",
+		"label": "水鉄砲",
+		"labelColor": "SKY",
+		"name": "スプラッシュ",
+		"targetType": "LONG_2"
+	},
+	{
+		"animeId": "SINGLE_ARROW.arrow_ice",
+		"damageType": "SWORD",
+		"effect": [
+			"ICE",
+			"SORA_200",
+			"COMBO",
+			"COUNTER_ABLE"
+		],
+		"energyCost": 0,
+		"energyType": "NONE",
+		"id": "waza_032",
+		"image": "waza_bow.png",
+		"label": "氷弓",
+		"labelColor": "BLUE",
+		"name": "凍土の弓",
+		"targetType": "LONG_2"
+	},
+	{
+		"animeId": "LASER_ARROW_3.arrow",
+		"damageType": "SWORD",
+		"effect": [
+			"HIT_4",
+			"SORA_200"
+		],
+		"energyCost": 1,
+		"energyType": "STR",
+		"id": "waza_033",
+		"image": "waza_bow.png",
+		"label": "貫通矢",
+		"labelColor": "YELLOW",
+		"name": "貫通矢",
+		"targetType": "LASER_3"
+	},
+	{
+		"animeId": "SINGLE.girotin",
+		"damageType": "NONE",
+		"effect": [
+			"DEATH",
+			"NO_ATTACK",
+			"HICHU"
+		],
+		"energyCost": 2,
+		"energyType": "MST",
+		"id": "waza_034",
+		"image": "waza_magic.png",
+		"label": "デス",
+		"labelColor": "RED",
+		"name": "デス",
+		"targetType": "LONG_2"
+	},
+	{
+		"animeId": "ROTATE.roll_blue",
+		"damageType": "SWORD",
+		"effect": [
+			"RIKU_0",
+			"HIT_4",
+			"RIKU_150"
+		],
+		"energyCost": 2,
+		"energyType": "STR",
+		"id": "waza_035",
+		"image": "waza_ax.png",
+		"label": "回転",
+		"labelColor": "YELLOW",
+		"name": "回転斬り",
+		"targetType": "SQUARE_1"
+	},
+	{
+		"animeId": "ALL.refresh",
+		"damageType": "SWORD",
+		"effect": [
+			"DAMAGE_150",
+			"RIKU_0"
+		],
+		"energyCost": 2,
+		"energyType": "STR",
+		"id": "waza_036",
+		"image": "waza_ax.png",
+		"label": "大地斬",
+		"labelColor": "YELLOW",
+		"name": "大地斬",
+		"targetType": "BREATH"
+	},
+	{
+		"animeId": "SINGLE_ARROW.arrow",
+		"damageType": "SWORD",
+		"effect": [
+			"SORA_200",
+			"HIT_12"
+		],
+		"energyCost": 2,
+		"energyType": "STR",
+		"id": "waza_037",
+		"image": "waza_bow.png",
+		"label": "乱射",
+		"labelColor": "SKY",
+		"name": "乱れ射ち",
+		"targetType": "BREATH"
+	},
+	{
+		"animeId": "SINGLE.thunder",
+		"damageType": "MAGIC",
+		"effect": [
+			"THUNDER"
+		],
+		"energyCost": 0,
+		"energyType": "NONE",
+		"id": "waza_038",
+		"image": "waza_magic.png",
+		"label": "雷撃",
+		"labelColor": "YELLOW",
+		"name": "サンダーボルト",
+		"targetType": "LONG_2"
+	},
+	{
+		"animeId": "SINGLE.refresh",
+		"damageType": "SWORD",
+		"effect": [
+			"COUNTER_ABLE",
+			"COMBO",
+			"POISON"
+		],
+		"energyCost": 0,
+		"energyType": "NONE",
+		"id": "waza_039",
+		"image": "waza_body.png",
+		"label": "毒牙",
+		"labelColor": "GREEN",
+		"name": "毒の牙",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SINGLE.slash",
+		"damageType": "SWORD",
+		"effect": [
+			"HIT_4",
+			"POISON",
+			"COMBO",
+			"COUNTER_ABLE"
+		],
+		"energyCost": 0,
+		"energyType": "NONE",
+		"id": "waza_040",
+		"image": "waza_knife.png",
+		"label": "毒針",
+		"labelColor": "GREEN",
+		"name": "毒針",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SINGLE_ARROW.spear_blue",
+		"damageType": "SWORD",
+		"effect": [
+			"COMBO",
+			"HIT_12",
+			"COUNTER_ABLE",
+			"CRITICAL"
+		],
+		"energyCost": 0,
+		"energyType": "NONE",
+		"id": "waza_041",
+		"image": "waza_knife.png",
+		"label": "手裏剣",
+		"labelColor": "YELLOW",
+		"name": "手裏剣",
+		"targetType": "LONG_2"
+	},
+	{
+		"animeId": "SINGLE_ARROW.refresh",
+		"damageType": "MAGIC",
+		"effect": [
+			"COUNTER_ABLE",
+			"COMBO",
+			"SORA_200"
+		],
+		"energyCost": 0,
+		"energyType": "NONE",
+		"id": "waza_042",
+		"image": "waza_magic.png",
+		"label": "風刃",
+		"labelColor": "GREEN",
+		"name": "ウインドカッター",
+		"targetType": "LONG_2"
+	},
+	{
+		"animeId": "SINGLE.press_blue",
+		"damageType": "SWORD",
+		"effect": [
+			"RIKU_150",
+			"COUNTER_ABLE",
+			"SORA_200"
+		],
+		"energyCost": 0,
+		"energyType": "NONE",
+		"id": "waza_043",
+		"image": "waza_ax.png",
+		"label": "獣斧",
+		"labelColor": "SKY",
+		"name": "神獣の斧",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SINGLE.press_blue",
+		"damageType": "SWORD",
+		"effect": [
+			"SORA_200",
+			"CHOP",
+			"COUNTER_ABLE",
+			"DRAGON_200"
+		],
+		"energyCost": 2,
+		"energyType": "STR",
+		"id": "waza_044",
+		"image": "waza_spear.png",
+		"label": "飛竜殺",
+		"labelColor": "SKY",
+		"name": "飛竜殺し",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SINGLE_ARROW.spear_blue",
+		"damageType": "SWORD",
+		"effect": [
+			"COUNTER_ABLE",
+			"COMBO",
+			"MIZU_100",
+			"UNDEAD_200"
+		],
+		"energyCost": 0,
+		"energyType": "NONE",
+		"id": "waza_045",
+		"image": "waza_spear.png",
+		"label": "魔槍",
+		"labelColor": "SKY",
+		"name": "ミストルテイン",
+		"targetType": "SINGLE_2"
+	},
+	{
+		"animeId": "ALL.magic_blue",
+		"damageType": "MAGIC",
+		"effect": [
+			"HICHU",
+			"MIZU_100",
+			"UNDEAD_200"
+		],
+		"energyCost": 2,
+		"energyType": "MST",
+		"id": "waza_046",
+		"image": "waza_magic.png",
+		"label": "聖光",
+		"labelColor": "SKY",
+		"name": "シャイニング",
+		"targetType": "ALL_2"
+	},
+	{
+		"animeId": "ALL.expr_blue",
+		"damageType": "MAGIC",
+		"effect": [
+			"ICE",
+			"HICHU",
+			"TAME",
+			"SLEEP"
+		],
+		"energyCost": 2,
+		"energyType": "MST",
+		"id": "waza_047",
+		"image": "waza_magic.png",
+		"label": "吹雪",
+		"labelColor": "BLUE",
+		"name": "ブリザード",
+		"targetType": "RING_3"
+	},
+	{
+		"animeId": "SINGLE.refresh",
+		"damageType": "SWORD",
+		"effect": [
+			"COUNTER_ABLE",
+			"POISON",
+			"DEATH"
+		],
+		"energyCost": 0,
+		"energyType": "NONE",
+		"id": "waza_048",
+		"image": "waza_body.png",
+		"label": "猛毒",
+		"labelColor": "GREEN",
+		"name": "猛毒の牙",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "ALL.girotin",
+		"damageType": "MAGIC",
+		"effect": [
+			"DEATH",
+			"SORA_200",
+			"TAME"
+		],
+		"energyCost": 4,
+		"energyType": "MST",
+		"id": "waza_049",
+		"image": "waza_magic.png",
+		"label": "死風",
+		"labelColor": "WHITE",
+		"name": "デスウインド",
+		"targetType": "RING_3"
+	},
+	{
+		"animeId": "SINGLE.refresh",
+		"damageType": "SWORD",
+		"effect": [
+			"DRAGON_200",
+			"RIKU_0",
+			"COUNTER_ABLE",
+			"UPPER",
+			"DAMAGE_200"
+		],
+		"energyCost": 2,
+		"energyType": "STR",
+		"id": "waza_050",
+		"image": "waza_spear.png",
+		"label": "地竜殺",
+		"labelColor": "YELLOW",
+		"name": "地竜殺し",
+		"targetType": "SINGLE_2"
+	},
+	{
+		"animeId": "SINGLE.slash_yellow",
+		"damageType": "SWORD",
+		"effect": [
+			"COMBO",
+			"HIT_12"
+		],
+		"energyCost": 1,
+		"energyType": "STR",
+		"id": "waza_051",
+		"image": "waza_sword.png",
+		"label": "光速斬",
+		"labelColor": "YELLOW",
+		"name": "電光石火",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "ALL.ice",
+		"damageType": "MAGIC",
+		"effect": [
+			"HICHU",
+			"DAMAGE_150",
+			"ICE"
+		],
+		"energyCost": 2,
+		"energyType": "MST",
+		"id": "waza_052",
+		"image": "waza_magic.png",
+		"label": "氷刃",
+		"labelColor": "BLUE",
+		"name": "アイスブレード",
+		"targetType": "HLINE"
+	},
+	{
+		"animeId": "SINGLE.slash_red",
+		"damageType": "SWORD",
+		"effect": [
+			"CHARM",
+			"COUNTER_ONLY",
+			"COMBO"
+		],
+		"energyCost": 1,
+		"energyType": "MST",
+		"id": "waza_053",
+		"image": "waza_spear.png",
+		"label": "誘惑",
+		"labelColor": "RED",
+		"name": "誘惑の鞭",
+		"targetType": "SINGLE_2"
+	},
+	{
+		"animeId": "SINGLE.thunder",
+		"damageType": "MAGIC",
+		"effect": [
+			"HICHU",
+			"DAMAGE_200",
+			"THUNDER"
+		],
+		"energyCost": 4,
+		"energyType": "MST",
+		"id": "waza_054",
+		"image": "waza_magic.png",
+		"label": "電撃",
+		"labelColor": "SKY",
+		"name": "スパーク",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SINGLE.slash_yellow",
+		"damageType": "SWORD",
+		"effect": [
+			"COUNTER_ABLE",
+			"DAMAGE_150",
+			"CHOP"
+		],
+		"energyCost": 1,
+		"energyType": "STR",
+		"id": "waza_055",
+		"image": "waza_sword.png",
+		"label": "落斬",
+		"labelColor": "YELLOW",
+		"name": "切り落とし",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SINGLE.press_blue",
+		"damageType": "SWORD",
+		"effect": [
+			"RIKU_150",
+			"COUNTER_ABLE",
+			"UNDEAD_200"
+		],
+		"energyCost": 0,
+		"energyType": "NONE",
+		"id": "waza_056",
+		"image": "waza_ax.png",
+		"label": "魔斧",
+		"labelColor": "BLUE",
+		"name": "魔神の斧",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SOME_ARROW.refresh",
+		"damageType": "SWORD",
+		"effect": [
+			"DAMAGE_150",
+			"RIKU_0",
+			"HIT_4"
+		],
+		"energyCost": 2,
+		"energyType": "STR",
+		"id": "waza_057",
+		"image": "waza_ax.png",
+		"label": "十字斬",
+		"labelColor": "GREEN",
+		"name": "グランドクロス",
+		"targetType": "CROSS_2"
+	},
+	{
+		"animeId": "SINGLE.refresh",
+		"damageType": "SWORD",
+		"effect": [
+			"DAMAGE_200",
+			"COUNTER_ONLY",
+			"HIT_4"
+		],
+		"energyCost": 1,
+		"energyType": "MST",
+		"id": "waza_058",
+		"image": "waza_sword.png",
+		"label": "反撃",
+		"labelColor": "YELLOW",
+		"name": "カウンター",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SINGLE_ARROW.arrow_green",
+		"damageType": "MAGIC",
+		"effect": [
+			"OIL",
+			"MISS_4"
+		],
+		"energyCost": 1,
+		"energyType": "MST",
+		"id": "waza_059",
+		"image": "waza_bow.png",
+		"label": "油玉",
+		"labelColor": "GREEN",
+		"name": "油玉",
+		"targetType": "LONG_2"
+	},
+	{
+		"animeId": "SINGLE.slash_yellow",
+		"damageType": "SWORD",
+		"effect": [
+			"COUNTER_ABLE",
+			"COMBO",
+			"DRAGON_200"
+		],
+		"energyCost": 1,
+		"energyType": "STR",
+		"id": "waza_060",
+		"image": "waza_sword.png",
+		"label": "竜殺剣",
+		"labelColor": "YELLOW",
+		"name": "ドラゴンキラー",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SINGLE.fire_big",
+		"damageType": "MAGIC",
+		"effect": [
+			"HICHU",
+			"FIRE"
+		],
+		"energyCost": 1,
+		"energyType": "MST",
+		"id": "waza_061",
+		"image": "waza_breath.png",
+		"label": "火炎",
+		"labelColor": "RED",
+		"name": "ファイヤーストーム",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SINGLE.expr_blue",
+		"damageType": "MAGIC",
+		"effect": [
+			"HICHU",
+			"ICE"
+		],
+		"energyCost": 1,
+		"energyType": "MST",
+		"id": "waza_062",
+		"image": "waza_breath.png",
+		"label": "氷結",
+		"labelColor": "BLUE",
+		"name": "アイスストーム",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SOME_ARROW.thunder",
+		"damageType": "SWORD",
+		"effect": [
+			"MISS_4",
+			"THUNDER"
+		],
+		"energyCost": 2,
+		"energyType": "MST",
+		"id": "waza_063",
+		"image": "waza_sword.png",
+		"label": "雷切",
+		"labelColor": "YELLOW",
+		"name": "ギガスラッシュ",
+		"targetType": "LASER_2"
+	},
+	{
+		"animeId": "LASER_ARROW_3.arrow_fire",
+		"damageType": "MAGIC",
+		"effect": [
+			"FIRE",
+			"HIT_4",
+			"SORA_200"
+		],
+		"energyCost": 1,
+		"energyType": "MST",
+		"id": "waza_064",
+		"image": "waza_magic.png",
+		"label": "火炎",
+		"labelColor": "RED",
+		"name": "フレイムレーザー",
+		"targetType": "LASER_3"
+	},
+	{
+		"animeId": "LASER_ARROW_3.arrow_thunder",
+		"damageType": "SWORD",
+		"effect": [
+			"THUNDER",
+			"HIT_4",
+			"SORA_200"
+		],
+		"energyCost": 1,
+		"energyType": "STR",
+		"id": "waza_065",
+		"image": "waza_bow.png",
+		"label": "雷矢",
+		"labelColor": "YELLOW",
+		"name": "サンダーアロー",
+		"targetType": "LASER_3"
+	},
+	{
+		"animeId": "LASER_ARROW_3.arrow_ice",
+		"damageType": "SWORD",
+		"effect": [
+			"ICE",
+			"HIT_4",
+			"SORA_200"
+		],
+		"energyCost": 1,
+		"energyType": "STR",
+		"id": "waza_066",
+		"image": "waza_bow.png",
+		"label": "氷矢",
+		"labelColor": "BLUE",
+		"name": "アイスアロー",
+		"targetType": "LASER_3"
+	},
+	{
+		"animeId": "SINGLE.magic_blue",
+		"damageType": "NONE",
+		"effect": [
+			"ATTACK_UP",
+			"NO_ATTACK",
+			"HEAL",
+			"HICHU"
+		],
+		"energyCost": 2,
+		"energyType": "MST",
+		"id": "waza_067",
+		"image": "waza_body.png",
+		"label": "加熱",
+		"labelColor": "RED",
+		"name": "ヒートアップ",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SINGLE.magic_blue",
+		"damageType": "NONE",
+		"effect": [
+			"GUARD_UP",
+			"NO_ATTACK",
+			"HEAL",
+			"HICHU"
+		],
+		"energyCost": 2,
+		"energyType": "MST",
+		"id": "waza_068",
+		"image": "waza_body.png",
+		"label": "防御",
+		"labelColor": "BLUE",
+		"name": "ガードアップ",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SINGLE.slash",
+		"damageType": "SWORD",
+		"effect": [
+			"COUNTER_ABLE",
+			"COMBO",
+			"CRITICAL",
+			"DEATH"
+		],
+		"energyCost": 1,
+		"energyType": "MST",
+		"id": "waza_069",
+		"image": "waza_sword.png",
+		"label": "暗黒剣",
+		"labelColor": "YELLOW",
+		"name": "デスブリンガー",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SINGLE.press_blue",
+		"damageType": "SWORD",
+		"effect": [
+			"DAMAGE_300",
+			"HICHU",
+			"TAME",
+			"RIKU_0"
+		],
+		"energyCost": 1,
+		"energyType": "STR",
+		"id": "waza_070",
+		"image": "waza_body.png",
+		"label": "プレス",
+		"labelColor": "RED",
+		"name": "メガトンプレス",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SINGLE.slash_yellow",
+		"damageType": "SWORD",
+		"effect": [
+			"DAMAGE_200",
+			"RIKU_0",
+			"MISS_4",
+			"COUNTER_ABLE"
+		],
+		"energyCost": 2,
+		"energyType": "STR",
+		"id": "waza_071",
+		"image": "waza_ax.png",
+		"label": "金斧",
+		"labelColor": "YELLOW",
+		"name": "金の斧",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SINGLE.turu",
+		"damageType": "MAGIC",
+		"effect": [
+			"OIL",
+			"CHARM"
+		],
+		"energyCost": 2,
+		"energyType": "MST",
+		"id": "waza_072",
+		"image": "waza_magic.png",
+		"label": "蔓草",
+		"labelColor": "GREEN",
+		"name": "ラブバイン",
+		"targetType": "LONG_2"
+	},
+	{
+		"animeId": "LASER_ARROW_3.arrow_ice",
+		"damageType": "MAGIC",
+		"effect": [
+			"ICE",
+			"HIT_4",
+			"SORA_200"
+		],
+		"energyCost": 1,
+		"energyType": "MST",
+		"id": "waza_073",
+		"image": "waza_magic.png",
+		"label": "氷結",
+		"labelColor": "BLUE",
+		"name": "アイスレーザー",
+		"targetType": "LASER_3"
+	},
+	{
+		"animeId": "SINGLE_ARROW.arrow_ice",
+		"damageType": "SWORD",
+		"effect": [
+			"SLEEP",
+			"WET",
+			"COUNTER_ABLE"
+		],
+		"energyCost": 2,
+		"energyType": "STR",
+		"id": "waza_074",
+		"image": "waza_bow.png",
+		"label": "木の実",
+		"labelColor": "GREEN",
+		"name": "ナッツシュート",
+		"targetType": "LONG_3"
+	},
+	{
+		"animeId": "SINGLE.slash_red",
+		"damageType": "SWORD",
+		"effect": [
+			"COMBO",
+			"COUNTER_ABLE",
+			"FIRE",
+			"DAMAGE_150"
+		],
+		"energyCost": 1,
+		"energyType": "MST",
+		"id": "waza_075",
+		"image": "waza_sword.png",
+		"label": "火炎斬",
+		"labelColor": "RED",
+		"name": "火炎斬り",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SINGLE.slash_blue",
+		"damageType": "SWORD",
+		"effect": [
+			"COMBO",
+			"COUNTER_ABLE",
+			"ICE",
+			"DAMAGE_150"
+		],
+		"energyCost": 1,
+		"energyType": "MST",
+		"id": "waza_076",
+		"image": "waza_sword.png",
+		"label": "氷結斬",
+		"labelColor": "BLUE",
+		"name": "氷結斬り",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SINGLE.slash",
+		"damageType": "SWORD",
+		"effect": [
+			"COMBO",
+			"HIT_4",
+			"COUNTER_ABLE"
+		],
+		"energyCost": 0,
+		"energyType": "NONE",
+		"id": "waza_077",
+		"image": "waza_knife.png",
+		"label": "クナイ",
+		"labelColor": "YELLOW",
+		"name": "クナイ",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SINGLE.slash",
+		"damageType": "SWORD",
+		"effect": [
+			"COMBO",
+			"HIT_4",
+			"COUNTER_ABLE",
+			"ICE",
+			"SLEEP"
+		],
+		"energyCost": 0,
+		"energyType": "NONE",
+		"id": "waza_078",
+		"image": "waza_knife.png",
+		"label": "氷刃",
+		"labelColor": "SKY",
+		"name": "アイシングダガー",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SINGLE.girotin",
+		"damageType": "SWORD",
+		"effect": [
+			"COUNTER_ABLE",
+			"HIT_4",
+			"DEATH"
+		],
+		"energyCost": 1,
+		"energyType": "MST",
+		"id": "waza_079",
+		"image": "waza_spear.png",
+		"label": "死鎌",
+		"labelColor": "RED",
+		"name": "デスサイズ",
+		"targetType": "SINGLE_2"
+	},
+	{
+		"animeId": "SINGLE.ice",
+		"damageType": "MAGIC",
+		"effect": [
+			"ICE",
+			"CHARM"
+		],
+		"energyCost": 2,
+		"energyType": "MST",
+		"id": "waza_080",
+		"image": "waza_magic.png",
+		"label": "氷玉",
+		"labelColor": "BLUE",
+		"name": "ラブアイス",
+		"targetType": "LONG_2"
+	},
+	{
+		"animeId": "SINGLE.fire",
+		"damageType": "MAGIC",
+		"effect": [
+			"FIRE",
+			"CHARM"
+		],
+		"energyCost": 2,
+		"energyType": "MST",
+		"id": "waza_081",
+		"image": "waza_magic.png",
+		"label": "火玉",
+		"labelColor": "RED",
+		"name": "ラブファイア",
+		"targetType": "LONG_2"
+	},
+	{
+		"animeId": "SINGLE.magic_blue",
+		"damageType": "MAGIC",
+		"effect": [
+			"HICHU",
+			"SLEEP"
+		],
+		"energyCost": 1,
+		"energyType": "MST",
+		"id": "waza_082",
+		"image": "waza_magic.png",
+		"label": "悪夢",
+		"labelColor": "GREEN",
+		"name": "ナイトメア",
+		"targetType": "LONG_2"
+	},
+	{
+		"animeId": "ALL.ice",
+		"damageType": "MAGIC",
+		"effect": [
+			"ICE",
+			"HICHU"
+		],
+		"energyCost": 1,
+		"energyType": "MST",
+		"id": "waza_083",
+		"image": "waza_magic.png",
+		"label": "氷輪",
+		"labelColor": "BLUE",
+		"name": "アイスリング",
+		"targetType": "RING_2"
+	},
+	{
+		"animeId": "SINGLE.press_green",
+		"damageType": "MAGIC",
+		"effect": [
+			"HIT_4",
+			"CHOP"
+		],
+		"energyCost": 1,
+		"energyType": "MST",
+		"id": "waza_084",
+		"image": "waza_magic.png",
+		"label": "重力波",
+		"labelColor": "GREEN",
+		"name": "グラビティブラスト",
+		"targetType": "LONG_2"
+	},
+	{
+		"animeId": "ALL.magic_blue",
+		"damageType": "NONE",
+		"effect": [
+			"NO_ATTACK",
+			"CHARM"
+		],
+		"energyCost": 2,
+		"energyType": "MST",
+		"id": "waza_085",
+		"image": "waza_magic.png",
+		"label": "淫夢",
+		"labelColor": "RED",
+		"name": "チャームライト",
+		"targetType": "ALL_3"
+	},
+	{
+		"animeId": "SINGLE_ARROW.arrow_blue",
+		"damageType": "MAGIC",
+		"effect": [
+			"DAMAGE_150",
+			"COUNTER_ABLE",
+			"SORA_200",
+			"COMBO"
+		],
+		"energyCost": 2,
+		"energyType": "MST",
+		"id": "waza_086",
+		"image": "waza_bow.png",
+		"label": "魔矢",
+		"labelColor": "SKY",
+		"name": "マジックシュート",
+		"targetType": "LONG_3"
+	},
+	{
+		"animeId": "SINGLE_ARROW.thunder",
+		"damageType": "MAGIC",
+		"effect": [
+			"THUNDER",
+			"UPPER",
+			"HIT_4"
+		],
+		"energyCost": 0,
+		"energyType": "NONE",
+		"id": "waza_087",
+		"image": "waza_magic.png",
+		"label": "雷鳥",
+		"labelColor": "YELLOW",
+		"name": "サンダーバード",
+		"targetType": "LONG_2"
+	},
+	{
+		"animeId": "SINGLE.slash_yellow",
+		"damageType": "SWORD",
+		"effect": [
+			"FIRE",
+			"ICE",
+			"THUNDER",
+			"COUNTER_ABLE"
+		],
+		"energyCost": 2,
+		"energyType": "MST",
+		"id": "waza_088",
+		"image": "waza_sword.png",
+		"label": "氷雷火",
+		"labelColor": "SKY",
+		"name": "マジカルソード",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SOME_ARROW.arrow_blue",
+		"damageType": "MAGIC",
+		"effect": [
+			"WET",
+			"HICHU",
+			"TAME"
+		],
+		"energyCost": 2,
+		"energyType": "MST",
+		"id": "waza_089",
+		"image": "waza_magic.png",
+		"label": "津波",
+		"labelColor": "BLUE",
+		"name": "タイダルウエイブ",
+		"targetType": "ALL_3"
+	},
+	{
+		"animeId": "SINGLE_ARROW.spear_blue",
+		"damageType": "SWORD",
+		"effect": [
+			"COUNTER_ABLE",
+			"COMBO",
+			"WET",
+			"MIZU_100"
+		],
+		"energyCost": 0,
+		"energyType": "MST",
+		"id": "waza_090",
+		"image": "waza_spear.png",
+		"label": "海槍",
+		"labelColor": "BLUE",
+		"name": "海神の槍",
+		"targetType": "SINGLE_2"
+	},
+	{
+		"animeId": "SINGLE.slash",
+		"damageType": "SWORD",
+		"effect": [
+			"HICHU",
+			"DEATH",
+			"RIKU_150"
+		],
+		"energyCost": 2,
+		"energyType": "MST",
+		"id": "waza_091",
+		"image": "waza_sword.png",
+		"label": "魂狩",
+		"labelColor": "YELLOW",
+		"name": "ソウルスティール",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SINGLE.expr_yellow",
+		"damageType": "SWORD",
+		"effect": [
+			"COUNTER_ABLE",
+			"DAMAGE_300",
+			"MISS_4"
+		],
+		"energyCost": 8,
+		"energyType": "STR",
+		"id": "waza_092",
+		"image": "waza_body.png",
+		"label": "爆熱拳",
+		"labelColor": "YELLOW",
+		"name": "ゴッドフィンガー",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SINGLE_ARROW.thunder",
+		"damageType": "SWORD",
+		"effect": [
+			"COUNTER_ABLE",
+			"THUNDER"
+		],
+		"energyCost": 0,
+		"energyType": "NONE",
+		"id": "waza_093",
+		"image": "waza_body.png",
+		"label": "感電",
+		"labelColor": "YELLOW",
+		"name": "エレキアタック",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SINGLE_ARROW.arrow",
+		"damageType": "SWORD",
+		"effect": [
+			"COUNTER_ABLE",
+			"COMBO",
+			"SORA_200"
+		],
+		"energyCost": 0,
+		"energyType": "NONE",
+		"id": "waza_094",
+		"image": "waza_bow.png",
+		"label": "森弓",
+		"labelColor": "GREEN",
+		"name": "森人の弓",
+		"targetType": "LONG_3"
+	},
+	{
+		"animeId": "SINGLE_ARROW.arrow",
+		"damageType": "SWORD",
+		"effect": [
+			"COUNTER_ABLE",
+			"COMBO",
+			"SORA_200",
+			"HIT_12"
+		],
+		"energyCost": 2,
+		"energyType": "STR",
+		"id": "waza_095",
+		"image": "waza_bow.png",
+		"label": "連弾",
+		"labelColor": "GREEN",
+		"name": "ツインショット",
+		"targetType": "LONG_2"
+	},
+	{
+		"animeId": "ALL.turu",
+		"damageType": "SWORD",
+		"effect": [
+			"POISON",
+			"OIL",
+			"RIKU_0",
+			"TAME"
+		],
+		"energyCost": 2,
+		"energyType": "STR",
+		"id": "waza_096",
+		"image": "waza_body.png",
+		"label": "毒蔓",
+		"labelColor": "GREEN",
+		"name": "マッドバイン",
+		"targetType": "ALL_2"
+	},
+	{
+		"animeId": "SINGLE.turu",
+		"damageType": "MAGIC",
+		"effect": [
+			"COMBO",
+			"CRITICAL",
+			"WET",
+			"CHARM",
+			"POISON"
+		],
+		"energyCost": 0,
+		"energyType": "NONE",
+		"id": "waza_097",
+		"image": "waza_body.png",
+		"label": "芋づる",
+		"labelColor": "GREEN",
+		"name": "芋づる",
+		"targetType": "LONG_2"
+	},
+	{
+		"animeId": "SINGLE.slash_yellow",
+		"damageType": "SWORD",
+		"effect": [
+			"COMBO",
+			"HIT_12",
+			"HIT_4",
+			"THUNDER",
+			"COUNTER_ABLE"
+		],
+		"energyCost": 3,
+		"energyType": "STR",
+		"id": "waza_098",
+		"image": "waza_knife.png",
+		"label": "三連殺",
+		"labelColor": "YELLOW",
+		"name": "三連殺",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SINGLE.slash_red",
+		"damageType": "MAGIC_ALL",
+		"effect": [
+			"FIRE",
+			"HICHU",
+			"COUNTER_ABLE"
+		],
+		"energyCost": 4,
+		"energyType": "MST",
+		"id": "waza_099",
+		"image": "waza_sword.png",
+		"label": "炎殺剣",
+		"labelColor": "RED",
+		"name": "炎殺剣",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "ALL.fire_big",
+		"damageType": "MAGIC",
+		"effect": [
+			"FIRE",
+			"HICHU"
+		],
+		"energyCost": 4,
+		"energyType": "MST",
+		"id": "waza_100",
+		"image": "waza_magic.png",
+		"label": "灼熱",
+		"labelColor": "RED",
+		"name": "クリムゾンフレア",
+		"targetType": "RING_3"
+	},
+	{
+		"animeId": "ALL.expr_blue",
+		"damageType": "MAGIC",
+		"effect": [
+			"MIZU_100",
+			"HICHU",
+			"ICE"
+		],
+		"energyCost": 4,
+		"energyType": "MST",
+		"id": "waza_101",
+		"image": "waza_magic.png",
+		"label": "氷塵",
+		"labelColor": "BLUE",
+		"name": "ダイアモンドダスト",
+		"targetType": "ALL_3"
+	},
+	{
+		"animeId": "SINGLE.slash_yellow",
+		"damageType": "MAGIC",
+		"effect": [
+			"COUNTER_ONLY",
+			"HICHU"
+		],
+		"energyCost": 1,
+		"energyType": "MST",
+		"id": "waza_102",
+		"image": "waza_magic.png",
+		"label": "反射",
+		"labelColor": "YELLOW",
+		"name": "リフレクト",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SINGLE.magic_blue",
+		"damageType": "NONE",
+		"effect": [
+			"UPPER",
+			"NO_ATTACK",
+			"HEAL",
+			"HICHU"
+		],
+		"energyCost": 2,
+		"energyType": "MST",
+		"id": "waza_103",
+		"image": "waza_magic.png",
+		"label": "浮遊",
+		"labelColor": "SKY",
+		"name": "レビテーション",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SINGLE.slash",
+		"damageType": "SWORD",
+		"effect": [
+			"COUNTER_ABLE",
+			"UNDEAD_200",
+			"DAMAGE_200"
+		],
+		"energyCost": 2,
+		"energyType": "STR",
+		"id": "waza_104",
+		"image": "waza_ax.png",
+		"label": "聖光斬",
+		"labelColor": "SKY",
+		"name": "ライトブリンガー",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SINGLE.slash_yellow",
+		"damageType": "SWORD_ALL",
+		"effect": [],
+		"energyCost": 8,
+		"energyType": "STR",
+		"id": "waza_105",
+		"image": "waza_sword.png",
+		"label": "真竜斬",
+		"labelColor": "YELLOW",
+		"name": "真竜斬り",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "ALL.magic_blue",
+		"damageType": "NONE",
+		"effect": [
+			"HICHU",
+			"CHARM",
+			"SLEEP",
+			"NO_ATTACK"
+		],
+		"energyCost": 4,
+		"energyType": "MST",
+		"id": "waza_106",
+		"image": "waza_magic.png",
+		"label": "淫夢",
+		"labelColor": "RED",
+		"name": "チャームフラッシュ",
+		"targetType": "RING_3"
+	},
+	{
+		"animeId": "SINGLE_ARROW.arrow_ice",
+		"damageType": "MAGIC",
+		"effect": [
+			"DAMAGE_150",
+			"MIZU_100",
+			"HIT_4",
+			"UPPER"
+		],
+		"energyCost": 1,
+		"energyType": "MST",
+		"id": "waza_107",
+		"image": "waza_magic.png",
+		"label": "魔法弾",
+		"labelColor": "SKY",
+		"name": "マジックミサイル",
+		"targetType": "LONG_2"
+	},
+	{
+		"animeId": "SOME_ARROW.thunder",
+		"damageType": "MAGIC",
+		"effect": [
+			"THUNDER",
+			"HICHU",
+			"TAME"
+		],
+		"energyCost": 2,
+		"energyType": "MST",
+		"id": "waza_108",
+		"image": "waza_magic.png",
+		"label": "波動",
+		"labelColor": "YELLOW",
+		"name": "ケイオスウエイブ",
+		"targetType": "ALL_4"
+	},
+	{
+		"animeId": "SINGLE.turu",
+		"damageType": "MAGIC_ALL",
+		"effect": [
+			"HEAL",
+			"HICHU",
+			"TAME",
+			"NONE",
+			"NONE"
+		],
+		"energyCost": 1,
+		"energyType": "MST",
+		"id": "waza_109",
+		"image": "waza_magic.png",
+		"label": "再生",
+		"labelColor": "SKY",
+		"name": "リジェネレーション",
+		"targetType": "ALL_4"
+	},
+	{
+		"animeId": "SINGLE.slash_red",
+		"damageType": "SWORD",
+		"effect": [
+			"COUNTER_ABLE",
+			"FIRE"
+		],
+		"energyCost": 0,
+		"energyType": "NONE",
+		"id": "waza_110",
+		"image": "waza_body.png",
+		"label": "炎撃",
+		"labelColor": "RED",
+		"name": "フレイムタックル",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SINGLE.ice",
+		"damageType": "SWORD",
+		"effect": [
+			"COUNTER_ABLE",
+			"ICE"
+		],
+		"energyCost": 0,
+		"energyType": "NONE",
+		"id": "waza_111",
+		"image": "waza_body.png",
+		"label": "氷撃",
+		"labelColor": "BLUE",
+		"name": "アイスタックル",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "ALL.magic_blue",
+		"damageType": "NONE",
+		"effect": [
+			"GUARD_UP",
+			"NO_ATTACK",
+			"HEAL",
+			"HICHU"
+		],
+		"energyCost": 3,
+		"energyType": "MST",
+		"id": "waza_112",
+		"image": "waza_magic.png",
+		"label": "水壁",
+		"labelColor": "BLUE",
+		"name": "アクアプリズン",
+		"targetType": "ALL_2"
+	},
+	{
+		"animeId": "LASER_ARROW_3.arrow_blue",
+		"damageType": "SWORD",
+		"effect": [
+			"WET",
+			"DAMAGE_200",
+			"MIZU_0",
+			"MIZU_100"
+		],
+		"energyCost": 2,
+		"energyType": "STR",
+		"id": "waza_113",
+		"image": "waza_spear.png",
+		"label": "海波斬",
+		"labelColor": "BLUE",
+		"name": "海波斬",
+		"targetType": "LASER_3"
+	},
+	{
+		"animeId": "SINGLE.ice",
+		"damageType": "SWORD",
+		"effect": [
+			"COUNTER_ABLE",
+			"COMBO",
+			"UPPER",
+			"SORA_200"
+		],
+		"energyCost": 0,
+		"energyType": "NONE",
+		"id": "waza_114",
+		"image": "waza_body.png",
+		"label": "音速弾",
+		"labelColor": "SKY",
+		"name": "音速弾",
+		"targetType": "SINGLE_2"
+	},
+	{
+		"animeId": "SOME_ARROW.thunder",
+		"damageType": "MAGIC",
+		"effect": [
+			"THUNDER",
+			"TAME",
+			"DAMAGE_200"
+		],
+		"energyCost": 4,
+		"energyType": "MST",
+		"id": "waza_115",
+		"image": "waza_magic.png",
+		"label": "雷嵐",
+		"labelColor": "YELLOW",
+		"name": "サンダーストーム",
+		"targetType": "ALL_2"
+	},
+	{
+		"animeId": "SINGLE_ARROW.spear_blue",
+		"damageType": "MAGIC",
+		"effect": [
+			"COUNTER_ABLE",
+			"COMBO",
+			"MIZU_100",
+			"UNDEAD_200"
+		],
+		"energyCost": 0,
+		"energyType": "NONE",
+		"id": "waza_116",
+		"image": "waza_spear.png",
+		"label": "聖槍",
+		"labelColor": "SKY",
+		"name": "ホーリーランス",
+		"targetType": "SINGLE_2"
+	},
+	{
+		"animeId": "SINGLE.ice",
+		"damageType": "SWORD",
+		"effect": [
+			"COUNTER_ABLE",
+			"POISON",
+			"CRITICAL"
+		],
+		"energyCost": 0,
+		"energyType": "NONE",
+		"id": "waza_117",
+		"image": "waza_knife.png",
+		"label": "猛毒",
+		"labelColor": "GREEN",
+		"name": "必殺針",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SOME_ARROW.refresh",
+		"damageType": "MAGIC",
+		"effect": [
+			"POISON",
+			"HICHU"
+		],
+		"energyCost": 4,
+		"energyType": "MST",
+		"id": "waza_118",
+		"image": "waza_magic.png",
+		"label": "毒嵐",
+		"labelColor": "GREEN",
+		"name": "ポイズンストーム",
+		"targetType": "ALL_2"
+	},
+	{
+		"animeId": "ALL.girotin",
+		"damageType": "SWORD",
+		"effect": [
+			"DAMAGE_150",
+			"HICHU",
+			"DEATH",
+			"TAME"
+		],
+		"energyCost": 2,
+		"energyType": "MST",
+		"id": "waza_119",
+		"image": "waza_spear.png",
+		"label": "終焉",
+		"labelColor": "RED",
+		"name": "デッドエンド",
+		"targetType": "SQUARE_1"
+	},
+	{
+		"animeId": "SINGLE.slash",
+		"damageType": "SWORD",
+		"effect": [
+			"COUNTER_ABLE",
+			"COMBO",
+			"CHARM"
+		],
+		"energyCost": 1,
+		"energyType": "STR",
+		"id": "waza_120",
+		"image": "waza_sword.png",
+		"label": "誘惑",
+		"labelColor": "RED",
+		"name": "誘惑の剣",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "ALL.slash",
+		"damageType": "SWORD",
+		"effect": [
+			"SORA_200",
+			"CHOP",
+			"HIT_4"
+		],
+		"energyCost": 1,
+		"energyType": "STR",
+		"id": "waza_121",
+		"image": "waza_sword.png",
+		"label": "空裂斬",
+		"labelColor": "SKY",
+		"name": "空裂斬",
+		"targetType": "HLINE"
+	},
+	{
+		"animeId": "SOME_ARROW.arrow_ice",
+		"damageType": "MAGIC",
+		"effect": [
+			"HICHU",
+			"ICE"
+		],
+		"energyCost": 1,
+		"energyType": "MST",
+		"id": "waza_122",
+		"image": "waza_breath.png",
+		"label": "氷息",
+		"labelColor": "BLUE",
+		"name": "アイスブレス",
+		"targetType": "BREATH"
+	},
+	{
+		"animeId": "SINGLE.slash_yellow",
+		"damageType": "SWORD",
+		"effect": [
+			"COUNTER_ABLE",
+			"COMBO",
+			"DRAGON_200",
+			"DAMAGE_150"
+		],
+		"energyCost": 1,
+		"energyType": "STR",
+		"id": "waza_123",
+		"image": "waza_sword.png",
+		"label": "竜斬り",
+		"labelColor": "YELLOW",
+		"name": "竜斬り",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "ALL.slash_yellow",
+		"damageType": "MAGIC",
+		"effect": [
+			"TAME",
+			"HICHU",
+			"DAMAGE_200",
+			"UNDEAD_200"
+		],
+		"energyCost": 2,
+		"energyType": "MST",
+		"id": "waza_124",
+		"image": "waza_magic.png",
+		"label": "星屑",
+		"labelColor": "YELLOW",
+		"name": "スターティアラ",
+		"targetType": "RING_2"
+	},
+	{
+		"animeId": "SINGLE_ARROW.arrow_fire",
+		"damageType": "SWORD",
+		"effect": [
+			"FIRE",
+			"SORA_200",
+			"COUNTER_ABLE",
+			"COMBO"
+		],
+		"energyCost": 0,
+		"energyType": "NONE",
+		"id": "waza_125",
+		"image": "waza_bow.png",
+		"label": "炎矢",
+		"labelColor": "RED",
+		"name": "ファイヤーアロー",
+		"targetType": "LONG_2"
+	},
+	{
+		"animeId": "ALL.thunder",
+		"damageType": "MAGIC",
+		"effect": [
+			"THUNDER",
+			"DAMAGE_150"
+		],
+		"energyCost": 1,
+		"energyType": "MST",
+		"id": "waza_126",
+		"image": "waza_magic.png",
+		"label": "雷電",
+		"labelColor": "YELLOW",
+		"name": "サンダーフレア",
+		"targetType": "ALL_1"
+	},
+	{
+		"animeId": "SINGLE.slash_fast",
+		"damageType": "SWORD",
+		"effect": [
+			"COUNTER_ABLE",
+			"COMBO",
+			"HIT_12"
+		],
+		"energyCost": 2,
+		"energyType": "HIT",
+		"id": "waza_127",
+		"image": "waza_knife.png",
+		"label": "連撃",
+		"labelColor": "SKY",
+		"name": "ダブルヒット",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SINGLE_ARROW.spear_blue",
+		"damageType": "SWORD",
+		"effect": [
+			"COMBO",
+			"HIT_4",
+			"COUNTER_ABLE",
+			"SORA_200"
+		],
+		"energyCost": 0,
+		"energyType": "NONE",
+		"id": "waza_128",
+		"image": "waza_knife.png",
+		"label": "飛苦無",
+		"labelColor": "YELLOW",
+		"name": "飛苦無",
+		"targetType": "LONG_2"
+	},
+	{
+		"animeId": "SINGLE.slash",
+		"damageType": "SWORD",
+		"effect": [
+			"COUNTER_ABLE",
+			"COMBO",
+			"CRITICAL",
+			"CHARM",
+			"UNDEAD_200"
+		],
+		"energyCost": 2,
+		"energyType": "STR",
+		"id": "waza_129",
+		"image": "waza_sword.png",
+		"label": "聖剣",
+		"labelColor": "SKY",
+		"name": "エクスカリバー",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "ALL.girotin",
+		"damageType": "MAGIC",
+		"effect": [
+			"TAME",
+			"HICHU",
+			"DEATH",
+			"SLEEP"
+		],
+		"energyCost": 4,
+		"energyType": "MST",
+		"id": "waza_130",
+		"image": "waza_magic.png",
+		"label": "終焉",
+		"labelColor": "RED",
+		"name": "カラミティエンド",
+		"targetType": "ALL_3"
+	},
+	{
+		"animeId": "ALL.fire",
+		"damageType": "NONE",
+		"effect": [
+			"ATTACK_UP",
+			"NO_ATTACK",
+			"HEAL",
+			"HICHU"
+		],
+		"energyCost": 3,
+		"energyType": "MST",
+		"id": "waza_131",
+		"image": "waza_body.png",
+		"label": "熱血",
+		"labelColor": "RED",
+		"name": "バーニング",
+		"targetType": "ALL_1"
+	},
+	{
+		"animeId": "SOME_ARROW.arrow_green",
+		"damageType": "MAGIC",
+		"effect": [
+			"OIL"
+		],
+		"energyCost": 2,
+		"energyType": "MST",
+		"id": "waza_132",
+		"image": "waza_bow.png",
+		"label": "乱油",
+		"labelColor": "GREEN",
+		"name": "みだれ油",
+		"targetType": "RING_2"
+	},
+	{
+		"animeId": "SINGLE.slash",
+		"damageType": "SWORD",
+		"effect": [
+			"DAMAGE_150",
+			"MISS_4",
+			"COUNTER_ABLE"
+		],
+		"energyCost": 1,
+		"energyType": "HIT",
+		"id": "waza_133",
+		"image": "waza_sword.png",
+		"label": "芋切",
+		"labelColor": "GREEN",
+		"name": "芋切り",
+		"targetType": "SINGLE_1"
+	},
+	{
+		"animeId": "SINGLE_ARROW.spear_blue",
+		"damageType": "MAGIC",
+		"effect": [
+			"HIT_4"
+		],
+		"energyCost": 1,
+		"energyType": "MST",
+		"id": "waza_134",
+		"image": "waza_magic.png",
+		"label": "誘導弾",
+		"labelColor": "SKY",
+		"name": "誘導弾",
+		"targetType": "LONG_2"
+	}
+]

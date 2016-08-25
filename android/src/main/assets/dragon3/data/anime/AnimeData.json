@@ -1,0 +1,418 @@
+[
+	{
+		"anime": [0],
+		"id": "NONE.none",
+		"image": "none.png",
+		"name": "無.none",
+		"sleep": 50,
+		"type": "NONE"
+	},
+	{
+		"anime": [45, 46, 47, 48, 0],
+		"id": "SINGLE.slash",
+		"image": "anime_slash.png",
+		"name": "単体.普通斬り",
+		"sleep": 50,
+		"type": "SINGLE"
+	},
+	{
+		"anime": [90, 91, 92, 93, 0],
+		"id": "SINGLE.press_green",
+		"image": "anime_press_green.png",
+		"name": "単体.斧",
+		"sleep": 50,
+		"type": "SINGLE"
+	},
+	{
+		"anime": [54, 55, 56, 57, 58, 59, 0],
+		"id": "SINGLE.ice",
+		"image": "anime_ice.png",
+		"name": "単体.氷結",
+		"sleep": 50,
+		"type": "SINGLE"
+	},
+	{
+		"anime": [80],
+		"id": "SINGLE_ARROW.spear_blue",
+		"image": "anime_spear_blue.png",
+		"name": "一人矢.普通槍",
+		"sleep": 15,
+		"type": "SINGLE_ARROW"
+	},
+	{
+		"anime": [86, 87],
+		"id": "SINGLE_ARROW.arrow",
+		"image": "anime_arrow.png",
+		"name": "一人矢.普通矢",
+		"sleep": 15,
+		"type": "SINGLE_ARROW"
+	},
+	{
+		"anime": [64, 65, 66, 67, 0],
+		"id": "SINGLE.magic_blue",
+		"image": "anime_magic_blue.png",
+		"name": "単体.魔法",
+		"sleep": 60,
+		"type": "SINGLE"
+	},
+	{
+		"anime": [84, 85],
+		"id": "SOME_ARROW.arrow_green",
+		"image": "anime_arrow_green.png",
+		"name": "複数矢.ブレス",
+		"sleep": 15,
+		"type": "SOME_ARROW"
+	},
+	{
+		"anime": [113, 114, 115, 116, 0],
+		"id": "SINGLE.slash_upper",
+		"image": "anime_slash_upper.png",
+		"name": "単体.切上げ",
+		"sleep": 50,
+		"type": "SINGLE"
+	},
+	{
+		"anime": [64, 65, 66, 67, 0],
+		"id": "ALL.magic_blue",
+		"image": "anime_magic_blue.png",
+		"name": "全体.魔法",
+		"sleep": 60,
+		"type": "ALL"
+	},
+	{
+		"anime": [82, 83],
+		"id": "LASER_ARROW_3.arrow_blue",
+		"image": "anime_arrow_blue.png",
+		"name": "貫通矢３.水矢",
+		"sleep": 15,
+		"type": "LASER_ARROW_3"
+	},
+	{
+		"anime": [54, 55, 56, 57, 58, 59, 0],
+		"id": "ALL.ice",
+		"image": "anime_ice.png",
+		"name": "全体.氷結",
+		"sleep": 50,
+		"type": "ALL"
+	},
+	{
+		"anime": [60, 61, 62, 63, 0],
+		"id": "SINGLE.slash_red",
+		"image": "anime_slash_red.png",
+		"name": "単体.火斬り",
+		"sleep": 50,
+		"type": "SINGLE"
+	},
+	{
+		"anime": [72, 73, 74],
+		"id": "SOME_ARROW.arrow_fire",
+		"image": "anime_arrow_fire.png",
+		"name": "複数矢.火炎矢",
+		"sleep": 30,
+		"type": "SOME_ARROW"
+	},
+	{
+		"anime": [105, 106, 107, 108, 0],
+		"id": "SINGLE.refresh",
+		"image": "anime_refresh.png",
+		"name": "単体.直斬り",
+		"sleep": 50,
+		"type": "SINGLE"
+	},
+	{
+		"anime": [98, 99, 100, 101, 0],
+		"id": "SINGLE.slash_blue",
+		"image": "anime_slash_blue.png",
+		"name": "単体.氷斬り",
+		"sleep": 50,
+		"type": "SINGLE"
+	},
+	{
+		"anime": [88, 89],
+		"id": "SINGLE_ARROW.arrow_thunder",
+		"image": "anime_arrow_thunder.png",
+		"name": "一人矢.雷矢",
+		"sleep": 20,
+		"type": "SINGLE_ARROW"
+	},
+	{
+		"anime": [80],
+		"id": "LASER_ARROW_2.spear_blue",
+		"image": "anime_spear_blue.png",
+		"name": "貫通矢２.普通槍",
+		"sleep": 15,
+		"type": "LASER_ARROW_2"
+	},
+	{
+		"anime": [49, 50, 51, 52, 53, 0],
+		"id": "SINGLE.fire",
+		"image": "anime_fire.png",
+		"name": "単体.火炎",
+		"sleep": 70,
+		"type": "SINGLE"
+	},
+	{
+		"anime": [68, 69, 70, 71, 0],
+		"id": "SINGLE.slash_yellow",
+		"image": "anime_slash_yellow.png",
+		"name": "単体.雷斬り",
+		"sleep": 50,
+		"type": "SINGLE"
+	},
+	{
+		"anime": [49, 50, 51, 52, 53, 0],
+		"id": "ALL.fire",
+		"image": "anime_fire.png",
+		"name": "全体.火炎",
+		"sleep": 70,
+		"type": "ALL"
+	},
+	{
+		"anime": [55, 56, 57],
+		"id": "SINGLE_ARROW.arrow_ice",
+		"image": "anime_arrow_ice.png",
+		"name": "一人矢.氷結矢",
+		"sleep": 15,
+		"type": "SINGLE_ARROW"
+	},
+	{
+		"anime": [86, 87],
+		"id": "LASER_ARROW_3.arrow",
+		"image": "anime_arrow.png",
+		"name": "貫通矢３.普通矢",
+		"sleep": 15,
+		"type": "LASER_ARROW_3"
+	},
+	{
+		"anime": [109, 110, 111, 112, 0],
+		"id": "SINGLE.girotin",
+		"image": "anime_girotin.png",
+		"name": "単体.ギロチン",
+		"sleep": 70,
+		"type": "SINGLE"
+	},
+	{
+		"anime": [81, 83],
+		"id": "ROTATE.roll_blue",
+		"image": "anime_roll_blue.png",
+		"name": "回転.回転",
+		"sleep": 20,
+		"type": "ROTATE"
+	},
+	{
+		"anime": [105, 106, 107, 108, 0],
+		"id": "ALL.refresh",
+		"image": "anime_refresh.png",
+		"name": "全体.直斬り",
+		"sleep": 50,
+		"type": "ALL"
+	},
+	{
+		"anime": [128, 129, 130, 131, 0],
+		"id": "SINGLE.thunder",
+		"image": "anime_thunder.png",
+		"name": "単体.電撃",
+		"sleep": 30,
+		"type": "SINGLE"
+	},
+	{
+		"anime": [105, 106, 107, 108, 0],
+		"id": "SINGLE_ARROW.refresh",
+		"image": "anime_refresh.png",
+		"name": "一人矢.直斬り",
+		"sleep": 50,
+		"type": "SINGLE_ARROW"
+	},
+	{
+		"anime": [94, 95, 96, 97, 0],
+		"id": "SINGLE.press_blue",
+		"image": "anime_press_blue.png",
+		"name": "単体.水圧",
+		"sleep": 50,
+		"type": "SINGLE"
+	},
+	{
+		"anime": [135, 136, 137, 138, 139, 140, 141, 142, 0],
+		"id": "ALL.expr_blue",
+		"image": "anime_expr_blue.png",
+		"name": "全体.大氷結",
+		"sleep": 50,
+		"type": "ALL"
+	},
+	{
+		"anime": [109, 110, 111, 112, 0],
+		"id": "ALL.girotin",
+		"image": "anime_girotin.png",
+		"name": "全体.ギロチン",
+		"sleep": 70,
+		"type": "ALL"
+	},
+	{
+		"anime": [105, 106, 107, 108, 0],
+		"id": "SOME_ARROW.refresh",
+		"image": "anime_refresh.png",
+		"name": "複数矢.直斬り",
+		"sleep": 50,
+		"type": "SOME_ARROW"
+	},
+	{
+		"anime": [84, 85],
+		"id": "SINGLE_ARROW.arrow_green",
+		"image": "anime_arrow_green.png",
+		"name": "一人矢.ブレス",
+		"sleep": 15,
+		"type": "SINGLE_ARROW"
+	},
+	{
+		"anime": [120, 121, 122, 123, 124, 125, 126, 127, 0],
+		"id": "SINGLE.fire_big",
+		"image": "anime_fire_big.png",
+		"name": "単体.大火炎",
+		"sleep": 70,
+		"type": "SINGLE"
+	},
+	{
+		"anime": [135, 136, 137, 138, 139, 140, 141, 142, 0],
+		"id": "SINGLE.expr_blue",
+		"image": "anime_expr_blue.png",
+		"name": "単体.大氷結",
+		"sleep": 50,
+		"type": "SINGLE"
+	},
+	{
+		"anime": [128, 129, 130, 131, 0],
+		"id": "SOME_ARROW.thunder",
+		"image": "anime_thunder.png",
+		"name": "複数矢.電撃",
+		"sleep": 30,
+		"type": "SOME_ARROW"
+	},
+	{
+		"anime": [72, 73, 74],
+		"id": "LASER_ARROW_3.arrow_fire",
+		"image": "anime_arrow_fire.png",
+		"name": "貫通矢３.火炎矢",
+		"sleep": 30,
+		"type": "LASER_ARROW_3"
+	},
+	{
+		"anime": [88, 89],
+		"id": "LASER_ARROW_3.arrow_thunder",
+		"image": "anime_arrow_thunder.png",
+		"name": "貫通矢３.雷矢",
+		"sleep": 20,
+		"type": "LASER_ARROW_3"
+	},
+	{
+		"anime": [55, 56, 57],
+		"id": "LASER_ARROW_3.arrow_ice",
+		"image": "anime_arrow_ice.png",
+		"name": "貫通矢３.氷結矢",
+		"sleep": 15,
+		"type": "LASER_ARROW_3"
+	},
+	{
+		"anime": [143, 144, 145, 146, 146, 145, 144, 143, 0],
+		"id": "SINGLE.turu",
+		"image": "anime_turu.png",
+		"name": "単体.芋づる",
+		"sleep": 70,
+		"type": "SINGLE"
+	},
+	{
+		"anime": [82, 83],
+		"id": "SINGLE_ARROW.arrow_blue",
+		"image": "anime_arrow_blue.png",
+		"name": "一人矢.水矢",
+		"sleep": 15,
+		"type": "SINGLE_ARROW"
+	},
+	{
+		"anime": [128, 129, 130, 131, 0],
+		"id": "SINGLE_ARROW.thunder",
+		"image": "anime_thunder.png",
+		"name": "一人矢.電撃",
+		"sleep": 30,
+		"type": "SINGLE_ARROW"
+	},
+	{
+		"anime": [82, 83],
+		"id": "SOME_ARROW.arrow_blue",
+		"image": "anime_arrow_blue.png",
+		"name": "複数矢.水矢",
+		"sleep": 15,
+		"type": "SOME_ARROW"
+	},
+	{
+		"anime": [150, 151, 152, 153, 154, 155, 156, 157, 0],
+		"id": "SINGLE.expr_yellow",
+		"image": "anime_expr_yellow.png",
+		"name": "単体.爆熱拳",
+		"sleep": 50,
+		"type": "SINGLE"
+	},
+	{
+		"anime": [143, 144, 145, 146, 146, 145, 144, 143, 0],
+		"id": "ALL.turu",
+		"image": "anime_turu.png",
+		"name": "全体.芋づる",
+		"sleep": 70,
+		"type": "ALL"
+	},
+	{
+		"anime": [120, 121, 122, 123, 124, 125, 126, 127, 0],
+		"id": "ALL.fire_big",
+		"image": "anime_fire_big.png",
+		"name": "全体.大火炎",
+		"sleep": 70,
+		"type": "ALL"
+	},
+	{
+		"anime": [45, 46, 47, 48, 0],
+		"id": "ALL.slash",
+		"image": "anime_slash.png",
+		"name": "全体.普通斬り",
+		"sleep": 50,
+		"type": "ALL"
+	},
+	{
+		"anime": [55, 56, 57],
+		"id": "SOME_ARROW.arrow_ice",
+		"image": "anime_arrow_ice.png",
+		"name": "複数矢.氷結矢",
+		"sleep": 15,
+		"type": "SOME_ARROW"
+	},
+	{
+		"anime": [68, 69, 70, 71, 0],
+		"id": "ALL.slash_yellow",
+		"image": "anime_slash_yellow.png",
+		"name": "全体.雷斬り",
+		"sleep": 50,
+		"type": "ALL"
+	},
+	{
+		"anime": [72, 73, 74],
+		"id": "SINGLE_ARROW.arrow_fire",
+		"image": "anime_arrow_fire.png",
+		"name": "一人矢.火炎矢",
+		"sleep": 30,
+		"type": "SINGLE_ARROW"
+	},
+	{
+		"anime": [128, 129, 130, 131, 0],
+		"id": "ALL.thunder",
+		"image": "anime_thunder.png",
+		"name": "全体.電撃",
+		"sleep": 30,
+		"type": "ALL"
+	},
+	{
+		"anime": [45, 46, 47, 48, 0],
+		"id": "SINGLE.slash_fast",
+		"image": "anime_slash.png",
+		"name": "単体.早斬り",
+		"sleep": 25,
+		"type": "SINGLE"
+	}
+]

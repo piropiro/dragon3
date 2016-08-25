@@ -1,0 +1,182 @@
+[
+	{
+		"back": "GRASS",
+		"id": "D01",
+		"level": 1,
+		"name": "Tutorial"
+	},
+	{
+		"back": "SAND",
+		"id": "D02",
+		"level": 1,
+		"name": "Starge A"
+	},
+	{
+		"back": "WHITE",
+		"id": "D03",
+		"level": 2,
+		"name": "Starge B"
+	},
+	{
+		"back": "WHITE",
+		"id": "D04",
+		"level": 2,
+		"name": "Starge C"
+	},
+	{
+		"back": "WHITE",
+		"id": "D05",
+		"level": 2,
+		"name": "Starge D"
+	},
+	{
+		"back": "WHITE",
+		"id": "D06",
+		"level": 3,
+		"name": "Starge E"
+	},
+	{
+		"back": "WHITE",
+		"id": "D07",
+		"level": 3,
+		"name": "Starge F"
+	},
+	{
+		"back": "WHITE",
+		"id": "D08",
+		"level": 3,
+		"name": "Starge G"
+	},
+	{
+		"back": "WHITE",
+		"id": "D09",
+		"level": 4,
+		"name": "Starge H"
+	},
+	{
+		"back": "WHITE",
+		"id": "D10",
+		"level": 4,
+		"name": "Starge I"
+	},
+	{
+		"back": "WHITE",
+		"id": "D11",
+		"level": 4,
+		"name": "Starge J"
+	},
+	{
+		"back": "WHITE",
+		"id": "D12",
+		"level": 5,
+		"name": "Starge K"
+	},
+	{
+		"back": "WHITE",
+		"id": "D13",
+		"level": 5,
+		"name": "Starge L"
+	},
+	{
+		"back": "WHITE",
+		"id": "D14",
+		"level": 5,
+		"name": "Starge M"
+	},
+	{
+		"back": "WHITE",
+		"id": "D15",
+		"level": 6,
+		"name": "Starge N"
+	},
+	{
+		"back": "WHITE",
+		"id": "D16",
+		"level": 6,
+		"name": "Starge O"
+	},
+	{
+		"back": "WHITE",
+		"id": "D17",
+		"level": 6,
+		"name": "Starge P"
+	},
+	{
+		"back": "WHITE",
+		"id": "D18",
+		"level": 7,
+		"name": "Starge Q"
+	},
+	{
+		"back": "WHITE",
+		"id": "D19",
+		"level": 7,
+		"name": "Starge R"
+	},
+	{
+		"back": "WHITE",
+		"id": "D20",
+		"level": 7,
+		"name": "Starge S"
+	},
+	{
+		"back": "WHITE",
+		"id": "D21",
+		"level": 8,
+		"name": "Starge T"
+	},
+	{
+		"back": "WHITE",
+		"id": "D22",
+		"level": 8,
+		"name": "Starge U"
+	},
+	{
+		"back": "WHITE",
+		"id": "D23",
+		"level": 8,
+		"name": "Starge V"
+	},
+	{
+		"back": "WHITE",
+		"id": "D24",
+		"level": 9,
+		"name": "Starge W"
+	},
+	{
+		"back": "WHITE",
+		"id": "D25",
+		"level": 9,
+		"name": "Starge X"
+	},
+	{
+		"back": "WHITE",
+		"id": "D26",
+		"level": 9,
+		"name": "Starge Y"
+	},
+	{
+		"back": "WHITE",
+		"id": "D27",
+		"level": 10,
+		"name": "Starge Z"
+	},
+	{
+		"back": "WHITE",
+		"id": "D28",
+		"level": 10,
+		"name": "Extra Stage 1"
+	},
+	{
+		"back": "WHITE",
+		"id": "D29",
+		"level": 10,
+		"name": "Extra Stage 2"
+	},
+	{
+		"back": "WHITE",
+		"id": "D30",
+		"level": 11,
+		"name": "Extra Stage 3"
+	}
+]

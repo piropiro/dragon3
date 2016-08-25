@@ -1,0 +1,740 @@
+[
+	{
+		"armorType": "NONE",
+		"attrList": [
+			"ANTI_POISON"
+		],
+		"def": 4,
+		"hit": 4,
+		"hp": 2,
+		"id": "item_001",
+		"image": "chara_135.png",
+		"kind": "ITEM",
+		"mdf": 4,
+		"mis": 0,
+		"moveStep": 0,
+		"moveType": "NONE",
+		"mst": 0,
+		"name": "ガントレット",
+		"soulType": "NONE",
+		"str": 4,
+		"wazaList": [
+			"waza_068",
+			"none",
+			"none",
+			"none",
+			"none",
+			"none"
+		],
+		"weponType": "NONE"
+	},
+	{
+		"armorType": "NONE",
+		"attrList": [
+			"FIRE_50"
+		],
+		"def": 4,
+		"hit": 0,
+		"hp": 2,
+		"id": "item_002",
+		"image": "chara_105.png",
+		"kind": "ITEM",
+		"mdf": 4,
+		"mis": 0,
+		"moveStep": 0,
+		"moveType": "NONE",
+		"mst": 2,
+		"name": "とんがり帽子",
+		"soulType": "NONE",
+		"str": 0,
+		"wazaList": [
+			"waza_064",
+			"none",
+			"none",
+			"none",
+			"none",
+			"none"
+		],
+		"weponType": "NONE"
+	},
+	{
+		"armorType": "NONE",
+		"attrList": [],
+		"def": 1,
+		"hit": 1,
+		"hp": 1,
+		"id": "item_003",
+		"image": "chara_100.png",
+		"kind": "ITEM",
+		"mdf": 1,
+		"mis": 1,
+		"moveStep": 0,
+		"moveType": "NONE",
+		"mst": 1,
+		"name": "サイコボール",
+		"soulType": "NONE",
+		"str": 1,
+		"wazaList": [
+			"waza_103",
+			"none",
+			"none",
+			"none",
+			"none",
+			"none"
+		],
+		"weponType": "NONE"
+	},
+	{
+		"armorType": "NONE",
+		"attrList": [
+			"ICE_50"
+		],
+		"def": 3,
+		"hit": 0,
+		"hp": 1,
+		"id": "item_004",
+		"image": "chara_085.png",
+		"kind": "ITEM",
+		"mdf": 3,
+		"mis": 0,
+		"moveStep": 0,
+		"moveType": "NONE",
+		"mst": 3,
+		"name": "魔法の帽子",
+		"soulType": "NONE",
+		"str": 0,
+		"wazaList": [
+			"waza_073",
+			"none",
+			"none",
+			"none",
+			"none",
+			"none"
+		],
+		"weponType": "NONE"
+	},
+	{
+		"armorType": "NONE",
+		"attrList": [
+			"FIRE_200"
+		],
+		"def": 0,
+		"hit": 0,
+		"hp": 2,
+		"id": "item_005",
+		"image": "chara_143.png",
+		"kind": "ITEM",
+		"mdf": 0,
+		"mis": 0,
+		"moveStep": 0,
+		"moveType": "NONE",
+		"mst": 4,
+		"name": "油玉",
+		"soulType": "NONE",
+		"str": 0,
+		"wazaList": [
+			"waza_132",
+			"none",
+			"none",
+			"none",
+			"none",
+			"none"
+		],
+		"weponType": "NONE"
+	},
+	{
+		"armorType": "NONE",
+		"attrList": [
+			"FIRE_50",
+			"ANTI_CHARM"
+		],
+		"def": 1,
+		"hit": 0,
+		"hp": 1,
+		"id": "item_006",
+		"image": "chara_137.png",
+		"kind": "ITEM",
+		"mdf": 1,
+		"mis": 1,
+		"moveStep": 0,
+		"moveType": "NONE",
+		"mst": 0,
+		"name": "炎の篭手",
+		"soulType": "NONE",
+		"str": 4,
+		"wazaList": [
+			"waza_131",
+			"none",
+			"none",
+			"none",
+			"none",
+			"none"
+		],
+		"weponType": "NONE"
+	},
+	{
+		"armorType": "NONE",
+		"attrList": [
+			"ICE_50",
+			"FIRE_200"
+		],
+		"def": 0,
+		"hit": 0,
+		"hp": 1,
+		"id": "item_007",
+		"image": "chara_098.png",
+		"kind": "ITEM",
+		"mdf": 0,
+		"mis": 0,
+		"moveStep": 0,
+		"moveType": "NONE",
+		"mst": 5,
+		"name": "スノードロップ",
+		"soulType": "NONE",
+		"str": 0,
+		"wazaList": [
+			"waza_047",
+			"none",
+			"none",
+			"none",
+			"none",
+			"none"
+		],
+		"weponType": "NONE"
+	},
+	{
+		"armorType": "NONE",
+		"attrList": [
+			"REGENE"
+		],
+		"def": 0,
+		"hit": 0,
+		"hp": 1,
+		"id": "item_008",
+		"image": "chara_153.png",
+		"kind": "ITEM",
+		"mdf": 0,
+		"mis": 0,
+		"moveStep": 0,
+		"moveType": "NONE",
+		"mst": 3,
+		"name": "ヒールストーン",
+		"soulType": "NONE",
+		"str": 0,
+		"wazaList": [
+			"waza_016",
+			"none",
+			"none",
+			"none",
+			"none",
+			"none"
+		],
+		"weponType": "NONE"
+	},
+	{
+		"armorType": "NONE",
+		"attrList": [
+			"ICE_50"
+		],
+		"def": 0,
+		"hit": 0,
+		"hp": 1,
+		"id": "item_009",
+		"image": "chara_139.png",
+		"kind": "ITEM",
+		"mdf": 0,
+		"mis": 5,
+		"moveStep": 0,
+		"moveType": "NONE",
+		"mst": 3,
+		"name": "カーバンクル",
+		"soulType": "NONE",
+		"str": 0,
+		"wazaList": [
+			"waza_102",
+			"none",
+			"none",
+			"none",
+			"none",
+			"none"
+		],
+		"weponType": "NONE"
+	},
+	{
+		"armorType": "NONE",
+		"attrList": [
+			"ICE_50"
+		],
+		"def": 0,
+		"hit": 3,
+		"hp": 1,
+		"id": "item_010",
+		"image": "chara_140.png",
+		"kind": "ITEM",
+		"mdf": 0,
+		"mis": 0,
+		"moveStep": 0,
+		"moveType": "NONE",
+		"mst": 4,
+		"name": "ブルーストーン",
+		"soulType": "NONE",
+		"str": 0,
+		"wazaList": [
+			"waza_112",
+			"none",
+			"none",
+			"none",
+			"none",
+			"none"
+		],
+		"weponType": "NONE"
+	},
+	{
+		"armorType": "NONE",
+		"attrList": [
+			"SWIM_ABLE",
+			"THUNDER_200"
+		],
+		"def": 1,
+		"hit": 0,
+		"hp": 1,
+		"id": "item_011",
+		"image": "chara_164.png",
+		"kind": "ITEM",
+		"mdf": 0,
+		"mis": 0,
+		"moveStep": 0,
+		"moveType": "NONE",
+		"mst": 0,
+		"name": "水かき",
+		"soulType": "NONE",
+		"str": 2,
+		"wazaList": [
+			"waza_031",
+			"none",
+			"none",
+			"none",
+			"none",
+			"none"
+		],
+		"weponType": "NONE"
+	},
+	{
+		"armorType": "NONE",
+		"attrList": [
+			"ANTI_DEATH"
+		],
+		"def": 1,
+		"hit": 0,
+		"hp": 1,
+		"id": "item_012",
+		"image": "chara_087.png",
+		"kind": "ITEM",
+		"mdf": 1,
+		"mis": 4,
+		"moveStep": 0,
+		"moveType": "NONE",
+		"mst": 4,
+		"name": "黒い帽子",
+		"soulType": "NONE",
+		"str": 0,
+		"wazaList": [
+			"waza_082",
+			"none",
+			"none",
+			"none",
+			"none",
+			"none"
+		],
+		"weponType": "NONE"
+	},
+	{
+		"armorType": "NONE",
+		"attrList": [
+			"THUNDER_200",
+			"ANTI_DEATH",
+			"FIRE_200"
+		],
+		"def": 4,
+		"hit": 0,
+		"hp": 1,
+		"id": "item_013",
+		"image": "chara_084.png",
+		"kind": "ITEM",
+		"mdf": 3,
+		"mis": 1,
+		"moveStep": 0,
+		"moveType": "NONE",
+		"mst": 0,
+		"name": "ナイトヘルム",
+		"soulType": "NONE",
+		"str": 4,
+		"wazaList": [
+			"waza_016",
+			"none",
+			"none",
+			"none",
+			"none",
+			"none"
+		],
+		"weponType": "NONE"
+	},
+	{
+		"armorType": "NONE",
+		"attrList": [
+			"MOVE_UP_1",
+			"LITE_WALK"
+		],
+		"def": 0,
+		"hit": 4,
+		"hp": 1,
+		"id": "item_014",
+		"image": "chara_165.png",
+		"kind": "ITEM",
+		"mdf": 0,
+		"mis": 3,
+		"moveStep": 0,
+		"moveType": "NONE",
+		"mst": 0,
+		"name": "ウイングブーツ",
+		"soulType": "NONE",
+		"str": 0,
+		"wazaList": [
+			"waza_095",
+			"none",
+			"none",
+			"none",
+			"none",
+			"none"
+		],
+		"weponType": "NONE"
+	},
+	{
+		"armorType": "NONE",
+		"attrList": [
+			"ANTI_SLEEP"
+		],
+		"def": 1,
+		"hit": 0,
+		"hp": 1,
+		"id": "item_015",
+		"image": "chara_136.png",
+		"kind": "ITEM",
+		"mdf": 0,
+		"mis": 0,
+		"moveStep": 0,
+		"moveType": "NONE",
+		"mst": 0,
+		"name": "光る篭手",
+		"soulType": "NONE",
+		"str": 5,
+		"wazaList": [
+			"waza_092",
+			"none",
+			"none",
+			"none",
+			"none",
+			"none"
+		],
+		"weponType": "NONE"
+	},
+	{
+		"armorType": "NONE",
+		"attrList": [
+			"FLY_ABLE",
+			"MOVE_UP_2"
+		],
+		"def": 0,
+		"hit": 0,
+		"hp": 1,
+		"id": "item_016",
+		"image": "chara_163.png",
+		"kind": "ITEM",
+		"mdf": 0,
+		"mis": 3,
+		"moveStep": 0,
+		"moveType": "NONE",
+		"mst": 0,
+		"name": "天使の翼",
+		"soulType": "NONE",
+		"str": 0,
+		"wazaList": [
+			"waza_107",
+			"none",
+			"none",
+			"none",
+			"none",
+			"none"
+		],
+		"weponType": "NONE"
+	},
+	{
+		"armorType": "NONE",
+		"attrList": [
+			"THUNDER_50"
+		],
+		"def": 0,
+		"hit": 0,
+		"hp": 1,
+		"id": "item_017",
+		"image": "chara_138.png",
+		"kind": "ITEM",
+		"mdf": 2,
+		"mis": 0,
+		"moveStep": 0,
+		"moveType": "NONE",
+		"mst": 4,
+		"name": "雷光石",
+		"soulType": "NONE",
+		"str": 0,
+		"wazaList": [
+			"waza_115",
+			"none",
+			"none",
+			"none",
+			"none",
+			"none"
+		],
+		"weponType": "NONE"
+	},
+	{
+		"armorType": "NONE",
+		"attrList": [
+			"ANTI_ALL",
+			"DRAGON_KILLER",
+			"UNDEAD_KILLER"
+		],
+		"def": 1,
+		"hit": 1,
+		"hp": 1,
+		"id": "item_018",
+		"image": "chara_099.png",
+		"kind": "ITEM",
+		"mdf": 1,
+		"mis": 1,
+		"moveStep": 0,
+		"moveType": "NONE",
+		"mst": 1,
+		"name": "覇者の称号",
+		"soulType": "NONE",
+		"str": 1,
+		"wazaList": [
+			"waza_108",
+			"none",
+			"none",
+			"none",
+			"none",
+			"none"
+		],
+		"weponType": "NONE"
+	},
+	{
+		"armorType": "NONE",
+		"attrList": [
+			"MASTER"
+		],
+		"def": 1,
+		"hit": 1,
+		"hp": 1,
+		"id": "item_019",
+		"image": "chara_123.png",
+		"kind": "ITEM",
+		"mdf": 1,
+		"mis": 1,
+		"moveStep": 0,
+		"moveType": "NONE",
+		"mst": 1,
+		"name": "竜玉石",
+		"soulType": "NONE",
+		"str": 1,
+		"wazaList": [
+			"none",
+			"none",
+			"none",
+			"none",
+			"none",
+			"none"
+		],
+		"weponType": "NONE"
+	},
+	{
+		"armorType": "NONE",
+		"attrList": [
+			"FIRE_200"
+		],
+		"def": 7,
+		"hit": 1,
+		"hp": 12,
+		"id": "item_020",
+		"image": "chara_131.png",
+		"kind": "ITEM",
+		"mdf": 1,
+		"mis": 1,
+		"moveStep": 0,
+		"moveType": "NONE",
+		"mst": 1,
+		"name": "樹木ドール",
+		"soulType": "NONE",
+		"str": 1,
+		"wazaList": [
+			"waza_074",
+			"none",
+			"none",
+			"none",
+			"none",
+			"none"
+		],
+		"weponType": "NONE"
+	},
+	{
+		"armorType": "NONE",
+		"attrList": [
+			"THUNDER_50",
+			"SWORD_50"
+		],
+		"def": 1,
+		"hit": 7,
+		"hp": 12,
+		"id": "item_021",
+		"image": "chara_146.png",
+		"kind": "ITEM",
+		"mdf": 1,
+		"mis": 1,
+		"moveStep": 0,
+		"moveType": "NONE",
+		"mst": 1,
+		"name": "雷鳥ドール",
+		"soulType": "NONE",
+		"str": 1,
+		"wazaList": [
+			"waza_054",
+			"none",
+			"none",
+			"none",
+			"none",
+			"none"
+		],
+		"weponType": "NONE"
+	},
+	{
+		"armorType": "NONE",
+		"attrList": [
+			"ICE_50",
+			"DRAGON_KILLER",
+			"REGENE"
+		],
+		"def": 1,
+		"hit": 1,
+		"hp": 12,
+		"id": "item_022",
+		"image": "chara_113.png",
+		"kind": "ITEM",
+		"mdf": 7,
+		"mis": 1,
+		"moveStep": 0,
+		"moveType": "NONE",
+		"mst": 1,
+		"name": "角獣ドール",
+		"soulType": "NONE",
+		"str": 1,
+		"wazaList": [
+			"waza_014",
+			"none",
+			"none",
+			"none",
+			"none",
+			"none"
+		],
+		"weponType": "NONE"
+	},
+	{
+		"armorType": "NONE",
+		"attrList": [
+			"FIRE_50"
+		],
+		"def": 1,
+		"hit": 1,
+		"hp": 12,
+		"id": "item_023",
+		"image": "chara_115.png",
+		"kind": "ITEM",
+		"mdf": 1,
+		"mis": 1,
+		"moveStep": 0,
+		"moveType": "NONE",
+		"mst": 1,
+		"name": "魔神ドール",
+		"soulType": "NONE",
+		"str": 7,
+		"wazaList": [
+			"waza_057",
+			"none",
+			"none",
+			"none",
+			"none",
+			"none"
+		],
+		"weponType": "NONE"
+	},
+	{
+		"armorType": "NONE",
+		"attrList": [
+			"FIRE_50",
+			"ANTI_POISON",
+			"UNDEAD"
+		],
+		"def": 1,
+		"hit": 1,
+		"hp": 12,
+		"id": "item_024",
+		"image": "chara_118.png",
+		"kind": "ITEM",
+		"mdf": 1,
+		"mis": 1,
+		"moveStep": 0,
+		"moveType": "NONE",
+		"mst": 7,
+		"name": "死神ドール",
+		"soulType": "NONE",
+		"str": 1,
+		"wazaList": [
+			"waza_119",
+			"none",
+			"none",
+			"none",
+			"none",
+			"none"
+		],
+		"weponType": "NONE"
+	},
+	{
+		"armorType": "NONE",
+		"attrList": [
+			"REGENE",
+			"THUNDER_200"
+		],
+		"def": 1,
+		"hit": 1,
+		"hp": 12,
+		"id": "item_025",
+		"image": "chara_108.png",
+		"kind": "ITEM",
+		"mdf": 1,
+		"mis": 7,
+		"moveStep": 0,
+		"moveType": "NONE",
+		"mst": 1,
+		"name": "羽蛇ドール",
+		"soulType": "NONE",
+		"str": 1,
+		"wazaList": [
+			"waza_049",
+			"none",
+			"none",
+			"none",
+			"none",
+			"none"
+		],
+		"weponType": "NONE"
+	}
+]

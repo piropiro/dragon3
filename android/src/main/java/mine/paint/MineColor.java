@@ -1,0 +1,40 @@
+/*
+ * Created on 2004/10/10
+ */
+package mine.paint;
+
+import lombok.Getter;
+
+/**
+ * @author saito
+ */
+public enum MineColor {
+	BLACK("", new int[]{0x00, 0x00, 0x00}),
+	BLUE("", new int[]{0x00, 0x00, 0xff}),
+	LIME("", new int[]{0x00, 0xff, 0x00}),
+	AQUA("", new int[]{0x00, 0xff, 0xff}),
+	RED("", new int[]{0xff, 0x00, 0x00}),
+	PINK("", new int[]{0xff, 0x00, 0xff}),
+	YELLOW("", new int[]{0xff, 0xff, 0x00}),
+	WHITE("", new int[]{0xff, 0xff, 0xff}),
+	GRAY("", new int[]{0x80, 0x80, 0x80}),
+	NAVY("", new int[]{0x00, 0x00, 0x80}),
+	GREEN("", new int[]{0x00, 0x80, 0x00}),
+	TEAL("", new int[]{0x00, 0x80, 0x80}),
+	MAROON("", new int[]{0x80, 0x00, 0x00}),
+	PURPLE("", new int[]{0x80, 0x00, 0x80}),
+	OLIVE("", new int[]{0x80, 0x80, 0x00}),
+	SILVER("", new int[]{0xc0, 0xc0, 0xc0}),
+	ORANGE("", new int[]{0xff, 0x80, 0x00}),
+	;
+	
+
+	@Getter private String text;
+	
+	@Getter private int[] rgb;
+	
+	private MineColor(String text, int[] rgb) {
+		this.text = text;
+		this.rgb = rgb;
+	}
+}
