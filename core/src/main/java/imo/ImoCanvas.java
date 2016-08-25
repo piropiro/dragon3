@@ -1,11 +1,10 @@
 package imo;
 
-import imo.common.ImageList;
-
 import javax.inject.Inject;
 import javax.inject.Named;
 import javax.inject.Singleton;
 
+import imo.common.ImageList;
 import imo.paint.EndImoEvent;
 import imo.paint.GameImoEvent;
 import imo.paint.StartImoEvent;

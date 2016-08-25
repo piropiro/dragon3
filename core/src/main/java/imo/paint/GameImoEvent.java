@@ -11,7 +11,6 @@ import imo.body.Sister;
 import imo.body.Sword;
 import imo.body.Turu;
 import imo.common.ImageList;
-
 import mine.event.KeyManager;
 import mine.paint.MineGraphics;
 import mine.thread.Engine;

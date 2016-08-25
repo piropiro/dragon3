@@ -1,11 +1,10 @@
 package imo.paint;
 
+import java.awt.event.KeyEvent;
+
 import imo.ImoEventListener;
 import imo.ImoWorks;
 import imo.common.ImageList;
-
-import java.awt.event.KeyEvent;
-
 import mine.paint.MineColor;
 import mine.paint.MineGraphics;
 import mine.thread.Engine;

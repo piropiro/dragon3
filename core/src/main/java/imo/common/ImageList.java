@@ -1,7 +1,6 @@
 package imo.common;
 
 
-import mine.MineException;
 import mine.paint.MineImage;
 import mine.paint.MineImageLoader;
 
