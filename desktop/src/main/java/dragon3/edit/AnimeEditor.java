@@ -1,5 +1,7 @@
 package dragon3.edit;
 
+import javax.inject.Inject;
+
 import dragon3.common.constant.AnimeType;
 import dragon3.data.AnimeData;
 import dragon3.image.AnimeImageList;
@@ -7,8 +9,6 @@ import dragon3.image.ImageManager;
 import mine.edit.BeanEditor;
 import mine.edit.EditPanel;
 import mine.paint.MineImage;
-
-import javax.inject.Inject;
 
 @SuppressWarnings("serial")
 public class AnimeEditor extends EditPanel<AnimeData> {

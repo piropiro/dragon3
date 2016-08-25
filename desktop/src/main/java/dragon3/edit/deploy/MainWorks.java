@@ -1,8 +1,8 @@
 package dragon3.edit.deploy;
 
-import dragon3.data.Data;
-
 import java.util.List;
+
+import dragon3.data.Data;
 
 public interface MainWorks<D extends Data> {
 

@@ -1,9 +1,9 @@
 package dragon3.edit.image;
 
-import mine.MineUtils;
-
 import java.io.File;
 import java.io.FilenameFilter;
+
+import mine.MineUtils;
 
 public class ImageLister {
 	static final String ANIME_IMAGE_DIR = "../dragon3_common/resources/dragon3/image/anime/";

@@ -10,6 +10,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import dagger.Module;
+import dragon3.DaggerDragonComponent;
 import dragon3.DragonComponent;
 import dragon3.DragonModule;
 import dragon3.Statics;
@@ -35,7 +36,9 @@ public class PanelManagerTest {
 	@BeforeClass
 	public static void setUpClass() throws Exception {
 		//og = ObjectGraph.create(new TestModule());
-		
+
+		og = DaggerDragonComponent.create();
+
 		DragonController dc = og.getDragonController();
 		dc.setup();
 		dc.title();

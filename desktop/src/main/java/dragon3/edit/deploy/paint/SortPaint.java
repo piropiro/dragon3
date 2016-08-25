@@ -1,12 +1,12 @@
 package dragon3.edit.deploy.paint;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import dragon3.data.DeployData;
 import dragon3.edit.deploy.MainWorks;
 import dragon3.edit.deploy.Page;
 import mine.paint.UnitMap;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class SortPaint implements PaintListener {
 

@@ -1,14 +1,16 @@
 package dragon3.edit.deploy;
 
+import java.awt.Graphics;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+
+import javax.swing.JPanel;
+import javax.swing.SwingUtilities;
+
 import dragon3.edit.deploy.paint.PaintListener;
 import mine.awt.GraphicsAWT;
 import mine.awt.MineAwtUtils;
 import mine.paint.UnitMap;
-
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 
 class MapPanel extends JPanel implements MouseListener {
 

@@ -1,5 +1,9 @@
 package dragon3.edit.deploy;
 
+import java.util.List;
+
+import javax.inject.Inject;
+
 import dragon3.Statics;
 import dragon3.common.constant.DeployType;
 import dragon3.data.BodyData;
@@ -9,9 +13,6 @@ import dragon3.image.ImageManager;
 import mine.edit.EditListener;
 import mine.edit.EditPanel;
 import mine.paint.MineImage;
-
-import javax.inject.Inject;
-import java.util.List;
 
 @SuppressWarnings("serial")
 public class StatusPanel extends EditPanel<DeployData> implements EditListener<DeployData> {

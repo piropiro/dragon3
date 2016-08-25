@@ -38,7 +38,7 @@ public class AnimeDataMigration {
     public void tearDown() {
     }
 
-    @Test
+    //@Test
     public void migrate_001() throws Exception {
         AnimeData[] data = (AnimeData[])BeanIO.read("dragon3/data/anime/SystemAnime.xml");
         

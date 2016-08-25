@@ -1,16 +1,22 @@
 package dragon3.edit;
 
+import java.util.Map;
+
+import javax.inject.Inject;
+
 import dragon3.Statics;
-import dragon3.common.constant.*;
+import dragon3.common.constant.ArmorType;
+import dragon3.common.constant.BodyAttribute;
+import dragon3.common.constant.BodyKind;
+import dragon3.common.constant.MoveType;
+import dragon3.common.constant.SoulType;
+import dragon3.common.constant.WeponType;
 import dragon3.data.BodyData;
 import dragon3.image.BodyImageList;
 import dragon3.image.ImageManager;
 import mine.edit.BeanEditor;
 import mine.edit.EditListener;
 import mine.edit.EditPanel;
-
-import javax.inject.Inject;
-import java.util.Map;
 
 @SuppressWarnings("serial")
 public class BodyEditor extends EditPanel<BodyData> implements EditListener<BodyData> {

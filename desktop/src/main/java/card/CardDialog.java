@@ -1,6 +1,5 @@
 package card;
 
-import mine.MineUtils;
 import mine.awt.MineAwtUtils;
 import mine.awt.MineCanvasAWT;
 import mine.event.MineCanvas;

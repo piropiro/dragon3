@@ -1,9 +1,9 @@
 package dragon3.edit;
 
+import javax.inject.Singleton;
+
 import dagger.Component;
 import dragon3.edit.deploy.DeployEditor;
-
-import javax.inject.Singleton;
 
 @Singleton
 @Component(modules=EditorModule.class)

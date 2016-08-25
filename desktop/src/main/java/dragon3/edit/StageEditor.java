@@ -1,12 +1,12 @@
 package dragon3.edit;
 
+import javax.inject.Inject;
+
 import dragon3.data.StageData;
 import dragon3.stage.StageBack;
 import mine.edit.BeanEditor;
 import mine.edit.EditListener;
 import mine.edit.EditPanel;
-
-import javax.inject.Inject;
 
 @SuppressWarnings("serial")
 public class StageEditor extends EditPanel<StageData> implements EditListener<StageData> {

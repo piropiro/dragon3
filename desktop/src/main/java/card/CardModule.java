@@ -1,5 +1,8 @@
 package card;
 
+import javax.inject.Named;
+import javax.inject.Singleton;
+
 import dagger.Module;
 import dagger.Provides;
 import mine.awt.ImageLoaderAWT;
@@ -9,9 +12,6 @@ import mine.event.MineCanvas;
 import mine.event.PaintComponent;
 import mine.event.SleepManager;
 import mine.paint.MineImageLoader;
-
-import javax.inject.Named;
-import javax.inject.Singleton;
 
 @Module
 public class CardModule {

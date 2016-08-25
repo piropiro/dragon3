@@ -21,7 +21,6 @@ object Damage {
             return 0
 
         val tikei = MoveUtils.getTikei(map, bb)
-        var damage = 0
         var attack = 0
         var guard = 0
 
@@ -65,7 +64,7 @@ object Damage {
         if (ba.hasAttr(BodyAttribute.UNDEAD_KILLER) && bb.hasAttr(BodyAttribute.UNDEAD))
             attack += attack / 2
 
-        damage = Math.max(0, attack - guard)
+        var damage = Math.max(0, attack - guard)
 
         if (effect.contains(AttackEffect.HEAL) && !bb.hasAttr(BodyAttribute.UNDEAD))
             damage *= -1

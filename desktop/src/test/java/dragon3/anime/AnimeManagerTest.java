@@ -7,6 +7,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import dagger.Module;
+import dragon3.DaggerDragonComponent;
 import dragon3.DragonComponent;
 import dragon3.DragonModule;
 import dragon3.Statics;
@@ -30,7 +31,9 @@ public class AnimeManagerTest {
 	@BeforeClass
 	public static void setUpClass() throws Exception {
 		//og = DaggerDragonTestComponent.builder().build();
-		
+
+		og = DaggerDragonComponent.create();
+
 		DragonController dc = og.getDragonController();
 		dc.setup();
 		dc.title();

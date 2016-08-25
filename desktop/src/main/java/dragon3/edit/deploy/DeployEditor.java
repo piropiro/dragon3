@@ -1,5 +1,19 @@
 package dragon3.edit.deploy;
 
+import java.awt.BorderLayout;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.io.File;
+import java.util.List;
+
+import javax.inject.Inject;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
+
 import dragon3.Statics;
 import dragon3.data.BodyData;
 import dragon3.data.DeployData;
@@ -22,16 +36,6 @@ import mine.file.FileWorks;
 import mine.io.JsonIO;
 import mine.paint.MineImageLoader;
 import mine.paint.UnitMap;
-
-import javax.inject.Inject;
-import javax.swing.*;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
-import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.io.File;
-import java.util.List;
 
 @SuppressWarnings("serial")
 public class DeployEditor extends JFrame implements MainWorks<DeployData>, CommandListener, FileWorks, ListSelectionListener, KeyListener {

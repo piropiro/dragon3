@@ -38,7 +38,7 @@ public class BodyDataMigration {
     public void tearDown() {
     }
 
-    @Test
+    //@Test
     public void migrate_001() throws Exception {
         BodyData[] data = (BodyData[])BeanIO.read("dragon3/data/body/BodyData.xml");
         

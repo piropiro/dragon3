@@ -182,7 +182,7 @@ object MineUtils {
      * *
      * @return
      */
-    inline fun mid(s: Int, m: Int, b: Int): Int {
+    fun mid(s: Int, m: Int, b: Int): Int {
         return Math.max(s, Math.min(m, b))
     }
 

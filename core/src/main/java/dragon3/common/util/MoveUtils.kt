@@ -14,34 +14,34 @@ import mine.paint.UnitMap
  */
 object MoveUtils {
 
-    val WHITE = 0
-    val YELLOW = 1
-    val GREEN = 2
-    val AQUA = 3
-    val BLUE = 4
-    val BLACK = 5
-    val ICE = 6
-    val POISONP = 7
-    val OILP = 8
-    val FIREP = 9
-    val SKYP = 10
-    val S_BLUE = 15
-    val S_RED = 16
-    val C_BLUE = 17
-    val C_RED = 18
-    val C_BLUEC = 19
-    val C_REDC = 20
-    val CLOSE_BOX = 21
-    val OPEN_BOX = 22
-    val BROKEN_BOX = 23
-    val OPEN_MAGIC = 24
-    val CLOSE_MAGIC = 25
+    const val WHITE = 0
+    const val YELLOW = 1
+    const val GREEN = 2
+    const val AQUA = 3
+    const val BLUE = 4
+    const val BLACK = 5
+    const val ICE = 6
+    const val POISONP = 7
+    const val OILP = 8
+    const val FIREP = 9
+    const val SKYP = 10
+    const val S_BLUE = 15
+    const val S_RED = 16
+    const val C_BLUE = 17
+    const val C_RED = 18
+    const val C_BLUEC = 19
+    const val C_REDC = 20
+    const val CLOSE_BOX = 21
+    const val OPEN_BOX = 22
+    const val BROKEN_BOX = 23
+    const val OPEN_MAGIC = 24
+    const val CLOSE_MAGIC = 25
 
-    val T_SKY = 1
-    val T_LAND = 2
-    val T_SEA = 3
-    val T_POOL = 4
-    val T_ICE = 5
+    const val T_SKY = 1
+    const val T_LAND = 2
+    const val T_SEA = 3
+    const val T_POOL = 4
+    const val T_ICE = 5
 
     /**
      * 必要歩数のリストを返す。

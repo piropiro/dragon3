@@ -43,7 +43,7 @@ public class DeployDataMigration {
     public void tearDown() {
     }
 
-    @Test
+    //@Test
     public void migrate_001() throws Exception {
         DeployData[] data = (DeployData[])BeanIO.read("dragon3/data/deploy/init.xml");
         
@@ -53,7 +53,7 @@ public class DeployDataMigration {
     
     }
     
-    @Test
+    //@Test
     public void migrate_002() throws Exception {
     	
     	for (String fileName : getFileNames()) {

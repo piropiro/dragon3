@@ -14,7 +14,6 @@ import javax.swing.JButton;
 import javax.swing.JToggleButton;
 import javax.swing.JToolBar;
 
-import mine.MineException;
 import mine.event.CommandListener;
 
 /**

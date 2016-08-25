@@ -27,7 +27,7 @@ class UnitUtils(private val map: UnitMap) {
         bd = moves(p, x, y - 1, bd, next, F_UP)
         bd = moves(p, x, y + 1, bd, next, F_DOWN)
         bd = moves(p, x - 1, y, bd, next, F_LEFT)
-        bd = moves(p, x + 1, y, bd, next, F_RIGHT)
+        moves(p, x + 1, y, bd, next, F_RIGHT)
         if (next.x != x)
             return next
         if (next.y != y)

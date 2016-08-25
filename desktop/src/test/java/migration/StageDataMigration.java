@@ -40,7 +40,7 @@ public class StageDataMigration {
     public void tearDown() {
     }
 
-    @Test
+    //@Test
     public void migrate_001() throws Exception {
         StageData[] data = (StageData[])BeanIO.read("dragon3/data/stage/StageData.xml");
         
@@ -50,7 +50,7 @@ public class StageDataMigration {
     
     }
     
-    @Test
+    //@Test
     public void migrate_002() throws Exception {
     	List<StageData> list = new ArrayList<>();
     	

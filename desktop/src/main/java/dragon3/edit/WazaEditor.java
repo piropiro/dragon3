@@ -1,8 +1,14 @@
 package dragon3.edit;
 
+import javax.inject.Inject;
+
 import dragon3.Statics;
 import dragon3.common.DataList;
-import dragon3.common.constant.*;
+import dragon3.common.constant.AttackEffect;
+import dragon3.common.constant.DamageType;
+import dragon3.common.constant.EnergyType;
+import dragon3.common.constant.GameColor;
+import dragon3.common.constant.TargetType;
 import dragon3.data.AnimeData;
 import dragon3.data.WazaData;
 import dragon3.image.BodyImageList;
@@ -11,8 +17,6 @@ import mine.MineException;
 import mine.edit.BeanEditor;
 import mine.edit.EditListener;
 import mine.edit.EditPanel;
-
-import javax.inject.Inject;
 
 @SuppressWarnings("serial")
 public class WazaEditor extends EditPanel<WazaData> implements EditListener<WazaData> {

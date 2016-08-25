@@ -38,7 +38,7 @@ public class WazaDataMigration {
     public void tearDown() {
     }
 
-    @Test
+    //@Test
     public void migrate_001() throws Exception {
         WazaData[] data = (WazaData[])BeanIO.read("dragon3/data/waza/WazaData.xml");
         
