@@ -11,7 +11,6 @@ import dragon3.common.constant.BodyAttribute;
 import dragon3.common.constant.GameColor;
 import dragon3.common.constant.Texts;
 import dragon3.panel.PanelWorks;
-import lombok.Getter;
 import mine.paint.MineGraphics;
 import mine.util.Point;
 
@@ -23,7 +22,7 @@ public class AttackPaint implements DataPanelPainter {
 	private Body ba;
 	private Body bb;
 	private Attack attack;
-	@Getter private GameColor color;
+	private GameColor color;
 
 	public AttackPaint(Attack attack) {
 		ba = attack.getAttacker();
@@ -102,4 +101,10 @@ public class AttackPaint implements DataPanelPainter {
 	public Point getPoint2() {
 		return new Point(bb.getX(), bb.getY());
 	}
+
+	@Override
+	public GameColor getColor() {
+		return color;
+	}
 }
+

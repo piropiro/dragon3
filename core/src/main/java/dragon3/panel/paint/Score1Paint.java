@@ -8,7 +8,6 @@ import dragon3.common.constant.GameColor;
 import dragon3.common.constant.Texts;
 import dragon3.panel.PanelWorks;
 import dragon3.save.SaveData;
-import lombok.Getter;
 import mine.paint.MineGraphics;
 import mine.paint.MineImage;
 import mine.util.Point;
@@ -20,8 +19,8 @@ public class Score1Paint implements DataPanelPainter {
 
 	private SaveData sd;
 	private MineImage cBlueImage;
-	@Getter private Point location;
-	@Getter private GameColor color;
+	private Point location;
+	private GameColor color;
 
 	public Score1Paint(SaveData sd, MineImage cBlueImage) {
 		this.sd = sd;
@@ -61,4 +60,10 @@ public class Score1Paint implements DataPanelPainter {
 	public Point getPoint2() {
 		return location;
 	}
+
+	@Override
+	public GameColor getColor() {
+		return color;
+	}
 }
+

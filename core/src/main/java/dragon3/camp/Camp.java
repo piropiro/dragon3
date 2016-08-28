@@ -13,7 +13,6 @@ import dragon3.manage.TreasureManager;
 import dragon3.map.MapWorks;
 import dragon3.panel.PanelManager;
 import dragon3.panel.paint.CampDataPaint;
-import lombok.Getter;
 import mine.paint.UnitMap;
 import mine.util.Point;
 
@@ -24,14 +23,14 @@ public class Camp {
 	private UnitMap map;
 	private PanelManager pm;
 	
-	@Getter Equip equip;
+	Equip equip;
 	List<Body> equips;
 
 	Point ps; // Last Position
 	Point end;
-	@Getter Body ba; // Selected Body
+	Body ba; // Selected Body
 	Body[] items; // Stock Item
-	@Getter boolean sortf; // Sorting Flag
+	boolean sortf; // Sorting Flag
 
 	public static final int T_NONE = 0;
 	public static final int T_FREE = 1;
@@ -534,4 +533,15 @@ public class Camp {
 		mw.repaint();
 	}
 
+	public Equip getEquip() {
+		return equip;
+	}
+
+	public Body getBa() {
+		return ba;
+	}
+
+	public boolean isSortf() {
+		return sortf;
+	}
 }

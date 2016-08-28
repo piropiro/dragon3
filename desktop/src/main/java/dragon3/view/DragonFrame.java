@@ -14,7 +14,6 @@ import javax.swing.AbstractButton;
 import javax.swing.JFrame;
 
 import dragon3.controller.CommandListener;
-import lombok.Setter;
 import mine.awt.BMenuBar;
 import mine.awt.MineAwtUtils;
 import mine.awt.MineCanvasAWT;

@@ -8,7 +8,6 @@ import dragon3.common.constant.GameColor;
 import dragon3.common.constant.Texts;
 import dragon3.common.util.MoveUtils;
 import dragon3.panel.PanelWorks;
-import lombok.Getter;
 import mine.paint.MineGraphics;
 import mine.paint.MineImage;
 import mine.util.Point;
@@ -20,8 +19,8 @@ public class PlacePaint implements DataPanelPainter {
 
 	private MineImage[] back;
 	private int tikei;
-	@Getter private Point location;
-	@Getter private GameColor color;
+	private Point location;
+	private GameColor color;
 	
 	public PlacePaint(int tikei, MineImage[] back, Point location) {
 		this.tikei = tikei;
@@ -86,4 +85,11 @@ public class PlacePaint implements DataPanelPainter {
 	public Point getPoint2() {
 		return location;
 	}
+
+	@Override
+	public GameColor getColor() {
+		return color;
+	}
 }
+
+

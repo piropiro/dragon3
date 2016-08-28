@@ -21,8 +21,6 @@ import dragon3.map.StageMap;
 import dragon3.save.SaveData;
 import dragon3.stage.StageSelectPanel;
 import dragon3.view.FrameWorks;
-import lombok.Getter;
-import lombok.Setter;
 import mine.util.Point;
 
 /**
@@ -35,9 +33,9 @@ public class PanelManagerImpl implements PanelManager {
 	@Inject FrameWorks fw;
 	
 	@Inject AnimePanel animeP;
-	@Inject @Getter MapPanel mapP;
-	@Inject @Getter StageSelectPanel stageSelectP;
-	@Inject @Getter CardCanvas cardP;
+	@Inject MapPanel mapP;
+	@Inject StageSelectPanel stageSelectP;
+	@Inject CardCanvas cardP;
 	@Inject @Named("dataP1") DataPanel dataP1;
 	@Inject @Named("dataP2") DataPanel dataP2;
 	@Inject @Named("hpP1") HPanel hpP1;
@@ -52,7 +50,7 @@ public class PanelManagerImpl implements PanelManager {
 	
 	@Inject StageMap map;
 	
-	@Setter private UnitWorks uw;
+	private UnitWorks uw;
 	
 	private boolean helpVisible;
 
@@ -295,8 +293,9 @@ public class PanelManagerImpl implements PanelManager {
 		cardP.setVisible(false);
 		//fw.setMouseListener(mapP);
 	}
-	
 
-	
-	
+
+	public void setUw(UnitWorks uw) {
+		this.uw = uw;
+	}
 }

@@ -1,10 +1,6 @@
 package dragon3.common.constant
 
-import java.util.Arrays
 import java.util.LinkedHashMap
-import java.util.stream.Collectors
-
-import lombok.Getter
 
 enum class AnimeType private constructor(
 

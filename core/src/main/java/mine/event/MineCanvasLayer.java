@@ -1,7 +1,5 @@
 package mine.event;
 
-import lombok.Getter;
-import lombok.Setter;
 import mine.paint.MineGraphics;
 import mine.paint.MineImage;
 import mine.paint.MineImageLoader;
@@ -16,11 +14,11 @@ public class MineCanvasLayer implements PaintComponent, PaintListener {
 	
 	private PaintListener paintListener;
 	
-	@Getter private int x, y, w, h;
+	private int x, y, w, h;
 	
-	@Getter private boolean visible;
+	private boolean visible;
 	
-	@Getter @Setter private boolean updated;
+	private boolean updated;
 	
 	public MineCanvasLayer(MineCanvas parent, MineImageLoader mil, int x, int y, int w, int h) {
 		this.parent = parent;
@@ -93,5 +91,33 @@ public class MineCanvasLayer implements PaintComponent, PaintListener {
 	public void setPaintListener(PaintListener pl) {
 		System.out.println(pl);
 		this.paintListener = pl;
+	}
+
+	public int getX() {
+		return x;
+	}
+
+	public int getY() {
+		return y;
+	}
+
+	public int getW() {
+		return w;
+	}
+
+	public int getH() {
+		return h;
+	}
+
+	public boolean isVisible() {
+		return visible;
+	}
+
+	public boolean isUpdated() {
+		return updated;
+	}
+
+	public void setUpdated(boolean updated) {
+		this.updated = updated;
 	}
 }

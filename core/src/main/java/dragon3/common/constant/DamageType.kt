@@ -5,8 +5,6 @@ package dragon3.common.constant
 
 import java.util.LinkedHashMap
 
-import lombok.Getter
-
 /**
  * @author k-saito
  */

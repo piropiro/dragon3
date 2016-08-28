@@ -6,7 +6,6 @@ import java.util.List;
 
 import javax.swing.JComponent;
 
-import lombok.Getter;
 import mine.event.MineCanvas;
 import mine.event.MouseAllListener;
 import mine.event.MouseManager;
@@ -18,9 +17,9 @@ public class MineCanvasAWT extends JComponent implements MineCanvas {
 
 	private MouseManager mm;
 	
-	@Getter private MineImageLoader imageLoader;
+	private MineImageLoader imageLoader;
 	
-	@Getter private List<PaintListener> layers = new ArrayList<>();
+	private List<PaintListener> layers = new ArrayList<>();
 	
 	public MineCanvasAWT(MineImageLoader imageLoader) {
 		this.imageLoader = imageLoader;
@@ -30,7 +29,17 @@ public class MineCanvasAWT extends JComponent implements MineCanvas {
 	public void paintComponent(Graphics g) {
 		paint(new GraphicsAWT(g));
 	}
-	
+
+	@Override
+	public MineImageLoader getImageLoader() {
+		return imageLoader;
+	}
+
+	@Override
+	public List<PaintListener> getLayers() {
+		return layers;
+	}
+
 	@Override
 	public void setMouseAllListener(MouseAllListener mal) {
 		if (mm == null) {

@@ -14,7 +14,6 @@ import dragon3.common.util.MoveUtils;
 import dragon3.controller.UnitWorks;
 import dragon3.map.StageMap;
 import dragon3.panel.PanelManager;
-import lombok.Setter;
 import mine.event.SleepManager;
 import mine.paint.UnitMap;
 import mine.util.Point;
@@ -41,7 +40,7 @@ public class TreasureManagerImpl implements TreasureManager {
 	private List<Integer> comments;
 
 
-	@Setter UnitWorks uw;
+	UnitWorks uw;
 	@Inject StageMap map;
 	@Inject AnimeManager anime;
 	@Inject SleepManager sm;
@@ -322,5 +321,10 @@ public class TreasureManagerImpl implements TreasureManager {
 		pm.addMessage(Texts.treasure2);
 		pm.closeData();
 		pm.startMessage(tre);
+	}
+
+	@Override
+	public void setUw(UnitWorks uw) {
+		this.uw = uw;
 	}
 }

@@ -2,8 +2,6 @@ package dragon3.common.constant
 
 import java.util.LinkedHashMap
 
-import lombok.Getter
-
 enum class AttackEffect private constructor(
 
         val text: String) {
