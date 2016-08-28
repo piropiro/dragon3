@@ -36,6 +36,8 @@ public class ImoDialog extends JDialog implements KeyListener, ImoListener {
 
 		MineAwtUtils.setSize(mca, 300, 300);
 
+		ic.setup("僕", 1);
+
 		ic.setVisible(true);
 		setTitle("ImoBattle");
 
@@ -47,6 +49,7 @@ public class ImoDialog extends JDialog implements KeyListener, ImoListener {
 		pack();
 		MineAwtUtils.setCenter(this);
 		setVisible(true);
+		mc.requestFocus();
 	}
 
 	public void gameExit(int exp_) {

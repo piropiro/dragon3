@@ -72,7 +72,7 @@ public class Body {
 		return true;
 	}
 
-	static boolean hit(Body a, double x, double y) {
+	public static boolean hit(Body a, double x, double y) {
 		if (x < a.x)
 			return false;
 		if (x >= a.x + a.xs)

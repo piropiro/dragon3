@@ -1,7 +1,5 @@
 package imo.paint;
 
-import java.util.Random;
-
 import imo.ImoEventListener;
 import imo.ImoWorks;
 import imo.body.Body;
@@ -20,12 +18,10 @@ public class GameImoEvent implements ImoEventListener {
 	private Jiki ore;
 	private Sister sister;
 	private Sword sword;
-	private Imo[] imo;
-	private Turu[] turu;
+	private Imo imo;
+	private Turu turu;
 	private Body screen;
 
-	private int imoMax = 0;
-	private int imoNum = 0;
 	private int love;
 	private boolean clearFlag;
 
@@ -43,23 +39,12 @@ public class GameImoEvent implements ImoEventListener {
 	public void resetData(String name, int level) {
 		love = 0;
 		clearFlag = false;
-		imoMax = level + 100;
 		ore = new Jiki(120, 120, name, screen, imageList);
 		sister = new Sister(0, 0, imageList);
-		imo = new Imo[imoMax];
-		turu = new Turu[imoMax];
-		
-		Random rnd = new Random();
-		for (int i=0; i<imo.length; i++) {
-			String imoname;
-			if (i==0) {
-				imoname = "いもすけ";
-			} else {
-				imoname = " " + (char)('ぁ' + rnd.nextInt(83)) + (char)('ぁ' + rnd.nextInt(83)) + "すけ";
-			}
-			imo[i] = new Imo(280, 280, imoname + "　Lv." + level, 2, screen, imageList);
-			turu[i] = new Turu(imageList);
-		}
+
+		imo = new Imo(280, 280, "いもすけ　Lv." + level, 2, screen, imageList);
+		turu = new Turu(imageList);
+
 		sword = new Sword(imageList);
 
 		km.reset();
@@ -69,13 +54,11 @@ public class GameImoEvent implements ImoEventListener {
 		sword.display(g);
 		ore.display(g);
 		sister.display(g);
-		for (int i=0; i<imo.length; i++) {
-			imo[i].display(g);
-			turu[i].display(g);
-		}
-		sister.displayMessage(g, love, ore, imo[imoNum]);
+		imo.display(g);
+		turu.display(g);
+		sister.displayMessage(g, love, ore, imo);
 		ore.displayHP(g);
-		imo[imoNum].displayHP(g);
+		imo.displayHP(g);
 	}
 
 	private void hit() {
@@ -83,22 +66,17 @@ public class GameImoEvent implements ImoEventListener {
 			ore.moveS();
 			love++;
 		}
-		for (int i=0; i<imo.length; i++) {
-			if (Body.hit(ore, imo[i])) {
-				if (imo[i].isAlive()) {
-					ore.damage(imo[i], 1);
-					imoNum = i;
-				} else {
-					ore.moveS();
-				}
+		if (Body.hit(ore, imo)) {
+			if (imo.isAlive()) {
+				ore.damage(imo, 1);
+			} else {
+				ore.moveS();
 			}
-			if (turu[i].isAlive() && Body.hit(ore, turu[i])) {
-				ore.damage(imo[i], 3);
-				imoNum = i;
+			if (turu.isAlive() && Body.hit(ore, turu)) {
+				ore.damage(imo, 3);
 			}
-			if (sword.isAlive() && Body.hit(sword, imo[i])) {
-				imo[i].damage(ore, 1);
-				imoNum = i;
+			if (sword.isAlive() && Body.hit(sword, imo)) {
+				imo.damage(ore, 1);
 			}
 		}
 		if (sword.isAlive() && Body.hit(sword, sister)) {
@@ -116,25 +94,22 @@ public class GameImoEvent implements ImoEventListener {
 			mw.gameEnd(4);
 			return;
 		}
-		for (int i=0; i<imo.length; i++) {
-			if (Body.hit(imo[i], sister)) {
-				mw.gameEnd(3);
-				return;
-			}
-			if (turu[i].isAlive() && Body.hit(turu[i], sister)) {
-				mw.gameEnd(3);
-				return;
-			}
+		if (Body.hit(imo, sister)) {
+			mw.gameEnd(3);
+			return;
 		}
+		if (turu.isAlive() && Body.hit(turu, sister)) {
+			mw.gameEnd(3);
+			return;
+		}
+
 		if (love >= 200) {
 			mw.gameEnd(2);
 			return;
 		}
 		boolean imoAlive = false;
-		for (int i=0; i<imo.length; i++) {
-			if (imo[i].isAlive()) {
-				imoAlive = true;
-			}
+		if (imo.isAlive()) {
+			imoAlive = true;
 		}
 
 		if (!imoAlive) {
@@ -171,18 +146,14 @@ public class GameImoEvent implements ImoEventListener {
 			mw.gameStart();
 		endjudge();
 		ore.move(km.isUp(), km.isDown(), km.isLeft(), km.isRight());
-		for (int i=0; i<imo.length; i++) {
-			imo[i].move(ore);
-		}
+		imo.move(ore);
 		sister.move();
 		if (km.isEnter() || km.isKey('z')){
 			ore.shot(sword);
 			km.setKey('z', false);
 		}
-		for (int i=0; i<imo.length; i++) {
-			imo[i].shot(turu[i]);
-			turu[i].move(imo[i]);
-		}
+		imo.shot(turu);
+		turu.move(imo);
 		sword.move(ore);
 		hit();
 	}
