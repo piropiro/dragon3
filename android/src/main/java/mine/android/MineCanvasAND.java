@@ -13,8 +13,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-import lombok.Getter;
-import lombok.Setter;
 import mine.event.MineCanvas;
 import mine.event.MineCanvasLayer;
 import mine.event.MouseAllListener;
@@ -27,12 +25,12 @@ import mine.paint.MineImageLoader;
 @SuppressWarnings("serial")
 public class MineCanvasAND extends View implements MineCanvas {
 
-    @Getter @Setter private MouseAllListener mouseAllListener;
+    private MouseAllListener mouseAllListener;
 
 
-	@Getter private MineImageLoader imageLoader;
+	private MineImageLoader imageLoader;
 
-	@Getter private List<PaintListener> layers = new ArrayList<>();
+	private List<PaintListener> layers = new ArrayList<>();
 
     private int width = 1;
 
@@ -71,8 +69,18 @@ public class MineCanvasAND extends View implements MineCanvas {
         g.drawFitImage(buffer, this.getWidth(), this.getHeight());
     }
 
+    @Override
+    public MineImageLoader getImageLoader() {
+        return imageLoader;
+    }
 
-	@Override
+    @Override
+    public List<PaintListener> getLayers() {
+        return layers;
+    }
+
+
+    @Override
 	protected void onDraw(Canvas canvas) {
 		paint(new GraphicsAND(canvas));
 	}
@@ -121,8 +129,16 @@ public class MineCanvasAND extends View implements MineCanvas {
         handler.sendEmptyMessage(0);
     }
 
+    @Override
+    public void setMouseAllListener(MouseAllListener mal) {
+        this.mouseAllListener = mal;
+    }
 
-	@Override
+    public MouseAllListener getMouseAllListener() {
+        return mouseAllListener;
+    }
+
+    @Override
 	public boolean isRunning() {
 		return false;
 	}
@@ -132,4 +148,6 @@ public class MineCanvasAND extends View implements MineCanvas {
             invalidate();
         }
     };
+
 }
+

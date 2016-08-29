@@ -31,6 +31,8 @@ interface MineGraphics {
 
     fun drawRotateImage(image: MineImage, dx: Int, dy: Int, angle: Double)
 
+    fun drawFitImage(image: MineImage, dw: Int, dh: Int)
+
     fun setAlpha(alpha: Double)
 
     fun setAntialias(flag: Boolean)

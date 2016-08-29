@@ -28,7 +28,7 @@ class Body : Serializable, Cloneable {
     var hit: Int = 0
     var mis: Int = 0
 
-    var wazaList: MutableList<String> = ArrayList()
+    var wazaList: List<String> = ArrayList()
 
     var attrSet = LinkedHashSet<BodyAttribute>()
 
@@ -81,13 +81,16 @@ class Body : Serializable, Cloneable {
     }
 
     fun resetWaza() {
-        val wazaList = ArrayList(base.wazaList)
-        wazaList.removeIf { a -> a == "none" }
-        this.wazaList = wazaList
+
+        wazaList = base.wazaList.filter { it != "none" }
+
+        // val wazaList = ArrayList(base.wazaList)
+        // wazaList.removeIf { a -> a == "none" }
+        // this.wazaList = wazaList
     }
 
     fun clearWaza() {
-        wazaList.clear()
+        wazaList = listOf()
     }
 
     fun restrict() {

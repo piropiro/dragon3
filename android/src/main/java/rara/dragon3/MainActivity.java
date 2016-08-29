@@ -20,8 +20,6 @@ import dragon3.panel.LargePanel;
 import dragon3.panel.MessagePanel;
 import dragon3.panel.SmallPanel;
 import dragon3.view.FrameWorks;
-import lombok.Getter;
-import lombok.Setter;
 import mine.android.ImageLoaderAND;
 import mine.android.MineCanvasAND;
 import mine.android.SleepManagerAND;
@@ -37,26 +35,25 @@ public class MainActivity extends AppCompatActivity implements FrameWorks {
 
     private Toolbar toolbar;
 
-    @Setter
     private CommandListener commandListener;
 
 
 
-    @Getter private PaintComponent mapPanel;
-    @Getter private PaintComponent animePanel;
-    @Getter private PaintComponent hPanel1;
-    @Getter private PaintComponent hPanel2;
-    @Getter private PaintComponent helpPanel;
-    @Getter private PaintComponent smallPanel;
-    @Getter private PaintComponent largePanel;
-    @Getter private PaintComponent cardPanel;
-    @Getter private PaintComponent dataPanel1;
-    @Getter private PaintComponent dataPanel2;
-    @Getter private PaintComponent messagePanel;
-    @Getter private PaintComponent stageSelectPanel;
+    private PaintComponent mapPanel;
+    private PaintComponent animePanel;
+    private PaintComponent hPanel1;
+    private PaintComponent hPanel2;
+    private PaintComponent helpPanel;
+    private PaintComponent smallPanel;
+    private PaintComponent largePanel;
+    private PaintComponent cardPanel;
+    private PaintComponent dataPanel1;
+    private PaintComponent dataPanel2;
+    private PaintComponent messagePanel;
+    private PaintComponent stageSelectPanel;
 
-    @Getter private MineImageLoader imageLoader;
-    @Getter private SleepManager sleepManager;
+    private MineImageLoader imageLoader;
+    private SleepManager sleepManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -163,5 +160,65 @@ public class MainActivity extends AppCompatActivity implements FrameWorks {
     public void setMouseListener(MouseAllListener mal) {
         mc.setMouseAllListener(mal);
         Log.d("SetMouseListener",  "MouseListener:" + mal.getClass());
+    }
+
+    public void setCommandListener(CommandListener commandListener) {
+        this.commandListener = commandListener;
+    }
+
+    public PaintComponent getMapPanel() {
+        return mapPanel;
+    }
+
+    public PaintComponent getAnimePanel() {
+        return animePanel;
+    }
+
+    public PaintComponent gethPanel1() {
+        return hPanel1;
+    }
+
+    public PaintComponent gethPanel2() {
+        return hPanel2;
+    }
+
+    public PaintComponent getHelpPanel() {
+        return helpPanel;
+    }
+
+    public PaintComponent getSmallPanel() {
+        return smallPanel;
+    }
+
+    public PaintComponent getLargePanel() {
+        return largePanel;
+    }
+
+    public PaintComponent getCardPanel() {
+        return cardPanel;
+    }
+
+    public PaintComponent getDataPanel1() {
+        return dataPanel1;
+    }
+
+    public PaintComponent getDataPanel2() {
+        return dataPanel2;
+    }
+
+    public PaintComponent getMessagePanel() {
+        return messagePanel;
+    }
+
+    public PaintComponent getStageSelectPanel() {
+        return stageSelectPanel;
+    }
+
+    public MineImageLoader getImageLoader() {
+        return imageLoader;
+    }
+
+    public SleepManager getSleepManager() {
+        return sleepManager;
     }
 }

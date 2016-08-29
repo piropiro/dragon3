@@ -1,6 +1,8 @@
 package mine.javafx;
 
 
+import org.jetbrains.annotations.NotNull;
+
 import javafx.geometry.VPos;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
@@ -186,6 +188,8 @@ public class GraphicsJFX implements MineGraphics {
 	}
 
 
+	@Override
+	public void drawFitImage(@NotNull MineImage image, int dw, int dh) {
 
-
+	}
 }

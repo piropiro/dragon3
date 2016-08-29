@@ -3,6 +3,8 @@
  */
 package mine.awt;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.awt.AlphaComposite;
 import java.awt.Color;
 import java.awt.Font;
@@ -151,7 +153,6 @@ public class GraphicsAWT implements MineGraphics {
 	 * @param x
 	 * @param y
 	 * @param xs
-	 * @param g
 	 */
 	public void drawString(String s, int x, int y, int xs) {
 		Font f = g.getFont();
@@ -161,7 +162,7 @@ public class GraphicsAWT implements MineGraphics {
 
 	/**
 	 * イメージの一部を回転させます。
-	 * @param img - ソースイメージ
+	 * @param mimg - ソースイメージ
 	 * @param x - 回転の中心座標X
 	 * @param y - 回転の中心座標Y
 	 * @param w - 回転させる部分の幅
@@ -181,15 +182,6 @@ public class GraphicsAWT implements MineGraphics {
 	/**
 	 * イメージを回転させて描画する。<p>
 	 * 
-	 * @param img
-	 * @param ax
-	 * @param ay
-	 * @param bx
-	 * @param by
-	 * @param w
-	 * @param h
-	 * @param theta
-	 * @param g
 	 */
 	public void drawRotateImage(
 		MineImage mimg,
@@ -223,6 +215,8 @@ public class GraphicsAWT implements MineGraphics {
 	}
 
 
-
-
+	@Override
+	public void drawFitImage(@NotNull MineImage image, int dw, int dh) {
+		g.drawImage((BufferedImage)image.getImage(), 0, 0, dw, dh, null);
+	}
 }

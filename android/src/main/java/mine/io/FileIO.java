@@ -33,9 +33,8 @@ public class FileIO {
      *
      * @param path ファイルパス
      * @return 指定されたファイルの入力ストリーム
-     * @throws MineException ファイルが見つからない。
      */
-    public static BufferedInputStream getInputStream(String path) throws MineException {
+    public static BufferedInputStream getInputStream(String path) {
 
         final AssetManager assetManager = context.getAssets();
 
@@ -43,7 +42,7 @@ public class FileIO {
             BufferedInputStream bis = new BufferedInputStream(assetManager.open(path));
             return bis;
         } catch (IOException e) {
-            throw new MineException(e);
+            throw new RuntimeException(e);
         }
     }
 
@@ -53,17 +52,15 @@ public class FileIO {
      *
      * @param path ファイルパス
      * @return 指定されたファイルの出力ストリーム
-     * @throws MineException ファイルが見つからない。
      */
-    public static BufferedOutputStream getOutputStream(String path) throws MineException {
+    public static BufferedOutputStream getOutputStream(String path) {
 
-        MineUtils.checkNull(path, "FilePath");
 
         try {
             OutputStream os = new FileOutputStream(path);
             return new BufferedOutputStream(os);
         } catch (FileNotFoundException e) {
-            throw new MineException(e);
+            throw new RuntimeException(e);
         }
     }
 }

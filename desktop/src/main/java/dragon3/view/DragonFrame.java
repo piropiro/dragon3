@@ -26,7 +26,7 @@ public class DragonFrame implements FrameWorks, ActionListener, KeyListener {
 	
 	private volatile BMenuBar mb;
 	private JFrame frame;
-	private MineCanvas mc;
+	private MineCanvasAWT mca;
 	private MouseAllListener mal;
 	
 	private CommandListener commandListener;
@@ -44,8 +44,7 @@ public class DragonFrame implements FrameWorks, ActionListener, KeyListener {
 		mb.add("NONE", "none", KeyEvent.VK_N);
 		frame.setJMenuBar(mb);
 		
-		this.mc = mc;
-		MineCanvasAWT mca = (MineCanvasAWT) mc;
+		this.mca = (MineCanvasAWT) mc;
 
 		//mapPanel.setVisible(true);
 		
@@ -127,14 +126,14 @@ public class DragonFrame implements FrameWorks, ActionListener, KeyListener {
 		}
 		frame.setJMenuBar(mb);
 		mb.repaint();
-		mc.requestFocus();
+		mca.requestFocus();
 	}
 	
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		frame.requestFocus();
-		if (mc.isRunning())
+		if (mca.isRunning())
 			return;
 		AbstractButton b = (AbstractButton) e.getSource();
 		String command = b.getActionCommand();
@@ -189,11 +188,11 @@ public class DragonFrame implements FrameWorks, ActionListener, KeyListener {
 	@Override
 	public void setMouseListener(MouseAllListener mal) {
 		this.mal = mal;
-		mc.setMouseAllListener(mal);
+		mca.setMouseAllListener(mal);
 	}
 	
 	public void repaint() {
-		mc.repaint();
+		mca.repaint();
 	}
 
 	public void setCommandListener(CommandListener commandListener) {

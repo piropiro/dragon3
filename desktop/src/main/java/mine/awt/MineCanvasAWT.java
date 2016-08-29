@@ -7,9 +7,12 @@ import java.util.List;
 import javax.swing.JComponent;
 
 import mine.event.MineCanvas;
+import mine.event.MineCanvasLayer;
 import mine.event.MouseAllListener;
 import mine.event.MouseManager;
+import mine.event.PaintComponent;
 import mine.event.PaintListener;
+import mine.paint.MineGraphics;
 import mine.paint.MineImageLoader;
 
 @SuppressWarnings("serial")
@@ -52,4 +55,19 @@ public class MineCanvasAWT extends JComponent implements MineCanvas {
 	public boolean isRunning() {
 		return mm.isAlive();
 	}
+
+	public PaintComponent newLayer(int x, int y, int w, int h) {
+		MineCanvasLayer layer = new MineCanvasLayer(this, getImageLoader(), x, y, w, h);
+		getLayers().add(layer);
+
+		return layer;
+	}
+
+	@Override
+	public void paint(MineGraphics g) {
+		for (PaintListener layer : getLayers()) {
+			layer.paint(g);
+		}
+	}
+
 }

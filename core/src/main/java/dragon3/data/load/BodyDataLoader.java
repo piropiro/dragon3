@@ -1,5 +1,7 @@
 package dragon3.data.load;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -74,7 +76,8 @@ public class BodyDataLoader {
 		
 		System.out.println(" str=" + body.getStr());
 	}
-	
+
+	@NotNull
 	public Body loadBodyData(String bodyId, int level) {
 		Body body = new Body();
 		

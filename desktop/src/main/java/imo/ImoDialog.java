@@ -49,7 +49,7 @@ public class ImoDialog extends JDialog implements KeyListener, ImoListener {
 		pack();
 		MineAwtUtils.setCenter(this);
 		setVisible(true);
-		mc.requestFocus();
+		//mc.requestFocus();
 	}
 
 	public void gameExit(int exp_) {

@@ -39,15 +39,6 @@ object JsonIO {
      * @throws RuntimeException データの書き込みに失敗した。
      */
     fun write(path: String, obj: Any) {
-        try {
-            FileIO.getOutputStream(path).use { os ->
-                val json = JSON.encode(obj, true)
-
-                IOUtils.write(json, os, "UTF-8")
-            }
-        } catch (e: IOException) {
-            throw RuntimeException(e)
-        }
-
+        FileIO.getOutputStream(path).use { os -> JSON.encode(obj, os, true) }
     }
 }

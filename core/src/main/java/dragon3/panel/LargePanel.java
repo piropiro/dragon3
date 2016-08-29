@@ -45,7 +45,7 @@ public class LargePanel implements PaintListener {
 
 	/*** Display ******************************************************************/
 
-	public void display(String text, GameColor bgcolor, int sleep) {
+	public void display(String text, GameColor bgcolor, final int sleep) {
 		this.text = text;
 		this.bgcolor = bgcolor;
 		
@@ -58,14 +58,16 @@ public class LargePanel implements PaintListener {
 		panel.setVisible(true);
 		panel.repaint();
 		
-		new Thread(() -> {
-			try {
-				Thread.sleep(sleep);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
+		new Thread(){
+			public void run() {
+				try {
+					Thread.sleep(sleep);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+				panel.setVisible(false);
 			}
-			panel.setVisible(false);
-		}).start();
+		}.start();
 	}
 
 	/*** Paint **************************************************************/

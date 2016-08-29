@@ -7,17 +7,10 @@ import mine.paint.MineImageLoader;
 
 public interface MineCanvas {
 	
-	public default PaintComponent newLayer(int x, int y, int w, int h) {
-		MineCanvasLayer layer = new MineCanvasLayer(this, getImageLoader(), x, y, w, h);
-		getLayers().add(layer);
-		
-		return layer;
-	}
-	
-	public default void paint(MineGraphics g) {
-		getLayers().forEach((layer) -> layer.paint(g));
-	}
-	
+	public PaintComponent newLayer(int x, int y, int w, int h);
+
+	public void paint(MineGraphics g);
+
 	public MineImageLoader getImageLoader();
 	
 	public List<PaintListener> getLayers();
@@ -30,5 +23,5 @@ public interface MineCanvas {
 	
 	public boolean isRunning();
 	
-	public void requestFocus();
+	//public void requestFocus();
 }
