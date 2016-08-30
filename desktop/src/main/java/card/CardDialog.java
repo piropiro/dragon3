@@ -21,8 +21,6 @@ import java.util.List;
 @Singleton
 public class CardDialog extends JDialog implements CardListener {
 
-	private static final long serialVersionUID = -7568381413859212716L;
-
 	private MineImage[] chara;
 	private int level = 1;
 

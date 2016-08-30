@@ -147,12 +147,10 @@ public class CardCanvas
 	}
 	public void repaint() {
 		panel.update();
-		listener.repaint();
 	}
 	
 	public void repaint(PaintBox box){
 		panel.update();
-		listener.repaint(box.getX(), box.getY(), box.getW(), box.getH());
 	}
 
 	public void sleep(long msec){

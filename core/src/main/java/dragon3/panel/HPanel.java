@@ -22,8 +22,6 @@ public class HPanel implements PaintListener {
 
 	private HPBar hpb;
 
-	private UnitWorks uw;
-
 	/*** Constructer ***********************************************/
 
 	public HPanel(PaintComponent panel, SleepManager sm, boolean high) {
@@ -77,7 +75,6 @@ public class HPanel implements PaintListener {
 
 		setLocate(ba, bb);
 		panel.setVisible(true);
-		uw.repaint();
 	}
 
 	/*** Paint *********************************************************/
@@ -101,7 +98,6 @@ public class HPanel implements PaintListener {
 	public void damage(int damage) {
 		hpb.setMin(ba.getHp() - damage, true);
 		panel.update();
-		uw.repaint();
 	}
 
 	/*** Henka **************************************************/
@@ -110,18 +106,13 @@ public class HPanel implements PaintListener {
 		int st = hpb.getSleepTime();
 		while (hpb.henka()) {
 			panel.update();
-			uw.repaint();
 			sm.sleep(st);
 		}
 		panel.update();
-		uw.repaint();
 	}
 	
 	public void setVisible(boolean flag) {
 		panel.setVisible(flag);
 	}
 
-	public void setUw(UnitWorks uw) {
-		this.uw = uw;
-	}
 }

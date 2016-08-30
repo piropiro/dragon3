@@ -12,7 +12,6 @@ import dragon3.common.Body;
 import dragon3.common.constant.GameColor;
 import dragon3.common.constant.Page;
 import dragon3.common.util.MoveUtils;
-import dragon3.controller.UnitWorks;
 import dragon3.manage.SummonManager;
 import dragon3.manage.TreasureManager;
 import dragon3.manage.TurnManager;
@@ -289,17 +288,4 @@ public class PanelManagerImpl implements PanelManager {
 		//fw.setMouseListener(mapP);
 	}
 
-	@Override
-	public void setUw(UnitWorks uw) {
-		animeP.setUw(uw);
-		mapP.setUw(uw);
-		stageSelectP.setUw(uw);
-		dataP1.setUw(uw);
-		dataP2.setUw(uw);
-		hpP1.setUw(uw);
-		hpP2.setUw(uw);
-		helpP.setUw(uw);
-		largeP.setUw(uw);
-		messageP.setUw(uw);
-	}
 }

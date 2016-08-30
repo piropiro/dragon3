@@ -121,7 +121,6 @@ public class DragonController implements UnitWorks, MouseAllListener, CommandLis
 
 
 	public void setup(FrameWorks fw) {
-		this.animeManager.setUw(this);
 		this.fightManager.setUw(this);
 		this.cardManager.setUw(this);
 		this.enemyTurn.setUw(this);
@@ -129,22 +128,11 @@ public class DragonController implements UnitWorks, MouseAllListener, CommandLis
 		this.treasure.setUw(this);
 		this.turnManager.setUw(this);
 		this.saveManager.setUw(this);
-		this.stageManager.setUw(this);
-		this.panelManager.setUw(this);
 		equip = saveManager.loadData("slgs.dat");
 		this.fw = fw;
 		fw.setMouseListener(this);
 	}
 
-	@Override
-	public void repaint() {
-		fw.repaint();
-	}
-
-	@Override
-	public void repaint(int x, int y, int w, int h) {
-		fw.repaint(x, y, w, h);
-	}
 
 	/*** Title ***********************************/
 

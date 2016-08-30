@@ -5,7 +5,6 @@ import javax.inject.Named;
 import javax.inject.Singleton;
 
 import dragon3.common.constant.Page;
-import dragon3.controller.UnitWorks;
 import mine.event.PaintComponent;
 import mine.event.PaintListener;
 import mine.paint.MineGraphics;
@@ -18,7 +17,6 @@ public class MapPanel implements MapWorks, PaintListener {
 	
 	private int wx, wy, wxs, wys;
 
-	UnitWorks uw;
 
 	@Inject StageMap map;
 
@@ -63,7 +61,7 @@ public class MapPanel implements MapWorks, PaintListener {
 			int xs = Math.abs(wx - wxs) * 32 + 32;
 			int ys = Math.abs(wy - wys) * 32 + 32;
 			panel.update();
-			uw.repaint(x, y, xs, ys);
+			//uw.repaint(x, y, xs, ys);
 		}
 		wxs = wx;
 		wys = wy;
@@ -74,17 +72,17 @@ public class MapPanel implements MapWorks, PaintListener {
 	@Override
 	public void ppaint(int px, int py) {
 		panel.update();
-		uw.repaint(px * 32, py * 32, 32, 32);
+		//uw.repaint(px * 32, py * 32, 32, 32);
 	}
 	@Override
 	public void ppaint(int[] box) {
 		panel.update();
-		uw.repaint(box[0] * 32, box[1] * 32, box[2] * 32, box[3] * 32);
+		//uw.repaint(box[0] * 32, box[1] * 32, box[2] * 32, box[3] * 32);
 	}
 	@Override
 	public void repaint() {
 		panel.update();
-		uw.repaint();
+		//uw.repaint();
 	}
 	@Override
 	public void update() {
@@ -98,7 +96,4 @@ public class MapPanel implements MapWorks, PaintListener {
 		map.getMap().draw(g);
 	}
 
-	public void setUw(UnitWorks uw) {
-		this.uw = uw;
-	}
 }

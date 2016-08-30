@@ -187,15 +187,6 @@ constructor(@Named("mainC") mc: MineCanvas, sleepManager: SleepManager) : FrameW
         this.mal = mal
     }
 
-    override fun repaint() {
-//        c.repaint()
-    }
-
-    override fun repaint(x: Int, y: Int, w: Int, h: Int) {
-//        c.repaint(x, y, w, h)
-//        c.repaint()
-    }
-
     fun setCommandListener(commandListener: CommandListener) {
         this.commandListener = commandListener
     }

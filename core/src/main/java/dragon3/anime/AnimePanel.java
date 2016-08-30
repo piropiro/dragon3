@@ -52,8 +52,6 @@ public class AnimePanel implements AnimeManager, AnimeWorks, PaintListener {
 	private AnimeListener np;
 	private AnimeListener al;
 
-	private UnitWorks uw;
-
 	@Inject
 	public AnimePanel(@Named("animeC") PaintComponent panel, Statics statics) {
 		this.panel = panel;
@@ -362,7 +360,6 @@ public class AnimePanel implements AnimeManager, AnimeWorks, PaintListener {
 	@Override
 	public void repaint() {
 		panel.update();
-		uw.repaint();
 	}
 
 	@Override
@@ -378,10 +375,6 @@ public class AnimePanel implements AnimeManager, AnimeWorks, PaintListener {
 	@Override
 	public void setVisible(boolean flag) {
 		panel.setVisible(flag);
-	}
-
-	public void setUw(UnitWorks uw) {
-		this.uw = uw;
 	}
 
 }

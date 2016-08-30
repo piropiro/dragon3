@@ -68,16 +68,6 @@ public class CardManager implements CardListener {
 		return num;
 	}
 
-	@Override
-	public void repaint() {
-		uw.repaint();
-	}
-
-	@Override
-	public void repaint(int x, int y, int w, int h) {
-		uw.repaint(x, y, w, h);
-	}
-
 	/*** End Judge *************************************************/
 
 	@Override

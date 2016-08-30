@@ -13,7 +13,6 @@ public interface StageManager {
 	
 	public void wakuPaint(int wx, int wy, boolean flag);
 	
-	public void setUw(UnitWorks uw);
-	
+
 	
 }

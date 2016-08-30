@@ -33,8 +33,6 @@ public interface AnimeManager extends AnimeWorks {
 	public static final int STATUS_HAMMER = 11;
 	public static final int STATUS_BERSERK = 12;
 
-	public void setUw(UnitWorks uw);
-
 	public void dispose();
 
 	public void setVisible(boolean flag);

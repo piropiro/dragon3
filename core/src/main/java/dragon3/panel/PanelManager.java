@@ -62,5 +62,4 @@ public interface PanelManager {
 	public void displayCardCanvas();
 	public void closeCardCanvas();
 
-	public void setUw(UnitWorks uw);
 }

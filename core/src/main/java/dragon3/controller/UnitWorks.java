@@ -23,9 +23,6 @@ import mine.util.Point;
 
 public interface UnitWorks {
 
-	public void repaint();
-	public void repaint(int x, int y, int w, int h);
-
 	/*** Main ************************/
 
 	public void title();

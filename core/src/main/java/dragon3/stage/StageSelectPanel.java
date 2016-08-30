@@ -30,7 +30,6 @@ public class StageSelectPanel implements StageManager, PaintListener {
 	
 	private PaintComponent panel;
 	
-	UnitWorks uw;
 
 	private ImageManager imageManager;
 	
@@ -119,7 +118,6 @@ public class StageSelectPanel implements StageManager, PaintListener {
 			int xs = Math.abs(wx - wxs) * UNIT_WIDTH + UNIT_WIDTH;
 			int ys = Math.abs(wy - wys) * UNIT_HEIGHT + UNIT_HEIGHT;
 			panel.update();
-			uw.repaint(x, y, xs, ys);
 		}
 		wxs = wx;
 		wys = wy;
@@ -142,10 +140,6 @@ public class StageSelectPanel implements StageManager, PaintListener {
 		selectedStage = stageList.get(stageNum);
 	}
 
-	@Override
-	public void setUw(UnitWorks uw) {
-		this.uw = uw;
-	}
 
 	@Override
 	public StageData getSelectedStage() {
