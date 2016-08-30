@@ -2,7 +2,9 @@ package card;
 
 import mine.awt.MineAwtUtils;
 import mine.awt.MineCanvasAWT;
+import mine.awt.MouseManagerAWT;
 import mine.event.MineCanvas;
+import mine.event.MouseManager;
 import mine.event.SleepManager;
 import mine.io.JsonManager;
 import mine.paint.MineImage;
@@ -25,7 +27,10 @@ public class CardDialog extends JDialog implements CardListener {
 	private int level = 1;
 
 	private int[][] status;
-	
+
+	private MouseManager mm;
+	private MineCanvasAWT c;
+
 	@Inject MineCanvas mc;
 	@Inject SleepManager sleepManager;
 	@Inject MineImageLoader imageLoader;
@@ -38,20 +43,21 @@ public class CardDialog extends JDialog implements CardListener {
 	}
 	
 	public void launch() {
-		MineCanvasAWT mca = (MineCanvasAWT) mc;
-		
-		MineAwtUtils.setSize(mca, 640, 480);	
+		c = new MineCanvasAWT(mc);
+		mm = new MouseManagerAWT(this);
+
+		MineAwtUtils.setSize(c, 640, 480);
 		
 		cc.setVisible(true);
 		setTitle("CardBattle");
 		
 		//SleepManager sleepManager = new SleepManagerAWT();
-		mca.addKeyListener((KeyListener)sleepManager);
-		mca.addMouseListener((MouseListener)sleepManager);
+		c.addKeyListener((KeyListener)sleepManager);
+		c.addMouseListener((MouseListener)sleepManager);
 		
 		//cc = new CardCanvas(cardPanel, mil, sleepManager);		
 		cc.setCardListener(this);
-		mc.setMouseAllListener(new CardEventListener(cc));
+		mm.setMouseAllListener(new CardEventListener(cc));
 		
 		//chara = (MineImage[])MineUtils.linerize(
 		//	imageLoader.loadTile("card/image/chara.png", 32, 32), new MineImage[0]);
@@ -68,7 +74,7 @@ public class CardDialog extends JDialog implements CardListener {
 		status = jsonManager.read("card/data/status.json", int[][].class);
 
 
-		getContentPane().add((JComponent)mc);
+		getContentPane().add(c);
 		pack();
 		MineAwtUtils.setCenter(this);
 		setVisible(true);

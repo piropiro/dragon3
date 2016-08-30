@@ -20,6 +20,7 @@ import dragon3.panel.LargePanel;
 import dragon3.panel.MessagePanel;
 import dragon3.panel.SmallPanel;
 import dragon3.view.FrameWorks;
+import dragon3.view.MenuSet;
 import mine.android.ImageLoaderAND;
 import mine.android.MineCanvasAND;
 import mine.android.SleepManagerAND;
@@ -91,7 +92,6 @@ public class MainActivity extends AppCompatActivity implements FrameWorks {
             }
         });
 
-        FileManagerAND.context = getApplicationContext();
         imageLoader = new ImageLoaderAND(getApplicationContext());
         sleepManager = new SleepManagerAND();
 
@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity implements FrameWorks {
 
         mapPanel.setVisible(true);
 
-        DragonController vp = new DragonController(this);
+        DragonController vp = new DragonController();
         this.setCommandListener(vp);
         vp.title();
     }
@@ -150,7 +150,7 @@ public class MainActivity extends AppCompatActivity implements FrameWorks {
 
 
     @Override
-    public void setMenu(int n) {
+    public void setMenu(MenuSet n) {
 
     }
 
@@ -158,6 +158,16 @@ public class MainActivity extends AppCompatActivity implements FrameWorks {
     public void setMouseListener(MouseAllListener mal) {
         mc.setMouseAllListener(mal);
         Log.d("SetMouseListener", "MouseListener:" + mal.getClass());
+    }
+
+    @Override
+    public void repaint() {
+        mc.repaint();
+    }
+
+    @Override
+    public void repaint(int x, int y, int w, int h) {
+        mc.repaint(x, y, w, h);
     }
 
     public void setCommandListener(CommandListener commandListener) {

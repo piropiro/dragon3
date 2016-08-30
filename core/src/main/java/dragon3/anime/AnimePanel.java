@@ -23,6 +23,7 @@ import dragon3.anime.listener.SummonAnime;
 import dragon3.anime.listener.WalkAnime;
 import dragon3.common.DataList;
 import dragon3.common.constant.AnimeType;
+import dragon3.controller.UnitWorks;
 import dragon3.data.AnimeData;
 import dragon3.image.ImageManager;
 import dragon3.map.MapWorks;
@@ -50,6 +51,8 @@ public class AnimePanel implements AnimeManager, AnimeWorks, PaintListener {
 
 	private AnimeListener np;
 	private AnimeListener al;
+
+	private UnitWorks uw;
 
 	@Inject
 	public AnimePanel(@Named("animeC") PaintComponent panel, Statics statics) {
@@ -358,7 +361,8 @@ public class AnimePanel implements AnimeManager, AnimeWorks, PaintListener {
 
 	@Override
 	public void repaint() {
-		panel.repaint();
+		panel.update();
+		uw.repaint();
 	}
 
 	@Override
@@ -375,4 +379,9 @@ public class AnimePanel implements AnimeManager, AnimeWorks, PaintListener {
 	public void setVisible(boolean flag) {
 		panel.setVisible(flag);
 	}
+
+	public void setUw(UnitWorks uw) {
+		this.uw = uw;
+	}
+
 }

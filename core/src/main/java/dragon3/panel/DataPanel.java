@@ -10,6 +10,7 @@ import dragon3.common.constant.BodyKind;
 import dragon3.common.constant.GameColor;
 import dragon3.common.constant.Texts;
 import dragon3.common.util.MoveUtils;
+import dragon3.controller.UnitWorks;
 import dragon3.data.WazaData;
 import dragon3.image.ImageManager;
 import dragon3.manage.LevelManager;
@@ -45,7 +46,9 @@ public class DataPanel implements PanelWorks, PaintListener {
 	public static final int HEIGHT = 128;
 
 	private Statics statics;
-	
+
+	private UnitWorks uw;
+
 	private PaintComponent panel;
 
 	private DataPanelPainter pp;
@@ -239,7 +242,7 @@ public class DataPanel implements PanelWorks, PaintListener {
 		
 		setHPBar(ba, counter);
 
-		panel.repaint();
+		uw.repaint();
 		panel.setVisible(true);
 	}
 	
@@ -251,7 +254,7 @@ public class DataPanel implements PanelWorks, PaintListener {
 		setLocate(pp.getPoint1(), pp.getPoint2(), 2);
 		setHPBar(ba, counter);
 
-		panel.repaint();
+		uw.repaint();
 		panel.setVisible(true);
 	}
 	
@@ -274,7 +277,7 @@ public class DataPanel implements PanelWorks, PaintListener {
 	private void display() {
 		setLocate(pp.getPoint1(), pp.getPoint2(), 1);
 		bgcolor = pp.getColor();
-		panel.repaint();
+		uw.repaint();
 		panel.setVisible(true);
 	}
 
@@ -320,7 +323,8 @@ public class DataPanel implements PanelWorks, PaintListener {
 
 	public void damage(Body ba, int damage) {
 		hpb.setMin(ba.getHp() - damage, true);
-		panel.repaint(50, 50, 96, 12);
+		panel.update();
+		uw.repaint(50, 50, 96, 12);
 	}
 
 	/*** Henka **************************************************/
@@ -328,17 +332,24 @@ public class DataPanel implements PanelWorks, PaintListener {
 	public void henka() {
 		int st = hpb.getSleepTime() / 2;
 		while (hpb.henka()) {
-			panel.repaint(50, 50, 96, 12);
+			panel.update();
+			uw.repaint(50, 50, 96, 12);
 			sm.sleep(st);
 		}
-		panel.repaint();
+		panel.update();
+		uw.repaint();
 	}
 	
 	public void repaint() {
-		panel.repaint();
+		panel.update();
+		uw.repaint();
 	}
 	
 	public void setVisible(boolean flag) {
 		panel.setVisible(flag);
+	}
+
+	public void setUw(UnitWorks uw) {
+		this.uw = uw;
 	}
 }

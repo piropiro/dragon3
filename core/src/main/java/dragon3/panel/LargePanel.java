@@ -5,6 +5,7 @@ import javax.inject.Named;
 import javax.inject.Singleton;
 
 import dragon3.common.constant.GameColor;
+import dragon3.controller.UnitWorks;
 import mine.event.PaintComponent;
 import mine.event.PaintListener;
 import mine.paint.MineGraphics;
@@ -24,6 +25,8 @@ public class LargePanel implements PaintListener {
 	private int width;
 	
 	private int height;
+
+	private UnitWorks uw;
 
 	@Inject
 	public LargePanel(@Named("largeC") PaintComponent panel) {
@@ -56,7 +59,7 @@ public class LargePanel implements PaintListener {
 		
 		setLocate();
 		panel.setVisible(true);
-		panel.repaint();
+		uw.repaint();
 		
 		new Thread(){
 			public void run() {
@@ -88,5 +91,9 @@ public class LargePanel implements PaintListener {
 
 	public void setVisible(boolean flag) {
 		panel.setVisible(flag);
+	}
+
+	public void setUw(UnitWorks uw) {
+		this.uw = uw;
 	}
 }

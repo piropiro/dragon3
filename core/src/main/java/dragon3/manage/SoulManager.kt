@@ -14,7 +14,9 @@ import dragon3.data.BodyData
 import dragon3.data.load.BodyDataLoader
 import dragon3.image.ImageManager
 import dragon3.panel.PanelManager
+import javax.inject.Singleton
 
+@Singleton
 class SoulManager
 @Inject
 constructor() {

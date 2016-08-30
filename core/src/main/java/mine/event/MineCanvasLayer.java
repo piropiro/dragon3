@@ -32,12 +32,6 @@ public class MineCanvasLayer implements PaintComponent, PaintListener {
 	}
 
 	@Override
-	public void repaint() {
-		updated = true;
-		parent.repaint();
-	}
-	
-	@Override
 	public void paint(MineGraphics g) {
 		if (visible) {
 			if (updated) {
@@ -56,14 +50,7 @@ public class MineCanvasLayer implements PaintComponent, PaintListener {
 		if (visible != flag) {
 			this.visible = flag;
 			this.updated = true;
-			parent.repaint();
 		}
-	}
-
-	@Override
-	public void repaint(int x, int y, int w, int h) {
-		updated = true;
-		parent.repaint();
 	}
 
 	@Override

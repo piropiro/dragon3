@@ -42,6 +42,8 @@ import dragon3.stage.StageBack;
 import dragon3.stage.StageManager;
 import dragon3.stage.StageSelectEventListener;
 import dragon3.view.FrameWorks;
+import dragon3.view.MenuSet;
+import dragon3.view.MenuSet;
 import mine.event.MouseAllListener;
 import mine.event.SleepManager;
 import mine.paint.MineImageLoader;
@@ -55,7 +57,7 @@ public class DragonController implements UnitWorks, MouseAllListener, CommandLis
 	@Inject BodyDataLoader bodyDataLoader;
 	
 	@Inject StageMap stageMap;
-	@Inject FrameWorks fw;
+	private FrameWorks fw;
 	@Inject MapWorks mw;
 	
 	@Inject ImageManager imageManager;
@@ -90,9 +92,8 @@ public class DragonController implements UnitWorks, MouseAllListener, CommandLis
 	/*** Constructer *************************************/
 
 	@Inject
-	public DragonController(FrameWorks fw) {
+	public DragonController() {
 		super();
-		this.fw = fw;
 
 		charaList = new ArrayList<>();
 		// map = new StageMap(imageManager);
@@ -117,8 +118,10 @@ public class DragonController implements UnitWorks, MouseAllListener, CommandLis
 //		stageManager = panelManager.getStageSelectP();
 
 	}
-	
-	public void setup() {
+
+
+	public void setup(FrameWorks fw) {
+		this.animeManager.setUw(this);
 		this.fightManager.setUw(this);
 		this.cardManager.setUw(this);
 		this.enemyTurn.setUw(this);
@@ -127,14 +130,26 @@ public class DragonController implements UnitWorks, MouseAllListener, CommandLis
 		this.turnManager.setUw(this);
 		this.saveManager.setUw(this);
 		this.stageManager.setUw(this);
+		this.panelManager.setUw(this);
 		equip = saveManager.loadData("slgs.dat");
+		this.fw = fw;
 		fw.setMouseListener(this);
+	}
+
+	@Override
+	public void repaint() {
+		fw.repaint();
+	}
+
+	@Override
+	public void repaint(int x, int y, int w, int h) {
+		fw.repaint(x, y, w, h);
 	}
 
 	/*** Title ***********************************/
 
 	public void title() {
-		fw.setMenu(FrameWorks.T_TITLE);
+		fw.setMenu(MenuSet.T_TITLE);
 		animeManager.openTitle();
 		setEventListener(new TitlePaint(this));
 	}
@@ -211,14 +226,14 @@ public class DragonController implements UnitWorks, MouseAllListener, CommandLis
 	/*** Start *************************************/
 
 	private void stageSelect() {
-		fw.setMenu(FrameWorks.T_STAGESELECT);
+		fw.setMenu(MenuSet.T_STAGESELECT);
 		panelManager.displayStageSelect(saveManager.getSaveData());
 		setMouseListener(new StageSelectEventListener(this, stageManager));
 	}
 	
 	@Override
 	public void stageStart(StageData stageData) {
-		fw.setMenu(FrameWorks.T_SETMENS);
+		fw.setMenu(MenuSet.T_SETMENS);
 		mapLoad(stageData);
 		panelManager.displayLarge(stageData.getName(), GameColor.BLUE, 1500);
 		
@@ -238,7 +253,7 @@ public class DragonController implements UnitWorks, MouseAllListener, CommandLis
 
 	@Override
 	public void campStart() {
-		fw.setMenu(FrameWorks.T_CAMP);
+		fw.setMenu(MenuSet.T_CAMP);
 		panelManager.closeSmall();
 		panelManager.closeHelp();
 		panelManager.closeStageSelect();
@@ -252,7 +267,7 @@ public class DragonController implements UnitWorks, MouseAllListener, CommandLis
 		saveManager.getSaveData().countTurn();
 		turnManager.turnChange(true);
 		PaintUtils.setBasicPaint(this);
-		fw.setMenu(FrameWorks.T_PLAYER);
+		fw.setMenu(MenuSet.T_PLAYER);
 		mw.repaint();
 	}
 
@@ -263,7 +278,7 @@ public class DragonController implements UnitWorks, MouseAllListener, CommandLis
 		turnManager.turnChange(false);
 		limitOver();
 		PaintUtils.setWaitPaint(this);
-		fw.setMenu(FrameWorks.T_ENEMY);
+		fw.setMenu(MenuSet.T_ENEMY);
 		enemyTurn.start(turnManager.getTurn());
 	}
 
@@ -321,7 +336,7 @@ public class DragonController implements UnitWorks, MouseAllListener, CommandLis
 			saveManager.getSaveData().countEscape();
 			PaintUtils.setWaitPaint(this);
 			panelManager.displayLarge("ESCAPE", GameColor.RED, 3000);
-			fw.setMenu(FrameWorks.T_CLEAR);
+			fw.setMenu(MenuSet.T_CLEAR);
 		} else {
 			panelManager.displayLarge("FAILED", GameColor.RED, 500);
 		}
@@ -425,7 +440,7 @@ public class DragonController implements UnitWorks, MouseAllListener, CommandLis
 			panelManager.displayLarge("STAGE CLEAR", GameColor.BLUE, 5000);
 		}
 		saveManager.getSaveData().countStarNum(stageManager.getSelectedStage().getId());
-		fw.setMenu(FrameWorks.T_CLEAR);
+		fw.setMenu(MenuSet.T_CLEAR);
 		panelManager.displayHelp(mw.getWaku(), GameColor.BLUE, Texts.help[Texts.H_CLEAR]);
 	}
 
@@ -459,7 +474,7 @@ public class DragonController implements UnitWorks, MouseAllListener, CommandLis
 	private void gameOver() {
 		PaintUtils.setWaitPaint(this);
 		panelManager.displayLarge("GAME OVER", GameColor.RED, 5000);
-		fw.setMenu(FrameWorks.T_GAMEOVER);
+		fw.setMenu(MenuSet.T_GAMEOVER);
 		panelManager.displayHelp(mw.getWaku(), GameColor.BLUE, Texts.help[Texts.H_OVER]);
 	}
 
@@ -504,13 +519,13 @@ public class DragonController implements UnitWorks, MouseAllListener, CommandLis
 		panelManager.displayScore(equip, saveManager.getSaveData());
 
 		PaintUtils.setScorePaint(this);
-		fw.setMenu(FrameWorks.T_SCORE);
+		fw.setMenu(MenuSet.T_SCORE);
 	}
 
 	@Override
 	public void backToCamp() {
 		panelManager.closeData();
-		fw.setMenu(FrameWorks.T_CAMP);
+		fw.setMenu(MenuSet.T_CAMP);
 		PaintUtils.setCampPaint(this, camp);
 		stageMap.resetBack(StageBack.WHITE);
 		camp.repaint(statics.getCampMap());

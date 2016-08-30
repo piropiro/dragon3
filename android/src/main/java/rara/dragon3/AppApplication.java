@@ -2,6 +2,9 @@ package rara.dragon3;
 
 import android.app.Application;
 
+import dragon3.DragonModule;
+import mine.android.MineCanvasAND;
+
 /**
  * Created by rara on 2016/08/29.
  */
@@ -16,8 +19,9 @@ public class AppApplication extends Application {
     }
 
     private void initializeInjector() {
+
         applicationComponent = DaggerAppComponent.builder()
-                .appModule(new DragonModuleAND(this))
+                .dragonModuleAND(new DragonModuleAND(this))
                 .build();
     }
 

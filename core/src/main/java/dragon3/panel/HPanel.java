@@ -1,6 +1,7 @@
 package dragon3.panel;
 
 import dragon3.common.Body;
+import dragon3.controller.UnitWorks;
 import dragon3.panel.item.HPBar;
 import mine.event.PaintComponent;
 import mine.event.PaintListener;
@@ -20,6 +21,8 @@ public class HPanel implements PaintListener {
 	private boolean high;
 
 	private HPBar hpb;
+
+	private UnitWorks uw;
 
 	/*** Constructer ***********************************************/
 
@@ -74,7 +77,7 @@ public class HPanel implements PaintListener {
 
 		setLocate(ba, bb);
 		panel.setVisible(true);
-		panel.repaint();
+		uw.repaint();
 	}
 
 	/*** Paint *********************************************************/
@@ -97,7 +100,8 @@ public class HPanel implements PaintListener {
 
 	public void damage(int damage) {
 		hpb.setMin(ba.getHp() - damage, true);
-		panel.repaint();
+		panel.update();
+		uw.repaint();
 	}
 
 	/*** Henka **************************************************/
@@ -105,13 +109,19 @@ public class HPanel implements PaintListener {
 	public void henka() {
 		int st = hpb.getSleepTime();
 		while (hpb.henka()) {
-			panel.repaint();
+			panel.update();
+			uw.repaint();
 			sm.sleep(st);
 		}
-		panel.repaint();
+		panel.update();
+		uw.repaint();
 	}
 	
 	public void setVisible(boolean flag) {
 		panel.setVisible(flag);
+	}
+
+	public void setUw(UnitWorks uw) {
+		this.uw = uw;
 	}
 }

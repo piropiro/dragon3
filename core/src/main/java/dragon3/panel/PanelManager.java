@@ -7,6 +7,7 @@ import dragon3.attack.Attack;
 import dragon3.camp.Equip;
 import dragon3.common.Body;
 import dragon3.common.constant.GameColor;
+import dragon3.controller.UnitWorks;
 import dragon3.manage.TurnManager;
 import dragon3.save.SaveData;
 import mine.util.Point;
@@ -60,4 +61,6 @@ public interface PanelManager {
 	// CardPanel
 	public void displayCardCanvas();
 	public void closeCardCanvas();
+
+	public void setUw(UnitWorks uw);
 }

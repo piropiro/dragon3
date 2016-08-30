@@ -127,7 +127,7 @@ public class ImoCanvas implements PaintListener, ImoWorks {
 	 * Repaint
 	 */
 	public void repaint() {
-		panel.repaint();
+		il.repaint();
 	}
 
 	public void keyPressed(char character, int keyCode) {

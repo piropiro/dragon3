@@ -25,7 +25,6 @@ public class TurnManagerImpl implements TurnManager {
 
 	@Inject StageMap map;
 	@Inject AnimeManager anime;
-	@Inject FrameWorks fw;
 
 	/*** Constructer ************************************/
 
@@ -45,27 +44,7 @@ public class TurnManagerImpl implements TurnManager {
 		return turn;
 	}
 
-	/*** Player ********************************/
 
-	public void playerTurnStart() {
-		uw.getSaveManager().getSaveData().countTurn();
-		turn++;
-		turnChange(true);
-		PaintUtils.setBasicPaint(uw);
-		fw.setMenu(FrameWorks.T_PLAYER);
-		uw.getMapWorks().repaint();
-	}
-
-	/*** Enemy ******************************/
-
-	public void enemyTurnStart() {
-		turnChange(false);
-		uw.limitOver();
-//		EnemyTurn et = new EnemyTurn(uw);
-		PaintUtils.setWaitPaint(uw);
-		fw.setMenu(FrameWorks.T_ENEMY);
-//		enemyTurn.start(turn);
-	}
 
 	/*** Change *****************************/
 

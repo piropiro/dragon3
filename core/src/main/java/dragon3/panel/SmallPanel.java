@@ -5,6 +5,7 @@ import javax.inject.Named;
 import javax.inject.Singleton;
 
 import dragon3.common.constant.GameColor;
+import dragon3.controller.UnitWorks;
 import mine.event.PaintComponent;
 import mine.event.PaintListener;
 import mine.paint.MineGraphics;
@@ -77,4 +78,5 @@ public class SmallPanel implements PaintListener {
 	public void setVisible(boolean flag) {
 		panel.setVisible(flag);
 	}
+
 }

@@ -4,12 +4,10 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 import javax.inject.Inject;
-import javax.swing.JComponent;
 import javax.swing.JDialog;
 
-import card.CardCanvas;
-import mine.awt.MineAwtUtils;
 import mine.awt.MineCanvasAWT;
+import mine.awt.MineAwtUtils;
 import mine.event.MineCanvas;
 import mine.event.SleepManager;
 import mine.paint.MineImageLoader;
@@ -25,6 +23,7 @@ public class ImoDialog extends JDialog implements KeyListener, ImoListener {
 	private int exp;
 	private int level = 1;
 
+	private MineCanvasAWT c;
 
 	@Inject
 	public ImoDialog() {
@@ -32,25 +31,27 @@ public class ImoDialog extends JDialog implements KeyListener, ImoListener {
 	}
 
 	public void launch() {
-		MineCanvasAWT mca = (MineCanvasAWT) mc;
 
-		MineAwtUtils.setSize(mca, 300, 300);
+		c = new MineCanvasAWT(mc);
+		MineAwtUtils.setSize(c, 300, 300);
 
 		ic.setup("僕", 1);
 
 		ic.setVisible(true);
 		setTitle("ImoBattle");
 
-		mca.addKeyListener(this);
+		c.addKeyListener(this);
 
 		ic.setImoListener(this);
 
-		getContentPane().add((JComponent)mc);
+		getContentPane().add(c);
 		pack();
 		MineAwtUtils.setCenter(this);
 		setVisible(true);
-		//mc.requestFocus();
+		c.requestFocus();
 	}
+
+
 
 	public void gameExit(int exp_) {
 		this.life = true;

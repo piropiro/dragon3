@@ -19,9 +19,12 @@ public interface FrameWorks {
 	public static final int T_WAZALIST = 12;
 	public static final int T_STAGESELECT = 13;
 
-    public void setMenu(int n);
+    public void setMenu(MenuSet n);
     public void setMouseListener(MouseAllListener mal);
-    
+
+	public void repaint();
+	public void repaint(int x, int y, int w, int h);
+
 //    public PaintComponent getMapPanel();
 //    public PaintComponent getStageSelectPanel();
 //    public PaintComponent getAnimePanel();

@@ -5,6 +5,7 @@ import javax.inject.Named;
 import javax.inject.Singleton;
 
 import dragon3.common.constant.GameColor;
+import dragon3.controller.UnitWorks;
 import mine.event.PaintComponent;
 import mine.event.PaintListener;
 import mine.paint.MineColor;
@@ -22,6 +23,8 @@ public class HelpPanel implements PaintListener {
 	private boolean leftf;
 	private boolean upf;
 	private GameColor bgcolor = GameColor.BLUE;
+
+	private UnitWorks uw;
 
 	@Inject
 	public HelpPanel(@Named("helpC") PaintComponent panel) {
@@ -96,6 +99,11 @@ public class HelpPanel implements PaintListener {
 	}
 	
 	public void repaint() {
-		panel.repaint();
+		panel.update();
+		uw.repaint();
+	}
+
+	public void setUw(UnitWorks uw) {
+		this.uw = uw;
 	}
 }

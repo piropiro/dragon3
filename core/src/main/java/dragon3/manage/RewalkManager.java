@@ -1,6 +1,7 @@
 package dragon3.manage;
 
 import javax.inject.Inject;
+import javax.inject.Singleton;
 
 import dragon3.common.Body;
 import dragon3.common.constant.Page;
@@ -11,6 +12,7 @@ import dragon3.paint.PaintUtils;
 import dragon3.panel.PanelManager;
 import mine.paint.UnitMap;
 
+@Singleton
 public class RewalkManager {
 
 	

@@ -23,10 +23,11 @@ import mine.paint.MineImage;
 import mine.paint.MineImageLoader;
 
 @SuppressWarnings("serial")
-public class MineCanvasAND extends View implements MineCanvas {
+public class MineCanvasAND extends View {
 
     private MouseAllListener mouseAllListener;
 
+    private PaintListener pl;
 
 	private MineImageLoader imageLoader;
 
@@ -51,38 +52,14 @@ public class MineCanvasAND extends View implements MineCanvas {
         this.height = height;
     }
 
-    @Override
-    public PaintComponent newLayer(int x, int y, int w, int h) {
-		MineCanvasLayer layer = new MineCanvasLayer(this, getImageLoader(), x, y, w, h);
-		getLayers().add(layer);
-
-		return layer;
-	}
-
-    @Override
-    public void paint(MineGraphics g) {
-        MineImage buffer = getImageLoader().getBuffer(width, height);
-        MineGraphics bg = buffer.getGraphics();
-        for (PaintListener layer : getLayers()) {
-            layer.paint(bg);
-        }
-        g.drawFitImage(buffer, this.getWidth(), this.getHeight());
-    }
-
-    @Override
-    public MineImageLoader getImageLoader() {
-        return imageLoader;
-    }
-
-    @Override
-    public List<PaintListener> getLayers() {
-        return layers;
+    public void setPaintListener(PaintListener pl) {
+        this.pl = pl;
     }
 
 
     @Override
 	protected void onDraw(Canvas canvas) {
-		paint(new GraphicsAND(canvas));
+		pl.paint(new GraphicsAND(canvas));
 	}
 
     @Override
@@ -119,17 +96,14 @@ public class MineCanvasAND extends View implements MineCanvas {
         return true;
     }
 
-    @Override
     public void repaint() {
         handler.sendEmptyMessage(0);
     }
 
-    @Override
     public void repaint(int x, int y, int w, int h) {
         handler.sendEmptyMessage(0);
     }
 
-    @Override
     public void setMouseAllListener(MouseAllListener mal) {
         this.mouseAllListener = mal;
     }
@@ -138,7 +112,6 @@ public class MineCanvasAND extends View implements MineCanvas {
         return mouseAllListener;
     }
 
-    @Override
 	public boolean isRunning() {
 		return false;
 	}

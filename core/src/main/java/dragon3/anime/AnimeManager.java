@@ -1,5 +1,6 @@
 package dragon3.anime;
 
+import dragon3.controller.UnitWorks;
 import dragon3.data.AnimeData;
 
 public interface AnimeManager extends AnimeWorks {
@@ -31,6 +32,8 @@ public interface AnimeManager extends AnimeWorks {
 	public static final int STATUS_OIL = 10;
 	public static final int STATUS_HAMMER = 11;
 	public static final int STATUS_BERSERK = 12;
+
+	public void setUw(UnitWorks uw);
 
 	public void dispose();
 

@@ -12,6 +12,7 @@ import dragon3.attack.Attack;
 import dragon3.common.Body;
 import dragon3.common.constant.GameColor;
 import dragon3.common.constant.Texts;
+import dragon3.controller.UnitWorks;
 import dragon3.image.ImageManager;
 import dragon3.panel.item.HPBar;
 import mine.event.PaintComponent;
@@ -41,6 +42,8 @@ public class MessagePanel implements PaintListener {
 	
 	protected int width;
 	protected int height;
+
+	private UnitWorks uw;
 
 	@Inject
 	public MessagePanel(@Named("messageC") PaintComponent panel) {
@@ -141,7 +144,8 @@ public class MessagePanel implements PaintListener {
 			n = i;
 			String text = (String) list.get(n);
 			for (line = 0; line <= text.length(); line++) {
-				panel.repaint();
+				panel.update();
+				uw.repaint();
 				sm.sleep(80);
 			}
 			sm.sleep(200);
@@ -178,5 +182,7 @@ public class MessagePanel implements PaintListener {
 		}
 	}
 
-	
+	public void setUw(UnitWorks uw) {
+		this.uw = uw;
+	}
 }

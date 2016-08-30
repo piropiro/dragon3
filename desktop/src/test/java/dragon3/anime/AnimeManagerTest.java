@@ -33,11 +33,10 @@ public class AnimeManagerTest {
 		//og = DaggerDragonTestComponent.builder().build();
 
 		og = DaggerDragonComponent.builder().build();
-
-		DragonController dc = og.getDragonController();
-		dc.setup();
-		dc.title();
 		DragonFrame df = og.getDragonFrame();
+		DragonController dc = og.getDragonController();
+		dc.setup(df);
+		dc.title();
 		df.launch();
 	}
 

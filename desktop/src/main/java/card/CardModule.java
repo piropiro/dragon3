@@ -7,7 +7,6 @@ import dagger.Module;
 import dagger.Provides;
 import mine.awt.FileManagerAWT;
 import mine.awt.ImageLoaderAWT;
-import mine.awt.MineCanvasAWT;
 import mine.awt.SleepManagerAWT;
 import mine.event.MineCanvas;
 import mine.event.PaintComponent;
@@ -23,7 +22,7 @@ public class CardModule {
 	
 	public CardModule() {
 		
-		this.mc = new MineCanvasAWT(new ImageLoaderAWT(new FileManagerAWT()));
+		this.mc = new MineCanvas(new ImageLoaderAWT(new FileManagerAWT()));
 
 		cardPanel = mc.newLayer(0, 0, CardCanvas.WIDTH, CardCanvas.HEIGHT);
 	}

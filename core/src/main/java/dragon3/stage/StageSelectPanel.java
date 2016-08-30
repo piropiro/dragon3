@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.inject.Singleton;
 
 import dragon3.Statics;
 import dragon3.controller.UnitWorks;
@@ -17,6 +18,7 @@ import mine.paint.MineImage;
 import mine.paint.UnitMap;
 import mine.util.Point;
 
+@Singleton
 public class StageSelectPanel implements StageManager, PaintListener {
 
 	public static final int UNIT_WIDTH = 106;
@@ -116,7 +118,8 @@ public class StageSelectPanel implements StageManager, PaintListener {
 			int y = Math.min(wy, wys) * UNIT_HEIGHT;
 			int xs = Math.abs(wx - wxs) * UNIT_WIDTH + UNIT_WIDTH;
 			int ys = Math.abs(wy - wys) * UNIT_HEIGHT + UNIT_HEIGHT;
-			panel.repaint(x, y, xs, ys);
+			panel.update();
+			uw.repaint(x, y, xs, ys);
 		}
 		wxs = wx;
 		wys = wy;

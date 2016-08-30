@@ -14,15 +14,11 @@ public class TurnManagerMock implements TurnManager {
 		return 0;
 	}
 
-	public void enemyTurnStart() {
-		// TODO Auto-generated method stub
+	@Override
+	public void turnChange(boolean flag) {
 
 	}
 
-	public void playerTurnStart() {
-		// TODO Auto-generated method stub
-
-	}
 
 	@Override
 	public void setUw(UnitWorks uw) {

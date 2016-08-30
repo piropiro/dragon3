@@ -40,9 +40,9 @@ public class PanelManagerTest {
 		og = DaggerDragonComponent.builder().build();
 
 		DragonController dc = og.getDragonController();
-		dc.setup();
-		dc.title();
 		DragonFrame df = og.getDragonFrame();
+		dc.setup(df);
+		dc.title();
 		df.launch();
 	}
 	

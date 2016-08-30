@@ -146,11 +146,13 @@ public class CardCanvas
 		panel.setVisible(flag);
 	}
 	public void repaint() {
-		panel.repaint();
+		panel.update();
+		listener.repaint();
 	}
 	
 	public void repaint(PaintBox box){
-		panel.repaint(box.getX(), box.getY(), box.getW(), box.getH());
+		panel.update();
+		listener.repaint(box.getX(), box.getY(), box.getW(), box.getH());
 	}
 
 	public void sleep(long msec){

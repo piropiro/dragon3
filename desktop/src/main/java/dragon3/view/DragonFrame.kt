@@ -17,18 +17,25 @@ import dragon3.controller.CommandListener
 import mine.awt.BMenuBar
 import mine.awt.MineAwtUtils
 import mine.awt.MineCanvasAWT
+import mine.awt.MouseManagerAWT
 import mine.event.MineCanvas
 import mine.event.MouseAllListener
+import mine.event.MouseManager
 import mine.event.SleepManager
+import kotlin.concurrent.thread
 
 @Singleton
 class DragonFrame
 @Inject
 constructor(@Named("mainC") mc: MineCanvas, sleepManager: SleepManager) : FrameWorks, ActionListener, KeyListener {
 
+
+    private val mm: MouseManager
+
     private val mb: BMenuBar
     private val frame: JFrame
-    private val mca: MineCanvasAWT
+    private val c: MineCanvasAWT
+    private val mca: MineCanvas
     private var mal: MouseAllListener? = null
 
     private var commandListener: CommandListener? = null
@@ -43,39 +50,48 @@ constructor(@Named("mainC") mc: MineCanvas, sleepManager: SleepManager) : FrameW
         mb.add("NONE", "none", KeyEvent.VK_N)
         frame.jMenuBar = mb
 
-        this.mca = mc as MineCanvasAWT
+        c = MineCanvasAWT(mc)
+        mm = MouseManagerAWT(c)
+
+        this.mca = mc
 
         //mapPanel.setVisible(true);
 
-        MineAwtUtils.setSize(mca, 640, 480)
-        mca.background = Color(0, 0, 150)
-        mca.addKeyListener(this)
+        MineAwtUtils.setSize(c, 640, 480)
+        c.background = Color(0, 0, 150)
+        c.addKeyListener(this)
 
-        frame.contentPane.add(mca)
+        frame.contentPane.add(c)
         frame.pack()
         frame.defaultCloseOperation = JFrame.EXIT_ON_CLOSE
 
-        mca.addKeyListener(sleepManager as KeyListener)
-        mca.addMouseListener(sleepManager as MouseListener)
+        c.addKeyListener(sleepManager as KeyListener)
+        c.addMouseListener(sleepManager as MouseListener)
     }
 
     fun launch() {
         frame.isVisible = true
         MineAwtUtils.setCenter(frame)
 
+        thread {
+            while (true) {
+                Thread.sleep(10)
+                c.repaint()
+            }
+        }
     }
 
     /*** MenuBar  */
 
-    @Synchronized override fun setMenu(type: Int) {
+    @Synchronized override fun setMenu(type: MenuSet) {
         mb.reset(this)
         when (type) {
-            FrameWorks.T_SCORE -> {
+            MenuSet.T_SCORE -> {
                 mb.add("BACK", "back", KeyEvent.VK_B)
                 mb.add("HELP", "help", KeyEvent.VK_H)
             }
-            FrameWorks.T_TITLE -> mb.add("NONE", "none", KeyEvent.VK_N)
-            FrameWorks.T_CAMP -> {
+            MenuSet.T_TITLE -> mb.add("NONE", "none", KeyEvent.VK_N)
+            MenuSet.T_CAMP -> {
                 mb.add("STAGE", "stage", KeyEvent.VK_A)
                 mb.add("SAVE", "save", KeyEvent.VK_S)
                 mb.add("LOAD", "campload", KeyEvent.VK_Q)
@@ -89,45 +105,45 @@ constructor(@Named("mainC") mc: MineCanvas, sleepManager: SleepManager) : FrameW
                 mb.addItem("HELP", "help", KeyEvent.VK_H)
                 mb.addItem("SCORE", "score", KeyEvent.VK_G)
             }
-            FrameWorks.T_STAGESELECT -> {
+            MenuSet.T_STAGESELECT -> {
                 mb.add("BACK", "camp", KeyEvent.VK_B)
                 mb.add("HELP", "help", KeyEvent.VK_H)
             }
-            FrameWorks.T_SETMENS -> {
+            MenuSet.T_SETMENS -> {
                 mb.add("BACK", "stage", KeyEvent.VK_B)
                 mb.add("START", "start", KeyEvent.VK_S)
                 mb.add("HELP", "help", KeyEvent.VK_H)
             }
-            FrameWorks.T_COLLECT -> {
+            MenuSet.T_COLLECT -> {
                 mb.add("BACK", "back", KeyEvent.VK_B)
                 mb.add("HELP", "help", KeyEvent.VK_H)
             }
-            FrameWorks.T_PLAYER -> {
+            MenuSet.T_PLAYER -> {
                 mb.add("TURN END", "turnend", KeyEvent.VK_T)
                 mb.add("ESCAPE", "escape", KeyEvent.VK_E)
                 mb.add("LOAD", "mapload", KeyEvent.VK_Q)
                 mb.add("HELP", "help", KeyEvent.VK_H)
             }
 
-            FrameWorks.T_ENEMY -> mb.add("NONE", "none", KeyEvent.VK_N)
-            FrameWorks.T_CLEAR -> {
+            MenuSet.T_ENEMY -> mb.add("NONE", "none", KeyEvent.VK_N)
+            MenuSet.T_CLEAR -> {
                 mb.add("CAMP", "camp", KeyEvent.VK_A)
                 mb.add("HELP", "help", KeyEvent.VK_H)
             }
-            FrameWorks.T_GAMEOVER -> {
+            MenuSet.T_GAMEOVER -> {
                 mb.add("LOAD", "mapload", KeyEvent.VK_Q)
                 mb.add("HELP", "help", KeyEvent.VK_H)
             }
         }
         frame.jMenuBar = mb
         mb.repaint()
-        mca.requestFocus()
+        c.requestFocus()
     }
 
 
     override fun actionPerformed(e: ActionEvent) {
         frame.requestFocus()
-        if (mca.isRunning)
+        if (mm.isAlive)
             return
         val b = e.source as AbstractButton
         val command = b.actionCommand
@@ -167,12 +183,17 @@ constructor(@Named("mainC") mc: MineCanvas, sleepManager: SleepManager) : FrameW
     }
 
     override fun setMouseListener(mal: MouseAllListener) {
+        mm.setMouseAllListener(mal)
         this.mal = mal
-        mca.setMouseAllListener(mal)
     }
 
-    fun repaint() {
-        mca.repaint()
+    override fun repaint() {
+//        c.repaint()
+    }
+
+    override fun repaint(x: Int, y: Int, w: Int, h: Int) {
+//        c.repaint(x, y, w, h)
+//        c.repaint()
     }
 
     fun setCommandListener(commandListener: CommandListener) {
