@@ -4,7 +4,7 @@ import mine.awt.MineAwtUtils;
 import mine.awt.MineCanvasAWT;
 import mine.event.MineCanvas;
 import mine.event.SleepManager;
-import mine.io.JsonIO;
+import mine.io.JsonManager;
 import mine.paint.MineImage;
 import mine.paint.MineImageLoader;
 
@@ -29,6 +29,7 @@ public class CardDialog extends JDialog implements CardListener {
 	@Inject MineCanvas mc;
 	@Inject SleepManager sleepManager;
 	@Inject MineImageLoader imageLoader;
+	@Inject JsonManager jsonManager;
 	@Inject CardCanvas cc;
 
 	@Inject
@@ -64,7 +65,7 @@ public class CardDialog extends JDialog implements CardListener {
 		}
 		chara = charaList.toArray(new MineImage[0]);
 
-		status = JsonIO.INSTANCE.read("card/data/status.json", int[][].class);
+		status = jsonManager.read("card/data/status.json", int[][].class);
 
 
 		getContentPane().add((JComponent)mc);

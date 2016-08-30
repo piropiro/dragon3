@@ -11,7 +11,7 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
 import mine.MineException;
-import mine.io.JsonIO;
+import mine.io.JsonManager;
 
 /**
  * 編集するBeanのリストを扱うクラス。
@@ -20,6 +20,8 @@ import mine.io.JsonIO;
  */
 @SuppressWarnings("serial")
 public class EditList<B> extends JList<String> implements ListSelectionListener {
+
+	private JsonManager jsonManager;
 
 	private EditListener<B> editListener;
 
@@ -30,8 +32,9 @@ public class EditList<B> extends JList<String> implements ListSelectionListener 
 	 *
 	 * @param listener
 	 */
-	public EditList(EditListener<B> listener) {
+	public EditList(JsonManager jsonManager, EditListener<B> listener) {
 		super();
+		this.jsonManager = jsonManager;
 		this.editListener = listener;
 		addListSelectionListener(this);
 		setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
@@ -55,7 +58,7 @@ public class EditList<B> extends JList<String> implements ListSelectionListener 
 	@SuppressWarnings("unchecked")
 	public void loadData(String file) {
 		try {
-			B[] array = (B[])JsonIO.INSTANCE.read(file, editListener.createArray().getClass());
+			B[] array = (B[])jsonManager.read(file, editListener.createArray().getClass());
 			List<B> list = new ArrayList<>(Arrays.asList(array));
 			setList(list);
 		} catch (RuntimeException e) {
@@ -69,7 +72,7 @@ public class EditList<B> extends JList<String> implements ListSelectionListener 
 	 * @param file
 	 */
 	public void saveData(String file) {
-		JsonIO.INSTANCE.write(file, beanList.toArray(editListener.createArray()));
+		jsonManager.write(file, beanList.toArray(editListener.createArray()));
 	}
 
 	/**

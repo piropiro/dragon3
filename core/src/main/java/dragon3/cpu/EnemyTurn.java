@@ -73,7 +73,7 @@ public class EnemyTurn {
 				return;
 			}
 		}
-		uw.getTurnManager().playerTurnStart();
+		uw.playerTurnStart();
 	}
 
 	public void move() {

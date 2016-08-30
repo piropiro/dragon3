@@ -31,15 +31,10 @@ import dragon3.save.SaveManager;
 import dragon3.save.SaveManagerImpl;
 import dragon3.stage.StageManager;
 import dragon3.stage.StageSelectPanel;
-import dragon3.view.DragonFrame;
 import dragon3.view.FrameWorks;
-import mine.awt.ImageLoaderAWT;
-import mine.awt.MineCanvasAWT;
-import mine.awt.SleepManagerAWT;
 import mine.event.MineCanvas;
 import mine.event.PaintComponent;
 import mine.event.SleepManager;
-import mine.paint.MineImageLoader;
 
 @Module
 public class DragonModule {
@@ -58,9 +53,9 @@ public class DragonModule {
 	private PaintComponent messagePanel;
 	private PaintComponent stageSelectPanel;
 	
-	public DragonModule() {
+	public DragonModule(MineCanvas mc) {
 		
-		this.mc = new MineCanvasAWT(new ImageLoaderAWT());
+		this.mc = mc;
 
 		mapPanel = mc.newLayer(0, 0, 640, 480);
 		stageSelectPanel = mc.newLayer(0, 0, 640, 480);
@@ -79,7 +74,6 @@ public class DragonModule {
 		mapPanel.setVisible(true);
 	}
 	
-
 	@Provides @Singleton @Named("mainC")
 	MineCanvas provideMainC() {
 		return mc;
@@ -165,21 +159,8 @@ public class DragonModule {
 		return new HPanel(panel, sm, false);
 	}
 	
-	@Provides @Singleton
-	FrameWorks provideFrameWorks(DragonFrame impl) {
-		return impl;
-	}
-	
-	@Provides @Singleton
-	MineImageLoader provideMineImageLoader() {
-		return new ImageLoaderAWT();
-	}
-	
-	@Provides @Singleton
-	SleepManager provideSleepManager() {
-		return new SleepManagerAWT();
-	}
-	
+
+
 	@Provides @Singleton
 	SaveManager provideSaveManager(SaveManagerImpl impl) {
 		return impl;

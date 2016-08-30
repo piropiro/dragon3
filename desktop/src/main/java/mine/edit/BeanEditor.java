@@ -7,11 +7,13 @@ import javax.swing.JFrame;
 import javax.swing.JScrollPane;
 
 import mine.MineException;
+import mine.awt.FileManagerAWT;
 import mine.awt.MineAwtUtils;
 import mine.event.CommandListener;
 import mine.file.FileCommand;
 import mine.file.FileManager;
 import mine.file.FileWorks;
+import mine.io.JsonManager;
 
 
 public class BeanEditor<B> extends JFrame implements CommandListener, FileWorks {
@@ -19,6 +21,8 @@ public class BeanEditor<B> extends JFrame implements CommandListener, FileWorks 
 	private static final long serialVersionUID = 6210161316199948253L;
 
 	private String title;
+
+	private JsonManager jsonManager;
 
 	private FileManager fileManager;
 	
@@ -31,8 +35,9 @@ public class BeanEditor<B> extends JFrame implements CommandListener, FileWorks 
 		this.title = title;
 		fileManager = new FileManager(historyFile, 10, defaultFile, editListener.getComponent(), this);
 		menuBar = new EditMenuBar(this);
-
-		editList = new EditList<B>(editListener);
+		jsonManager = new JsonManager();
+		jsonManager.setFileManager(new FileManagerAWT());
+		editList = new EditList<B>(jsonManager, editListener);
 		getContentPane().setLayout(new BorderLayout());
 		getContentPane().add(new EditToolBar(this), "North");
 		getContentPane().add(editListener.getComponent(), "East");

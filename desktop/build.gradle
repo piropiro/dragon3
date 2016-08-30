@@ -6,7 +6,7 @@ plugins {
     id "nebula.kotlin" version "1.0.3"
 }
 
-sourceCompatibility = 1.8
+sourceCompatibility = 1.7
 project.ext.mainClassName = "dragon3.DragonApp"
 project.ext.assetsDir = new File("../android/src/main/assets");
 

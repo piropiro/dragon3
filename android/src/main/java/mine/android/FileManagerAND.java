@@ -1,7 +1,7 @@
 /*
  * 作成日: 2003/09/28
  */
-package mine.io;
+package mine.android;
 
 import android.content.Context;
 import android.content.res.AssetManager;
@@ -18,14 +18,19 @@ import java.io.OutputStream;
 
 import mine.MineException;
 import mine.MineUtils;
+import mine.io.FileManager;
 
 /**
  * @author k-saito
  *
  */
-public class FileIO {
+public class FileManagerAND implements FileManager {
 
-    public static Context context;
+    public Context context;
+
+    public FileManagerAND(Context context) {
+        this.context = context;
+    }
 
     /**
      * 指定されたファイルの入力ストリームを取得する。
@@ -34,7 +39,7 @@ public class FileIO {
      * @param path ファイルパス
      * @return 指定されたファイルの入力ストリーム
      */
-    public static BufferedInputStream getInputStream(String path) {
+    public BufferedInputStream getInputStream(String path) {
 
         final AssetManager assetManager = context.getAssets();
 
@@ -53,7 +58,7 @@ public class FileIO {
      * @param path ファイルパス
      * @return 指定されたファイルの出力ストリーム
      */
-    public static BufferedOutputStream getOutputStream(String path) {
+    public BufferedOutputStream getOutputStream(String path) {
 
 
         try {

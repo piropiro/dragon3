@@ -7,7 +7,7 @@ import dragon3.controller.DragonController;
 import dragon3.view.DragonFrame;
 
 @Singleton
-@Component(modules = DragonModule.class)
+@Component(modules = {DragonModuleAWT.class, DragonModule.class})
 public interface DragonComponent {
 	DragonFrame getDragonFrame();
 	DragonController getDragonController();

@@ -13,10 +13,9 @@ public interface TurnManager {
 	public void reset();
 
 	public int getTurn();
-	
-	public void enemyTurnStart();
-	
-	public void playerTurnStart();
-	
+
+	public void turnChange(boolean flag);
+
+
 	public void setUw(UnitWorks uw);
 }

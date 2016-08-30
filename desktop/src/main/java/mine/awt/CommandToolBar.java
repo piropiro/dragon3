@@ -15,6 +15,7 @@ import javax.swing.JToggleButton;
 import javax.swing.JToolBar;
 
 import mine.event.CommandListener;
+import mine.paint.MineImageLoader;
 
 /**
  * @author k-saito
@@ -22,11 +23,13 @@ import mine.event.CommandListener;
 @SuppressWarnings("serial")
 public class CommandToolBar extends JToolBar implements ActionListener {
 
+	private ImageLoaderAWT imageLoader;
 	private List<CommandListener> listeners;
 
 	public CommandToolBar() {
 		super();
 		listeners = new ArrayList<CommandListener>();
+		imageLoader = new ImageLoaderAWT(new FileManagerAWT());
 	}
 
 	public CommandToolBar(CommandListener listener) {
@@ -83,7 +86,7 @@ public class CommandToolBar extends JToolBar implements ActionListener {
 
 	private void setIcon(AbstractButton button, String label, String image) {
 		try {
-			ImageIcon icon = new ImageIcon(ImageLoaderAWT.loadNative(image));
+			ImageIcon icon = new ImageIcon(imageLoader.loadNative(image));
 			button.setIcon(icon);
 		} catch (RuntimeException e) {
 			e.printStackTrace();

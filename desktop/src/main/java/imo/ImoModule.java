@@ -6,6 +6,7 @@ import javax.inject.Singleton;
 import card.CardCanvas;
 import dagger.Module;
 import dagger.Provides;
+import mine.awt.FileManagerAWT;
 import mine.awt.ImageLoaderAWT;
 import mine.awt.KeyManagerAWT;
 import mine.awt.MineCanvasAWT;
@@ -14,6 +15,7 @@ import mine.event.KeyManager;
 import mine.event.MineCanvas;
 import mine.event.PaintComponent;
 import mine.event.SleepManager;
+import mine.io.FileManager;
 import mine.paint.MineImageLoader;
 
 @Module
@@ -24,7 +26,7 @@ public class ImoModule {
 	
 	public ImoModule() {
 		
-		this.mc = new MineCanvasAWT(new ImageLoaderAWT());
+		this.mc = new MineCanvasAWT(new ImageLoaderAWT(new FileManagerAWT()));
 
 		imoPanel = mc.newLayer(0, 0, ImoCanvas.WIDTH, ImoCanvas.HEIGHT);
 	}
@@ -36,7 +38,7 @@ public class ImoModule {
 	
 	@Provides @Singleton
 	MineImageLoader provideMineImageLoader() {
-		return new ImageLoaderAWT();
+		return new ImageLoaderAWT(new FileManagerAWT());
 	}
 	
 	@Provides @Singleton

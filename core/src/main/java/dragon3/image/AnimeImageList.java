@@ -8,6 +8,7 @@ import java.util.Map;
 
 import mine.MineException;
 import mine.MineUtils;
+import mine.io.FileManager;
 import mine.paint.MineImage;
 import mine.paint.MineImageLoader;
 
@@ -25,11 +26,11 @@ public class AnimeImageList {
 	
 	private MineImage[][] imageList;
 	
-	public AnimeImageList(String image_dir, MineImageLoader mil) throws MineException {
+	public AnimeImageList(FileManager fm, String image_dir, MineImageLoader mil) throws MineException {
 		
 		map = new HashMap<String, MineImage[]>();
 		
-		pathList = MineUtils.INSTANCE.readStringArray(image_dir + "list.txt");
+		pathList = MineUtils.INSTANCE.readStringArray(fm, image_dir + "list.txt");
 
 		imageList = new MineImage[pathList.length][];
 		

@@ -12,6 +12,7 @@ import dragon3.stage.StageBack;
 import dragon3.stage.StageSelectPanel;
 import dragon3.stage.StageStatus;
 import mine.MineException;
+import mine.io.FileManager;
 import mine.paint.MineGraphics;
 import mine.paint.MineImage;
 import mine.paint.MineImageLoader;
@@ -43,7 +44,7 @@ public class ImageManager {
 
 	
 	@Inject
-	public ImageManager(MineImageLoader imageLoader) {
+	public ImageManager(FileManager fileManager, MineImageLoader imageLoader) {
 		this.imageLoader = imageLoader;
 
 		try {
@@ -51,8 +52,8 @@ public class ImageManager {
 			text = imageLoader.loadTile(IMAGE_DIR + "text.png", 32, 12)[0];
 			status = imageLoader.loadTile(IMAGE_DIR + "status.png", 32, 32)[0];
 			num = imageLoader.loadTile(IMAGE_DIR + "num.png", 10, 12)[0];
-			animeImageList = new AnimeImageList(ANIME_IMAGE_DIR, imageLoader);
-			bodyImageList = new BodyImageList(BODY_IMAGE_DIR, imageLoader);
+			animeImageList = new AnimeImageList(fileManager, ANIME_IMAGE_DIR, imageLoader);
+			bodyImageList = new BodyImageList(fileManager, BODY_IMAGE_DIR, imageLoader);
 			
 			stageWaku = imageLoader.loadTile(IMAGE_DIR + "stageWaku.png", StageSelectPanel.UNIT_WIDTH, StageSelectPanel.UNIT_HEIGHT)[0];
 			stageStar = imageLoader.load(IMAGE_DIR + "stageStar.png");

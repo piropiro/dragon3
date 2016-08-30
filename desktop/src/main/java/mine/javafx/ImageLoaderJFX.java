@@ -11,7 +11,7 @@ import javafx.scene.image.PixelReader;
 import javafx.scene.image.PixelWriter;
 import javafx.scene.image.WritableImage;
 import mine.MineException;
-import mine.io.FileIO;
+import mine.io.FileManager;
 import mine.paint.MineImage;
 import mine.paint.MineImageLoader;
 
@@ -19,7 +19,15 @@ import mine.paint.MineImageLoader;
  * @author saito
  */
 public class ImageLoaderJFX implements MineImageLoader {
-    /**
+	private FileManager fileManager;
+
+
+	public ImageLoaderJFX(FileManager fileManager) {
+		this.fileManager = fileManager;
+	}
+
+
+	/**
      * ファイルからイメージを読み込む。
      * <p>
      *
@@ -27,8 +35,8 @@ public class ImageLoaderJFX implements MineImageLoader {
      * @return ファイルから読み込んだイメージ
      * @throws MineException 読み込みに失敗した。
      */
-    public static Image loadNative(String path) {
-        try (InputStream in = FileIO.INSTANCE.getInputStream(path)) {
+    public Image loadNative(String path) {
+        try (InputStream in = fileManager.getInputStream(path)) {
         	Image img = new Image(in);
             return img;
         } catch (IOException e) {
@@ -46,7 +54,7 @@ public class ImageLoaderJFX implements MineImageLoader {
      * @return ファイルから読み込んだタイル
      * @throws MineException ファイルの読み込みに失敗した。
      */
-    public static Image[][] loadTileNative(String path, int width, int height) {
+    public Image[][] loadTileNative(String path, int width, int height) {
         Image img = loadNative(path);
 
         int xNum = (int)img.getWidth() / width;

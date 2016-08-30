@@ -32,7 +32,7 @@ public class AnimeManagerTest {
 	public static void setUpClass() throws Exception {
 		//og = DaggerDragonTestComponent.builder().build();
 
-		og = DaggerDragonComponent.create();
+		og = DaggerDragonComponent.builder().build();
 
 		DragonController dc = og.getDragonController();
 		dc.setup();

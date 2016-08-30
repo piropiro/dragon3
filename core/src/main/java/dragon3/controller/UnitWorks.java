@@ -40,7 +40,8 @@ public interface UnitWorks {
 	public void stageStart(StageData stageData);
 	public void campStart();
 	public void enemyTurnStart();
-	
+	public void playerTurnStart();
+
 	/*** Main2 **************************/
 
 	public void dead(Body ba, Body bb);

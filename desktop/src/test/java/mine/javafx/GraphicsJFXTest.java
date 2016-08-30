@@ -14,6 +14,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import mine.awt.FileManagerAWT;
 import mine.paint.MineColor;
 import mine.paint.MineGraphics;
 import mine.paint.MineImage;
@@ -53,7 +54,7 @@ public class GraphicsJFXTest extends Application {
 	}
 	
 	public void drawImageTest(Pane root) throws Exception {
-		MineImageLoader mil = new ImageLoaderJFX();
+		MineImageLoader mil = new ImageLoaderJFX(new FileManagerAWT());
 		
 		MineImage img = mil.load("mine/image/new.png");
 		

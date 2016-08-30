@@ -12,6 +12,7 @@ import javax.xml.parsers.SAXParserFactory;
 
 import mine.MineException;
 import mine.MineUtils;
+import mine.awt.FileManagerAWT;
 import mine.edit.EditPanel;
 
 import org.xml.sax.Attributes;
@@ -115,7 +116,7 @@ public class EditPanelFactory<B> extends DefaultHandler {
 				if (itemFile == null) {
 					editPanel.setField(getLocation(), name, label);
 				} else {
-					Map<String, String> idAndText = MineUtils.INSTANCE.readIdAndTextMap(itemFile);
+					Map<String, String> idAndText = MineUtils.INSTANCE.readIdAndTextMap(new FileManagerAWT(), itemFile);
 					editPanel.setTextCombo(getLocation(), name, label);
 					editPanel.initCombo(name, idAndText);
 				}

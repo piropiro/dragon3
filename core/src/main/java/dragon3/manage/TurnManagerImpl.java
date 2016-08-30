@@ -69,7 +69,11 @@ public class TurnManagerImpl implements TurnManager {
 
 	/*** Change *****************************/
 
-	private void turnChange(boolean flag) {
+	@Override
+	public void turnChange(boolean flag) {
+		if (flag) {
+			turn++;
+		}
 		UnitMap map = this.map.getMap();
 		map.clear(Page.P10, 0);
 		map.clear(Page.P30, 0);

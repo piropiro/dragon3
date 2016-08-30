@@ -26,7 +26,7 @@ import mine.android.SleepManagerAND;
 import mine.event.MouseAllListener;
 import mine.event.PaintComponent;
 import mine.event.SleepManager;
-import mine.io.FileIO;
+import mine.android.FileManagerAND;
 import mine.paint.MineImageLoader;
 
 public class MainActivity extends AppCompatActivity implements FrameWorks {
@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity implements FrameWorks {
     private Toolbar toolbar;
 
     private CommandListener commandListener;
-
 
 
     private PaintComponent mapPanel;
@@ -67,7 +66,7 @@ public class MainActivity extends AppCompatActivity implements FrameWorks {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-      //          Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+                //          Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show();
 
                 mc.getMouseAllListener().cancel();
             }
@@ -87,13 +86,13 @@ public class MainActivity extends AppCompatActivity implements FrameWorks {
         fab3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                          Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show();
 
             }
         });
 
-        FileIO.context = getApplicationContext();
-        imageLoader =  new ImageLoaderAND(getApplicationContext());
+        FileManagerAND.context = getApplicationContext();
+        imageLoader = new ImageLoaderAND(getApplicationContext());
         sleepManager = new SleepManagerAND();
 
         mc = (MineCanvasAND) findViewById(R.id.dragon_view);
@@ -108,7 +107,7 @@ public class MainActivity extends AppCompatActivity implements FrameWorks {
         helpPanel = mc.newLayer(0, 0, HelpPanel.WIDTH, HelpPanel.HEIGHT);
         smallPanel = mc.newLayer(0, 0, SmallPanel.WIDTH, SmallPanel.HEIGHT);
         largePanel = mc.newLayer(0, 0, LargePanel.WIDTH, LargePanel.HEIGHT);
-		cardPanel = mc.newLayer(0, 0, CardCanvas.WIDTH, CardCanvas.HEIGHT);
+        cardPanel = mc.newLayer(0, 0, CardCanvas.WIDTH, CardCanvas.HEIGHT);
         dataPanel1 = mc.newLayer(0, 0, DataPanel.WIDTH, DataPanel.HEIGHT);
         dataPanel2 = mc.newLayer(0, 0, DataPanel.WIDTH, DataPanel.HEIGHT);
         messagePanel = mc.newLayer(0, 0, MessagePanel.WIDTH, MessagePanel.HEIGHT);
@@ -150,7 +149,6 @@ public class MainActivity extends AppCompatActivity implements FrameWorks {
     }
 
 
-
     @Override
     public void setMenu(int n) {
 
@@ -159,66 +157,11 @@ public class MainActivity extends AppCompatActivity implements FrameWorks {
     @Override
     public void setMouseListener(MouseAllListener mal) {
         mc.setMouseAllListener(mal);
-        Log.d("SetMouseListener",  "MouseListener:" + mal.getClass());
+        Log.d("SetMouseListener", "MouseListener:" + mal.getClass());
     }
 
     public void setCommandListener(CommandListener commandListener) {
         this.commandListener = commandListener;
     }
-
-    public PaintComponent getMapPanel() {
-        return mapPanel;
-    }
-
-    public PaintComponent getAnimePanel() {
-        return animePanel;
-    }
-
-    public PaintComponent gethPanel1() {
-        return hPanel1;
-    }
-
-    public PaintComponent gethPanel2() {
-        return hPanel2;
-    }
-
-    public PaintComponent getHelpPanel() {
-        return helpPanel;
-    }
-
-    public PaintComponent getSmallPanel() {
-        return smallPanel;
-    }
-
-    public PaintComponent getLargePanel() {
-        return largePanel;
-    }
-
-    public PaintComponent getCardPanel() {
-        return cardPanel;
-    }
-
-    public PaintComponent getDataPanel1() {
-        return dataPanel1;
-    }
-
-    public PaintComponent getDataPanel2() {
-        return dataPanel2;
-    }
-
-    public PaintComponent getMessagePanel() {
-        return messagePanel;
-    }
-
-    public PaintComponent getStageSelectPanel() {
-        return stageSelectPanel;
-    }
-
-    public MineImageLoader getImageLoader() {
-        return imageLoader;
-    }
-
-    public SleepManager getSleepManager() {
-        return sleepManager;
-    }
 }
+

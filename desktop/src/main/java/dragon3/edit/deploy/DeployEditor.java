@@ -33,7 +33,7 @@ import mine.event.CommandListener;
 import mine.file.FileCommand;
 import mine.file.FileManager;
 import mine.file.FileWorks;
-import mine.io.JsonIO;
+import mine.io.JsonManager;
 import mine.paint.MineImageLoader;
 import mine.paint.UnitMap;
 
@@ -49,6 +49,7 @@ public class DeployEditor extends JFrame implements MainWorks<DeployData>, Comma
 	@Inject Statics statics;
 	private FileManager fileManager;
 	@Inject ImageManager imageManager;
+	@Inject JsonManager jsonManager;
 
 	private EditList<DeployData> editList;
 	private EditMenuBar menuBar;
@@ -77,7 +78,7 @@ public class DeployEditor extends JFrame implements MainWorks<DeployData>, Comma
 
 		fileManager = new FileManager("deploys.txt", 10, "data.json", statusPanel, this);
 		menuBar = new EditMenuBar(this);
-		editList = new EditList<>(statusPanel);
+		editList = new EditList<>(jsonManager, statusPanel);
 		editList.addListSelectionListener(this);
 
 		JPanel eastPanel = new JPanel();
@@ -284,7 +285,7 @@ public class DeployEditor extends JFrame implements MainWorks<DeployData>, Comma
 		editList.loadData(deployFile);
 
 		if (new File(mapFile).exists()) {
-			map.setPage(Page.OBJ, JsonIO.INSTANCE.read(mapFile, int[][].class));
+			map.setPage(Page.OBJ, jsonManager.read(mapFile, int[][].class));
 		} else {
 			map.clear(Page.OBJ, 0);
 			System.out.println("MapFile is not found. [" + new File(mapFile).getAbsolutePath() + "]");

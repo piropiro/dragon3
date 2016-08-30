@@ -4,6 +4,8 @@ import java.io.File;
 
 import mine.MineException;
 import mine.MineUtils;
+import mine.awt.FileManagerAWT;
+import mine.io.*;
 import mine.util.History;
 
 /**
@@ -13,6 +15,8 @@ import mine.util.History;
  */
 public class FileHistory {
 
+	private mine.io.FileManager fileManager;
+
 	private History<String> history;
 
 	/**
@@ -21,6 +25,7 @@ public class FileHistory {
 	 * @param max // 履歴の最大数
 	 */
 	public FileHistory(int max){
+		this.fileManager = new FileManagerAWT();
 		this.history = new History<String>(max);
 	}
 
@@ -29,11 +34,11 @@ public class FileHistory {
 			System.out.println("HistoryFile is not found. [" + new File(historyFile).getAbsolutePath() + "]");
 			return;
 		}
-		setFileList(MineUtils.INSTANCE.readStringArray(historyFile));
+		setFileList(MineUtils.INSTANCE.readStringArray(fileManager, historyFile));
 	}
 
 	public void save(String historyFile) {
-		MineUtils.INSTANCE.writeStringArray(historyFile, getFileList());
+		MineUtils.INSTANCE.writeStringArray(fileManager, historyFile, getFileList());
 	}
 
 	/**

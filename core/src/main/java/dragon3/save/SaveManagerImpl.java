@@ -5,7 +5,7 @@ import javax.inject.Singleton;
 
 import dragon3.camp.Equip;
 import dragon3.controller.UnitWorks;
-import mine.io.JsonIO;
+import mine.io.JsonManager;
 
 @Singleton
 public class SaveManagerImpl implements SaveManager {
@@ -13,9 +13,10 @@ public class SaveManagerImpl implements SaveManager {
 	UnitWorks uw;
     private SaveData sd;
     private long startTime;
+    private JsonManager jsonManager;
 
     @Inject
-    public SaveManagerImpl() {
+    public SaveManagerImpl(JsonManager jsonManager) {
     }
 
     /**
@@ -31,7 +32,7 @@ public class SaveManagerImpl implements SaveManager {
     @Override
     public Equip loadData(String filename) {
         try {
-            sd = JsonIO.INSTANCE.read(filename, SaveData.class);
+            sd = jsonManager.read(filename, SaveData.class);
         } catch (RuntimeException e) {
             sd = initData();
         }
@@ -44,7 +45,7 @@ public class SaveManagerImpl implements SaveManager {
         sd.countSave();
         sd.addTime(getTime());
         sd.setBodyList(equip.getEquips());
-        JsonIO.INSTANCE.write(filename, sd);
+        jsonManager.write(filename, sd);
         timerReset();
     }
    

@@ -14,8 +14,10 @@ import org.junit.Test;
 import dragon3.common.constant.DeployType;
 import dragon3.common.util.MoveUtils;
 import dragon3.data.DeployData;
+import mine.awt.FileManagerAWT;
 import mine.io.BeanIO;
-import mine.io.JsonIO;
+import mine.io.JsonManager;
+
 import net.arnx.jsonic.JSON;
 
 /**
@@ -55,10 +57,11 @@ public class DeployDataMigration {
     
     //@Test
     public void migrate_002() throws Exception {
-    	
+        JsonManager jsonManager = new JsonManager();
+        jsonManager.setFileManager(new FileManagerAWT());
     	for (String fileName : getFileNames()) {
-    		DeployData[] dataList = JsonIO.INSTANCE.read("dragon3/data/deploy/deploy_" + fileName + ".json", DeployData[].class);
-    		int[][] map = JsonIO.INSTANCE.read("dragon3/data/map/map_" + fileName + ".json", int[][].class);
+    		DeployData[] dataList = jsonManager.read("dragon3/data/deploy/deploy_" + fileName + ".json", DeployData[].class);
+    		int[][] map = jsonManager.read("dragon3/data/map/map_" + fileName + ".json", int[][].class);
         
     		for (DeployData data : dataList) {
     			switch (data.getDeployType()) {

@@ -8,6 +8,7 @@ import java.util.Map;
 
 import mine.MineException;
 import mine.MineUtils;
+import mine.io.FileManager;
 import mine.paint.MineImage;
 import mine.paint.MineImageLoader;
 
@@ -29,10 +30,10 @@ public class BodyImageList {
 	private Map<String, Integer> map;
 	
 
-	public BodyImageList(String image_dir, MineImageLoader mil) throws MineException {
+	public BodyImageList(FileManager fm, String image_dir, MineImageLoader mil) throws MineException {
 		map = new HashMap<String, Integer>();
 		
-		pathList = MineUtils.INSTANCE.readStringArray(image_dir + "list.txt");
+		pathList = MineUtils.INSTANCE.readStringArray(fm, image_dir + "list.txt");
 		imageList = new MineImage[pathList.length];
 
 		for (int i=0; i<pathList.length; i++) {

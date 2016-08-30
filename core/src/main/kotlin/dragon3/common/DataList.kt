@@ -6,14 +6,14 @@ import java.util.HashMap
 import java.util.LinkedHashMap
 
 import dragon3.data.Data
-import mine.io.JsonIO
+import mine.io.JsonManager
 
 /**
  * @author k-saito
  */
 class DataList<T : Data>
 @SuppressWarnings("unchecked")
-constructor(baseDir: String, fileList: List<String>, clazz: Class<Array<T>>) {
+constructor(jsonManager: JsonManager, baseDir: String, fileList: List<String>, clazz: Class<Array<T>>) {
 
     private val list: MutableList<T>
 
@@ -26,7 +26,7 @@ constructor(baseDir: String, fileList: List<String>, clazz: Class<Array<T>>) {
 
         for (file in fileList) {
             val filePath = baseDir + file
-            for (t in JsonIO.read(filePath, clazz)) {
+            for (t in jsonManager.read(filePath, clazz)) {
                 list.add(t)
                 map.put(t.id, t)
             }

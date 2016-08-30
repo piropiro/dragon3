@@ -1,5 +1,6 @@
 package mine
 
+import mine.io.FileManager
 import java.io.BufferedReader
 import java.io.FileOutputStream
 import java.io.IOException
@@ -14,7 +15,6 @@ import java.util.HashMap
 import java.util.LinkedHashMap
 import java.util.StringTokenizer
 
-import mine.io.FileIO
 
 /**
 
@@ -90,9 +90,9 @@ object MineUtils {
      * *
      * @return
      */
-    fun readStringArray(file: String): Array<String> {
+    fun readStringArray(fm: FileManager, file: String): Array<String> {
         try {
-            BufferedReader(InputStreamReader(FileIO.getInputStream(file))).use { `in` ->
+            BufferedReader(InputStreamReader(fm.getInputStream(file))).use { `in` ->
                 val list = ArrayList<String>()
                 var s: String? = `in`.readLine()
                 while (s != null) {
@@ -114,8 +114,8 @@ object MineUtils {
      * *
      * @param list
      */
-    fun writeStringArray(file: String, list: Array<String>) {
-        PrintWriter(OutputStreamWriter(FileIO.getOutputStream(file))).use { out ->
+    fun writeStringArray(fm: FileManager, file: String, list: Array<String>) {
+        PrintWriter(OutputStreamWriter(fm.getOutputStream(file))).use { out ->
             for (str in list) {
                 out.println(str)
             }
@@ -131,11 +131,11 @@ object MineUtils {
      * *
      * @return
      */
-    fun readIdAndTextMap(file: String): Map<String, String> {
+    fun readIdAndTextMap(fm: FileManager, file: String): Map<String, String> {
         val map = LinkedHashMap<String, String>()
 
         try {
-            BufferedReader(InputStreamReader(FileIO.getInputStream(file))).use { input ->
+            BufferedReader(InputStreamReader(fm.getInputStream(file))).use { input ->
                 var s: String? = input.readLine()
                 while (s != null) {
                     val st = StringTokenizer(s)

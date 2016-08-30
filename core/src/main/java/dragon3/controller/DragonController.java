@@ -203,7 +203,7 @@ public class DragonController implements UnitWorks, MouseAllListener, CommandLis
 	public void finishPutPlayers() {
 		stageMap.finishPutPlayers();
 		putUnit(charaList);
-		turnManager.playerTurnStart();
+		playerTurnStart();
 		panelManager.displayLarge("Turn " + turnManager.getTurn(), GameColor.BLUE, 1500);
 	}
 
@@ -245,9 +245,25 @@ public class DragonController implements UnitWorks, MouseAllListener, CommandLis
 		Camp();
 	}
 	
+	/*** Player ********************************/
+
+	@Override
+	public void playerTurnStart() {
+		saveManager.getSaveData().countTurn();
+		turnManager.turnChange(true);
+		PaintUtils.setBasicPaint(this);
+		fw.setMenu(FrameWorks.T_PLAYER);
+		mw.repaint();
+	}
+
+	/*** Enemy ******************************/
+
 	@Override
 	public void enemyTurnStart() {
-		turnManager.enemyTurnStart();
+		turnManager.turnChange(false);
+		limitOver();
+		PaintUtils.setWaitPaint(this);
+		fw.setMenu(FrameWorks.T_ENEMY);
 		enemyTurn.start(turnManager.getTurn());
 	}
 
@@ -608,7 +624,8 @@ public class DragonController implements UnitWorks, MouseAllListener, CommandLis
 		}
 		return bodyList;
 	}
-	
+
+
 	@Override
 	public SaveManager getSaveManager() {
 		return saveManager;

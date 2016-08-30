@@ -12,7 +12,7 @@ import dragon3.data.BodyData;
 import dragon3.data.DeployData;
 import dragon3.data.StageData;
 import dragon3.data.WazaData;
-import mine.io.JsonIO;
+import mine.io.JsonManager;
 
 @Singleton
 public class Statics {
@@ -34,6 +34,7 @@ public class Statics {
 
 	public static final int TYPE_MAX = 100;
 
+	private JsonManager jsonManager;
 
 	private DataList<BodyData> bodyList;
 	private DataList<WazaData> wazaList;
@@ -41,20 +42,21 @@ public class Statics {
 	private DataList<AnimeData> animeList;
 	private int[][] stageMapData;
 
-	@Inject public Statics() {
-		bodyList = new DataList<BodyData>(BODY_DIR, BODY_FILES, BodyData[].class);
-		wazaList = new DataList<WazaData>(WAZA_DIR, WAZA_FILES, WazaData[].class);
-		stageList = new DataList<StageData>(STAGE_DIR, STAGE_FILES, StageData[].class);
-		animeList = new DataList<AnimeData>(ANIME_DIR, ANIME_FILES, AnimeData[].class);
-		stageMapData = JsonIO.INSTANCE.read(Statics.STAGE_DIR + "map_stage.json", int[][].class);
+	@Inject public Statics(JsonManager jsonManager) {
+		this.jsonManager = jsonManager;
+		bodyList = new DataList<BodyData>(jsonManager, BODY_DIR, BODY_FILES, BodyData[].class);
+		wazaList = new DataList<WazaData>(jsonManager, WAZA_DIR, WAZA_FILES, WazaData[].class);
+		stageList = new DataList<StageData>(jsonManager, STAGE_DIR, STAGE_FILES, StageData[].class);
+		animeList = new DataList<AnimeData>(jsonManager, ANIME_DIR, ANIME_FILES, AnimeData[].class);
+		stageMapData = jsonManager.read(Statics.STAGE_DIR + "map_stage.json", int[][].class);
 	}
 	
 	public List<DeployData> getDeployData(String stageId) {
-		return Arrays.asList(JsonIO.INSTANCE.read(DEPLOY_DIR + "deploy_" + stageId + ".json", DeployData[].class));
+		return Arrays.asList(jsonManager.read(DEPLOY_DIR + "deploy_" + stageId + ".json", DeployData[].class));
 	}
 
 	public int[][] getMapData(String stageId) {
-		return JsonIO.INSTANCE.read(MAP_DIR + "map_" + stageId + ".json", int[][].class);
+		return jsonManager.read(MAP_DIR + "map_" + stageId + ".json", int[][].class);
 	}
 
 	

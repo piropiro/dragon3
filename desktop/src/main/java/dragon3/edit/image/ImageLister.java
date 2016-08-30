@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FilenameFilter;
 
 import mine.MineUtils;
+import mine.awt.FileManagerAWT;
 
 public class ImageLister {
 	static final String ANIME_IMAGE_DIR = "../dragon3_common/resources/dragon3/image/anime/";
@@ -21,6 +22,6 @@ public class ImageLister {
 				return name.endsWith(".png");
 			}
 		});
-		MineUtils.INSTANCE.writeStringArray(imageDir + "list.txt", list);
+		MineUtils.INSTANCE.writeStringArray(new FileManagerAWT(), imageDir + "list.txt", list);
 	}
 }

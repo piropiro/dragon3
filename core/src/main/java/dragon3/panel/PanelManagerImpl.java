@@ -12,7 +12,6 @@ import dragon3.common.Body;
 import dragon3.common.constant.GameColor;
 import dragon3.common.constant.Page;
 import dragon3.common.util.MoveUtils;
-import dragon3.controller.UnitWorks;
 import dragon3.manage.SummonManager;
 import dragon3.manage.TreasureManager;
 import dragon3.manage.TurnManager;
@@ -20,7 +19,6 @@ import dragon3.map.MapPanel;
 import dragon3.map.StageMap;
 import dragon3.save.SaveData;
 import dragon3.stage.StageSelectPanel;
-import dragon3.view.FrameWorks;
 import mine.util.Point;
 
 /**
@@ -29,8 +27,6 @@ import mine.util.Point;
 public class PanelManagerImpl implements PanelManager {
 
 	@Inject Statics statics;
-	
-	@Inject FrameWorks fw;
 	
 	@Inject AnimePanel animeP;
 	@Inject MapPanel mapP;
@@ -49,8 +45,6 @@ public class PanelManagerImpl implements PanelManager {
 	@Inject SummonManager summonManager;
 	
 	@Inject StageMap map;
-	
-	private UnitWorks uw;
 	
 	private boolean helpVisible;
 
@@ -294,8 +288,4 @@ public class PanelManagerImpl implements PanelManager {
 		//fw.setMouseListener(mapP);
 	}
 
-
-	public void setUw(UnitWorks uw) {
-		this.uw = uw;
-	}
 }

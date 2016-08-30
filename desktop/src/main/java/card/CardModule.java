@@ -5,12 +5,14 @@ import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
+import mine.awt.FileManagerAWT;
 import mine.awt.ImageLoaderAWT;
 import mine.awt.MineCanvasAWT;
 import mine.awt.SleepManagerAWT;
 import mine.event.MineCanvas;
 import mine.event.PaintComponent;
 import mine.event.SleepManager;
+import mine.io.FileManager;
 import mine.paint.MineImageLoader;
 
 @Module
@@ -21,7 +23,7 @@ public class CardModule {
 	
 	public CardModule() {
 		
-		this.mc = new MineCanvasAWT(new ImageLoaderAWT());
+		this.mc = new MineCanvasAWT(new ImageLoaderAWT(new FileManagerAWT()));
 
 		cardPanel = mc.newLayer(0, 0, CardCanvas.WIDTH, CardCanvas.HEIGHT);
 	}
@@ -32,10 +34,13 @@ public class CardModule {
 	}
 	
 	@Provides @Singleton
-	MineImageLoader provideMineImageLoader() {
-		return new ImageLoaderAWT();
+	MineImageLoader provideMineImageLoader(FileManager fileManager) {
+		return new ImageLoaderAWT(fileManager);
 	}
-	
+
+	@Provides @Singleton
+	FileManager provideFileManager() { return new FileManagerAWT(); }
+
 	@Provides @Singleton
 	SleepManager provideSleepManager() {
 		return new SleepManagerAWT();

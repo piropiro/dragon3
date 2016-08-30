@@ -37,7 +37,7 @@ public class PanelManagerTest {
 	public static void setUpClass() throws Exception {
 		//og = ObjectGraph.create(new TestModule());
 
-		og = DaggerDragonComponent.create();
+		og = DaggerDragonComponent.builder().build();
 
 		DragonController dc = og.getDragonController();
 		dc.setup();
