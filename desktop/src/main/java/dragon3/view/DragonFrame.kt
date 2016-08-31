@@ -35,7 +35,7 @@ constructor(@Named("mainC") mc: MineCanvas, sleepManager: SleepManager) : FrameW
     private val mb: BMenuBar
     private val frame: JFrame
     private val c: MineCanvasAWT
-    private val mca: MineCanvas
+    private val mc: MineCanvas
     private var mal: MouseAllListener? = null
 
     private var commandListener: CommandListener? = null
@@ -53,7 +53,7 @@ constructor(@Named("mainC") mc: MineCanvas, sleepManager: SleepManager) : FrameW
         c = MineCanvasAWT(mc)
         mm = MouseManagerAWT(c)
 
-        this.mca = mc
+        this.mc = mc
 
         //mapPanel.setVisible(true);
 
@@ -75,8 +75,10 @@ constructor(@Named("mainC") mc: MineCanvas, sleepManager: SleepManager) : FrameW
 
         thread {
             while (true) {
+                if (mc.isUpdated) {
+                    c.repaint()
+                }
                 Thread.sleep(10)
-                c.repaint()
             }
         }
     }

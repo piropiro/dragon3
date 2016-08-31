@@ -12,7 +12,7 @@ public class MineCanvas implements PaintListener {
 
 	private MineImageLoader imageLoader;
 
-	private List<PaintListener> layers = new ArrayList<>();
+	private List<MineCanvasLayer> layers = new ArrayList<>();
 
 	public MineCanvas(MineImageLoader imageLoader) {
 		this.imageLoader = imageLoader;
@@ -23,7 +23,7 @@ public class MineCanvas implements PaintListener {
 		return imageLoader;
 	}
 
-	public List<PaintListener> getLayers() {
+	public List<MineCanvasLayer> getLayers() {
 		return layers;
 	}
 
@@ -38,6 +38,15 @@ public class MineCanvas implements PaintListener {
 		for (PaintListener layer : getLayers()) {
 			layer.paint(g);
 		}
+	}
+
+	public boolean isUpdated() {
+		for (MineCanvasLayer layer : getLayers()) {
+			if (layer.isUpdated()) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 }

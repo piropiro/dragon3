@@ -27,7 +27,6 @@ import mine.android.SleepManagerAND;
 import mine.event.MouseAllListener;
 import mine.event.PaintComponent;
 import mine.event.SleepManager;
-import mine.android.FileManagerAND;
 import mine.paint.MineImageLoader;
 
 public class MainActivity extends AppCompatActivity implements FrameWorks {
@@ -39,21 +38,7 @@ public class MainActivity extends AppCompatActivity implements FrameWorks {
     private CommandListener commandListener;
 
 
-    private PaintComponent mapPanel;
-    private PaintComponent animePanel;
-    private PaintComponent hPanel1;
-    private PaintComponent hPanel2;
-    private PaintComponent helpPanel;
-    private PaintComponent smallPanel;
-    private PaintComponent largePanel;
-    private PaintComponent cardPanel;
-    private PaintComponent dataPanel1;
-    private PaintComponent dataPanel2;
-    private PaintComponent messagePanel;
-    private PaintComponent stageSelectPanel;
-
-    private MineImageLoader imageLoader;
-    private SleepManager sleepManager;
+;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,31 +77,16 @@ public class MainActivity extends AppCompatActivity implements FrameWorks {
             }
         });
 
-        imageLoader = new ImageLoaderAND(getApplicationContext());
-        sleepManager = new SleepManagerAND();
 
         mc = (MineCanvasAND) findViewById(R.id.dragon_view);
         mc.setBufferSize(640, 480);
 
-        mapPanel = mc.newLayer(0, 0, 640, 480);
-        stageSelectPanel = mc.newLayer(0, 0, 640, 480);
-        animePanel = mc.newLayer(0, 0, 640, 480);
 
-        hPanel1 = mc.newLayer(0, 0, HPanel.WIDTH, HPanel.HEIGHT);
-        hPanel2 = mc.newLayer(0, 0, HPanel.WIDTH, HPanel.HEIGHT);
-        helpPanel = mc.newLayer(0, 0, HelpPanel.WIDTH, HelpPanel.HEIGHT);
-        smallPanel = mc.newLayer(0, 0, SmallPanel.WIDTH, SmallPanel.HEIGHT);
-        largePanel = mc.newLayer(0, 0, LargePanel.WIDTH, LargePanel.HEIGHT);
-        cardPanel = mc.newLayer(0, 0, CardCanvas.WIDTH, CardCanvas.HEIGHT);
-        dataPanel1 = mc.newLayer(0, 0, DataPanel.WIDTH, DataPanel.HEIGHT);
-        dataPanel2 = mc.newLayer(0, 0, DataPanel.WIDTH, DataPanel.HEIGHT);
-        messagePanel = mc.newLayer(0, 0, MessagePanel.WIDTH, MessagePanel.HEIGHT);
+        DragonController dc = new DragonController();
+        this.setCommandListener(dc);
+        dc.setup(this);
+        dc.title();
 
-        mapPanel.setVisible(true);
-
-        DragonController vp = new DragonController();
-        this.setCommandListener(vp);
-        vp.title();
     }
 
     @Override
@@ -160,15 +130,6 @@ public class MainActivity extends AppCompatActivity implements FrameWorks {
         Log.d("SetMouseListener", "MouseListener:" + mal.getClass());
     }
 
-    @Override
-    public void repaint() {
-        mc.repaint();
-    }
-
-    @Override
-    public void repaint(int x, int y, int w, int h) {
-        mc.repaint(x, y, w, h);
-    }
 
     public void setCommandListener(CommandListener commandListener) {
         this.commandListener = commandListener;

@@ -31,15 +31,13 @@ constructor() : JDialog(), KeyListener, ImoListener {
     @field: Inject
     lateinit internal var ic: ImoCanvas
 
-    var isLife: Boolean = false
+    var life: Boolean = false
     var exp: Int = 0
     var level = 1
 
-    private lateinit var c: MineCanvasAWT
-
     fun launch() {
 
-        c = MineCanvasAWT(mc)
+        val c = MineCanvasAWT(mc)
         MineAwtUtils.setSize(c, 300, 300)
 
         ic.setup("僕", 1)
@@ -59,7 +57,9 @@ constructor() : JDialog(), KeyListener, ImoListener {
 
         thread {
             while (true) {
-                c.repaint()
+                if (mc.isUpdated) {
+                    c.repaint()
+                }
                 Thread.sleep(10)
             }
         }
@@ -67,7 +67,7 @@ constructor() : JDialog(), KeyListener, ImoListener {
 
 
     override fun gameExit(exp_: Int) {
-        this.isLife = true
+        this.life = true
         this.exp = exp_
         if (exp > 0) level++
         ic.gameReset("俺", level)

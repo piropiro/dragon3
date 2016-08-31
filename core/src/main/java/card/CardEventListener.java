@@ -17,14 +17,15 @@ public class CardEventListener implements MouseAllListener {
 
 	@Override
 	public void leftPressed(int x, int y) {
+		System.out.println("leftPressed");
 		mouseMoved(x, y);
 		accept();
 	}
 
 	@Override
 	public void mouseMoved(int x, int y) {
-		int wx = x/32 - 4;
-		int wy = y/32 - 1;
+		int wx = x/32;
+		int wy = y/32;
 		
 		if (lock.lock()) {
 			cw.wakuMove(wx, wy);

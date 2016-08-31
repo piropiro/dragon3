@@ -57,7 +57,6 @@ public class AnimeManagerTest {
 		map.getMap().fillDia(Page.P41, 10, 10, 2, 1);
 		map.getMap().clear(Page.P02, 1);
 		map.getMap().paintStep(Page.P02, Page.P03, 2, 2, 20);
-		df.repaint();
 	}
 
 	//@Test
