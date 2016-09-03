@@ -1,11 +1,9 @@
 package dragon3.camp
 
-import java.util.ArrayList
-import java.util.HashMap
-
 import dragon3.common.Body
 import dragon3.common.constant.BodyKind
 import dragon3.common.constant.GameColor
+import java.util.*
 
 class Equip
 (private val equipList: MutableList<Body>) {
@@ -83,7 +81,7 @@ class Equip
                 equip(b)
                 playerList.add(b)
             }
-            playerList.sort { b1, b2 -> b1.goalY - b2.goalY }
+            Collections.sort(playerList, { b1, b2 -> b1.goalY - b2.goalY })
 
             return playerList
         }

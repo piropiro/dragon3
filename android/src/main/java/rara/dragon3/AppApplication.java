@@ -3,7 +3,9 @@ package rara.dragon3;
 import android.app.Application;
 
 import dragon3.DragonModule;
+import mine.android.ImageLoaderAND;
 import mine.android.MineCanvasAND;
+import mine.event.MineCanvas;
 
 /**
  * Created by rara on 2016/08/29.

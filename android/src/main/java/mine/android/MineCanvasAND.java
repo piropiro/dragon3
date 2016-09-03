@@ -56,10 +56,16 @@ public class MineCanvasAND extends View {
         this.pl = pl;
     }
 
-
+    public void paint(MineGraphics g) {
+        MineImage buffer = imageLoader.getBuffer(width, height);
+        pl.paint(buffer.getGraphics());
+        g.drawFitImage(buffer, this.getWidth(), this.getHeight());
+    }
     @Override
 	protected void onDraw(Canvas canvas) {
-		pl.paint(new GraphicsAND(canvas));
+        if (pl != null) {
+            paint(new GraphicsAND(canvas));
+        }
 	}
 
     @Override
@@ -97,10 +103,6 @@ public class MineCanvasAND extends View {
     }
 
     public void repaint() {
-        handler.sendEmptyMessage(0);
-    }
-
-    public void repaint(int x, int y, int w, int h) {
         handler.sendEmptyMessage(0);
     }
 

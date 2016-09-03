@@ -35,108 +35,77 @@ import dragon3.view.FrameWorks;
 import mine.event.MineCanvas;
 import mine.event.PaintComponent;
 import mine.event.SleepManager;
+import mine.paint.MineImageLoader;
 
 @Module
 public class DragonModule {
 
-	private MineCanvas mc;
-	private PaintComponent mapPanel;
-	private PaintComponent animePanel;
-	private PaintComponent hPanel1;
-	private PaintComponent hPanel2;
-	private PaintComponent helpPanel;
-	private PaintComponent smallPanel;
-	private PaintComponent largePanel;
-	private PaintComponent cardPanel;
-	private PaintComponent dataPanel1;
-	private PaintComponent dataPanel2;
-	private PaintComponent messagePanel;
-	private PaintComponent stageSelectPanel;
-	
-	public DragonModule(MineCanvas mc) {
-		
-		this.mc = mc;
 
-		mapPanel = mc.newLayer(0, 0, 640, 480);
-		stageSelectPanel = mc.newLayer(0, 0, 640, 480);
-		animePanel = mc.newLayer(0, 0, 640, 480);
-
-		hPanel1 = mc.newLayer(0, 0, HPanel.WIDTH, HPanel.HEIGHT);
-		hPanel2 = mc.newLayer(0, 0, HPanel.WIDTH, HPanel.HEIGHT);
-		helpPanel = mc.newLayer(0, 0, HelpPanel.WIDTH, HelpPanel.HEIGHT);
-		smallPanel = mc.newLayer(0, 0, SmallPanel.WIDTH, SmallPanel.HEIGHT);
-		largePanel = mc.newLayer(0, 0, LargePanel.WIDTH, LargePanel.HEIGHT);
-		cardPanel = mc.newLayer(0, 0, CardCanvas.WIDTH, CardCanvas.HEIGHT);
-		dataPanel1 = mc.newLayer(0, 0, DataPanel.WIDTH, DataPanel.HEIGHT);
-		dataPanel2 = mc.newLayer(0, 0, DataPanel.WIDTH, DataPanel.HEIGHT);
-		messagePanel = mc.newLayer(0, 0, MessagePanel.WIDTH, MessagePanel.HEIGHT);
-
-		mapPanel.setVisible(true);
-	}
-	
-	@Provides @Singleton @Named("mainC")
-	MineCanvas provideMainC() {
-		return mc;
+	@Provides @Singleton
+	MineCanvas provideMainC(MineImageLoader mil) {
+		return new MineCanvas(mil);
 	}
 	
 	@Provides @Singleton @Named("mapC")
-	PaintComponent provideMapC() {
-		return mapPanel;
+	PaintComponent provideMapC(MineCanvas mc) {
+		PaintComponent mapP = mc.newLayer(0, 0, 640, 480);
+		mapP.setVisible(true);
+		return mapP;
 	}
 	
 	@Provides @Singleton @Named("animeC")
-	PaintComponent provideAnimeC() {
-		return animePanel;
+	PaintComponent provideAnimeC(MineCanvas mc) {
+		return mc.newLayer(0, 0, 640, 480);
 	}
 	
 	@Provides @Singleton @Named("hpC1")
-	PaintComponent proivdeHpC1() {
-		return hPanel1;
+	PaintComponent proivdeHpC1(MineCanvas mc) {
+		return mc.newLayer(0, 0, HPanel.WIDTH, HPanel.HEIGHT);
 	}
 	
 	@Provides @Singleton @Named("hpC2")
-	PaintComponent proivdeHpC2() {
-		return hPanel2;
+	PaintComponent proivdeHpC2(MineCanvas mc) {
+		return mc.newLayer(0, 0, HPanel.WIDTH, HPanel.HEIGHT);
 	}
 	
 	@Provides @Singleton @Named("helpC")
-	PaintComponent proivdeHelpC() {
-		return helpPanel;
+	PaintComponent proivdeHelpC(MineCanvas mc) {
+		return mc.newLayer(0, 0, HelpPanel.WIDTH, HelpPanel.HEIGHT);
 	}
 	
 	@Provides @Singleton @Named("smallC")
-	PaintComponent proivdeSmallC() {
-		return smallPanel;
+	PaintComponent proivdeSmallC(MineCanvas mc) {
+		return mc.newLayer(0, 0, SmallPanel.WIDTH, SmallPanel.HEIGHT);
 	}
 	
 	@Provides @Singleton @Named("largeC")
-	PaintComponent proivdeLargeC() {
-		return largePanel;
+	PaintComponent proivdeLargeC(MineCanvas mc) {
+		return mc.newLayer(0, 0, LargePanel.WIDTH, LargePanel.HEIGHT);
 	}
 	
 	@Provides @Singleton @Named("cardC")
-	PaintComponent proivdeCardC() {
-		return cardPanel;
+	PaintComponent proivdeCardC(MineCanvas mc) {
+		return mc.newLayer(0, 0, CardCanvas.WIDTH, CardCanvas.HEIGHT);
 	}
 	
 	@Provides @Singleton @Named("dataC1")
-	PaintComponent proivdeDataC1() {
-		return dataPanel1;
+	PaintComponent proivdeDataC1(MineCanvas mc) {
+		return mc.newLayer(0, 0, DataPanel.WIDTH, DataPanel.HEIGHT);
 	}
 	
 	@Provides @Singleton @Named("dataC2")
-	PaintComponent proivdeDataC2() {
-		return dataPanel2;
+	PaintComponent proivdeDataC2(MineCanvas mc) {
+		return mc.newLayer(0, 0, DataPanel.WIDTH, DataPanel.HEIGHT);
 	}
 	
 	@Provides @Singleton @Named("messageC")
-	PaintComponent proivdeMessageC() {
-		return messagePanel;
+	PaintComponent proivdeMessageC(MineCanvas mc) {
+		return mc.newLayer(0, 0, MessagePanel.WIDTH, MessagePanel.HEIGHT);
 	}
 	
 	@Provides @Singleton @Named("stageSelectC")
-	PaintComponent provideStageSelectC() {
-		return stageSelectPanel;
+	PaintComponent provideStageSelectC(MineCanvas mc) {
+		return mc.newLayer(0, 0, 640, 480);
 	}
 	
 	@Provides @Singleton @Named("dataP1")

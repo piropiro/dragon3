@@ -10,40 +10,37 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import card.CardCanvas;
+import javax.inject.Inject;
+import javax.inject.Named;
+
 import dragon3.controller.CommandListener;
 import dragon3.controller.DragonController;
-import dragon3.panel.DataPanel;
-import dragon3.panel.HPanel;
-import dragon3.panel.HelpPanel;
-import dragon3.panel.LargePanel;
-import dragon3.panel.MessagePanel;
-import dragon3.panel.SmallPanel;
 import dragon3.view.FrameWorks;
 import dragon3.view.MenuSet;
-import mine.android.ImageLoaderAND;
 import mine.android.MineCanvasAND;
-import mine.android.SleepManagerAND;
+import mine.event.MineCanvas;
 import mine.event.MouseAllListener;
-import mine.event.PaintComponent;
-import mine.event.SleepManager;
-import mine.paint.MineImageLoader;
 
 public class MainActivity extends AppCompatActivity implements FrameWorks {
 
-    private MineCanvasAND mc;
+    private MineCanvasAND c;
 
     private Toolbar toolbar;
 
     private CommandListener commandListener;
 
 
-;
+    @Inject
+    MineCanvas mc;
+
+    @Inject
+    DragonController dc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getApplicationComponent().inject(this);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -54,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements FrameWorks {
             public void onClick(View view) {
                 //          Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show();
 
-                mc.getMouseAllListener().cancel();
+                c.getMouseAllListener().cancel();
             }
         });
 
@@ -64,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements FrameWorks {
             public void onClick(View view) {
                 //          Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show();
 
-                mc.getMouseAllListener().accept();
+                c.getMouseAllListener().accept();
             }
         });
 
@@ -78,15 +75,30 @@ public class MainActivity extends AppCompatActivity implements FrameWorks {
         });
 
 
-        mc = (MineCanvasAND) findViewById(R.id.dragon_view);
-        mc.setBufferSize(640, 480);
+        c = (MineCanvasAND) findViewById(R.id.dragon_view);
+        c.setBufferSize(640, 480);
+        c.setPaintListener(mc);
 
 
-        DragonController dc = new DragonController();
         this.setCommandListener(dc);
         dc.setup(this);
         dc.title();
 
+        new Thread() {
+            @Override
+            public void run() {
+                while (true) {
+                    if (mc.isUpdated()) {
+                        c.repaint();
+                    }
+                    try {
+                        Thread.sleep(10);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }.start();
     }
 
     @Override
@@ -126,7 +138,7 @@ public class MainActivity extends AppCompatActivity implements FrameWorks {
 
     @Override
     public void setMouseListener(MouseAllListener mal) {
-        mc.setMouseAllListener(mal);
+        c.setMouseAllListener(mal);
         Log.d("SetMouseListener", "MouseListener:" + mal.getClass());
     }
 
@@ -134,5 +146,10 @@ public class MainActivity extends AppCompatActivity implements FrameWorks {
     public void setCommandListener(CommandListener commandListener) {
         this.commandListener = commandListener;
     }
+
+    private AppComponent getApplicationComponent() {
+        return ((AppApplication) getApplication()).getApplicationComponent();
+    }
+
 }
 

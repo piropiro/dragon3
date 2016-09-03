@@ -8,7 +8,6 @@ import java.awt.event.KeyListener
 import java.awt.event.MouseListener
 
 import javax.inject.Inject
-import javax.inject.Named
 import javax.inject.Singleton
 import javax.swing.AbstractButton
 import javax.swing.JFrame
@@ -27,7 +26,7 @@ import kotlin.concurrent.thread
 @Singleton
 class DragonFrame
 @Inject
-constructor(@Named("mainC") mc: MineCanvas, sleepManager: SleepManager) : FrameWorks, ActionListener, KeyListener {
+constructor(mc: MineCanvas, sleepManager: SleepManager) : FrameWorks, ActionListener, KeyListener {
 
 
     private val mm: MouseManager
@@ -136,6 +135,7 @@ constructor(@Named("mainC") mc: MineCanvas, sleepManager: SleepManager) : FrameW
                 mb.add("LOAD", "mapload", KeyEvent.VK_Q)
                 mb.add("HELP", "help", KeyEvent.VK_H)
             }
+            else -> IllegalArgumentException()
         }
         frame.jMenuBar = mb
         mb.repaint()
@@ -161,7 +161,7 @@ constructor(@Named("mainC") mc: MineCanvas, sleepManager: SleepManager) : FrameW
 
     override fun keyPressed(e: KeyEvent) {
         println(e.keyChar)
-        var n = 0
+        var n: Int
         when (e.keyCode) {
             KeyEvent.VK_F1 -> n = 1
             KeyEvent.VK_F2 -> n = 2

@@ -9,7 +9,7 @@ import mine.event.MineCanvas;
 public class DragonApp {
 
 	public static void main(String[] args) {
-		DragonComponent og = DaggerDragonComponent.builder().dragonModule(new DragonModule(new MineCanvas(new ImageLoaderAWT(new FileManagerAWT())))).build();
+		DragonComponent og = DaggerDragonComponent.builder().build();
 		
 		DragonFrame fw = og.getDragonFrame();
 		
