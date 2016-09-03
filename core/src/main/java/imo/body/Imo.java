@@ -73,7 +73,7 @@ public class Imo extends Body {
 		statusWait = SWORD_WAIT_MAX;
 	}
 
-	public void move(Jiki ore) {
+	public void move(Player ore) {
 		shotWait--;
 		if (isAlive() && 0 >= statusWait--)
 			status = S_MOVE;

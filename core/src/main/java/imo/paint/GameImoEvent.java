@@ -4,7 +4,7 @@ import imo.ImoEventListener;
 import imo.ImoWorks;
 import imo.body.Body;
 import imo.body.Imo;
-import imo.body.Jiki;
+import imo.body.Player;
 import imo.body.Sister;
 import imo.body.Sword;
 import imo.body.Turu;
@@ -15,7 +15,7 @@ import mine.thread.Engine;
 
 public class GameImoEvent implements ImoEventListener {
 
-	private Jiki ore;
+	private Player ore;
 	private Sister sister;
 	private Sword sword;
 	private Imo imo;
@@ -39,7 +39,7 @@ public class GameImoEvent implements ImoEventListener {
 	public void resetData(String name, int level) {
 		love = 0;
 		clearFlag = false;
-		ore = new Jiki(120, 120, name, screen, imageList);
+		ore = new Player(120, 120, name, screen, imageList);
 		sister = new Sister(0, 0, imageList);
 
 		imo = new Imo(280, 280, "いもすけ　Lv." + level, 2, screen, imageList);

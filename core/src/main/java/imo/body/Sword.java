@@ -30,14 +30,14 @@ public class Sword extends Body {
 		return life;
 	}
 
-	public void make(Jiki ore, int animeWait_) {
+	public void make(Player ore, int animeWait_) {
 		this.face = ore.getFace();
 		this.animeWait = animeWait_;
 		life = true;
 		move(ore);
 	}
 
-	public void move(Jiki ore) {
+	public void move(Player ore) {
 		this.face = ore.getFace();
 		switch (face) {
 			case F_UP :

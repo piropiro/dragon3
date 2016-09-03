@@ -7,7 +7,7 @@ import mine.paint.MineGraphics;
 import mine.paint.MineImage;
 
 
-public class Jiki extends Body {
+public class Player extends Body {
 
 	static final int HP_MAX = 10;
 	static final int SHOT_WAIT_MAX = 15;
@@ -40,7 +40,7 @@ public class Jiki extends Body {
 	private MineImage[][] jikiImage;
 	private MineImage hpbarImage;
 
-	public Jiki(double x, double y, String name, Body screen, ImageList imageList) {
+	public Player(double x, double y, String name, Body screen, ImageList imageList) {
 		super(x, y, 32, 32, 0, 1);
 		this.jikiImage = imageList.getJiki();
 		this.hpbarImage = imageList.getHpbar();

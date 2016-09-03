@@ -69,7 +69,7 @@ public class Sister extends Body {
 		g.drawImage(sisterImage[0][srcx], (int)x, (int)y);
 	}
 	
-	public void displayMessage(MineGraphics g, int love, Jiki jiki, Imo imo){
+	public void displayMessage(MineGraphics g, int love, Player player, Imo imo){
 		String message = "";
 		if (imo.isAlive()){
 			if (hp < HP_MAX) {
@@ -77,12 +77,12 @@ public class Sister extends Body {
 			} else if (love > 30) {
 				message = "お兄ちゃん、だめ…";
 			} else if (imo.getHp() == 1 ){
-				if (jiki.getHp() == Jiki.HP_MAX) {
+				if (player.getHp() == Player.HP_MAX) {
 					message = "やっちゃえ！";
 				} else {
 					message = "お兄ちゃん、とどめよ！";
 				}
-			} else if (jiki.getHp() < 5){
+			} else if (player.getHp() < 5){
 				message = "お兄ちゃん負けないで！";
 			} else if (imo.getHp() < 5){
 				message = "がんばれー";
@@ -90,9 +90,9 @@ public class Sister extends Body {
 				message = "いけー";
 			}
 		} else {
-			if (jiki.getHp() == Jiki.HP_MAX){
+			if (player.getHp() == Player.HP_MAX){
 				message = "パーフェクト！";
-			} else if (jiki.getHp() == 1){
+			} else if (player.getHp() == 1){
 				message = "ヤレヤレだぜ…";
 			} else {
 				message = "おかえりー";
