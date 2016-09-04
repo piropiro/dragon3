@@ -11,21 +11,11 @@ class Equip
     /*** Search  */
 
     fun search(x: Int, y: Int): Body? {
-        for (b in equipList) {
-            if (b != null && b.x == x && b.y == y) {
-                return b
-            }
-        }
-        return null
+        return equipList.firstOrNull { it.x == x && it.y == y }
     }
 
     fun searchItem(x: Int, y: Int): Body? {
-        for (b in equipList) {
-            if (b.color === GameColor.GREEN && b.x == x && b.y == y) {
-                return b
-            }
-        }
-        return null
+        return equipList.firstOrNull { it.color == GameColor.GREEN && it.x == x && it.y == y }
     }
 
     fun addBody(b: Body) {

@@ -111,8 +111,7 @@ public class ImoCanvas implements PaintListener, ImoWorks {
 	 */
 	public void gameEnd(int n) {
 		stop();
-		imageList.setEndImage(n);
-		setEventListener(new EndImoEvent(this, imageList));
+		setEventListener(new EndImoEvent(this, imageList, n));
 		start();
 	}
 
@@ -120,7 +119,7 @@ public class ImoCanvas implements PaintListener, ImoWorks {
 	 * Game Exit
 	 */
 	public void gameExit() {
-		il.gameExit(gp.getEXP());
+		il.gameExit(gp.getExp());
 	}
 
 	/**
