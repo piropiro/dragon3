@@ -70,7 +70,7 @@ class Enemy(private val canvas: CardWorks, private val battleManager: BattleMana
      * *
      * @return
      */
-    private fun max(card: Array<Card>): Int {
+    private fun max(card: List<Card>): Int {
         return card.maxBy { it.number }?.number ?: -1
     }
 
@@ -80,7 +80,7 @@ class Enemy(private val canvas: CardWorks, private val battleManager: BattleMana
      * @param card
      * @return
      */
-    private fun selectRandomCard(card: Array<Card>): Card {
+    private fun selectRandomCard(card: List<Card>): Card {
         val n = canvas.nextInt(card.size)
         return card[n]
     }
@@ -92,7 +92,7 @@ class Enemy(private val canvas: CardWorks, private val battleManager: BattleMana
      * @param border
      * @return
      */
-    private fun selectMinCard(red: Array<Card>, border: Int): Card? {
+    private fun selectMinCard(red: List<Card>, border: Int): Card? {
         return red.filter { it.number > border }.minBy { it.number }
     }
 }

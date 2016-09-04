@@ -1,5 +1,7 @@
 package card.anime;
 
+import java.util.List;
+
 import card.CardWorks;
 import card.body.Card;
 import card.common.ImageList;
@@ -11,11 +13,11 @@ public class OpeningAnime implements Runnable {
 	private CardWorks canvas;
 	private UnitMap map;
 	private AnimeManager anime;
-	private Card[] red;
-	private Card[] blue;
+	private List<Card> red;
+	private List<Card> blue;
 	private ImageList il;
 
-	public OpeningAnime(CardWorks canvas, AnimeManager anime, UnitMap map, Card[] red, Card[] blue, ImageList il){
+	public OpeningAnime(CardWorks canvas, AnimeManager anime, UnitMap map, List<Card> red, List<Card> blue, ImageList il){
 		this.canvas = canvas;
 		this.anime = anime;
 		this.map = map;
@@ -71,10 +73,10 @@ public class OpeningAnime implements Runnable {
 		Card card = new Card(0, 9*32, 4*32, Card.RED, il);
 		card.close();
 		canvas.addCard(card);
-		red[6].close();
+		red.get(6).close();
 		for (int i=5; i>=0; i--) {
 			anime.moveCard(canvas, card, (i+2)*32, 4*32, 8);
-			red[i].close();
+			red.get(i).close();
 		}
 		card.dispose();
 		canvas.removeCard(card);
@@ -85,10 +87,10 @@ public class OpeningAnime implements Runnable {
 		Card card = new Card(0, 2*32, 8*32, Card.BLUE, il);
 		card.close();
 		canvas.addCard(card);
-		blue[0].close();
+		blue.get(0).close();
 		for (int i=1; i<7; i++) {
 			anime.moveCard(canvas, card, (i+2)*32, 8*32, 8);
-			blue[i].close();
+			blue.get(i).close();
 		}
 		card.dispose();
 		canvas.removeCard(card);

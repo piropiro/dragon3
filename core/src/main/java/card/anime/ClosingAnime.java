@@ -1,5 +1,7 @@
 package card.anime;
 
+import java.util.List;
+
 import card.CardWorks;
 import card.body.Card;
 import card.common.Page;
@@ -9,12 +11,12 @@ public class ClosingAnime implements Runnable {
 	
 	private CardWorks canvas;
 	private UnitMap map;
-	private Card[] card;
+	private List<Card> cards;
 
-	public ClosingAnime(CardWorks canvas, UnitMap map, Card[] card){
+	public ClosingAnime(CardWorks canvas, UnitMap map, List<Card> cards){
 		this.canvas = canvas;
 		this.map = map;
-		this.card = card;
+		this.cards = cards;
 	}
 	
 	public void run(){
@@ -23,10 +25,10 @@ public class ClosingAnime implements Runnable {
 			map.fillRect(Page.BACK, 0, i, 11, 1, 1);
 			map.fillRect(Page.CHARA, 0, i, 11, 1, -1);
 			map.fillRect(Page.BACK, 0, i-1, 11, 1, -1);
-			
-			for (int j=0; j<card.length; j++) {
-				if (i == card[j].getY() / 32) {
-					card[j].dispose();
+
+			for (Card card : cards) {
+				if (i == card.getY() / 32) {
+					card.dispose();
 				}
 			}
 			canvas.repaint();

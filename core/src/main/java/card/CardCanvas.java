@@ -173,7 +173,7 @@ public class CardCanvas
 
 	public void dispose(){
 		lock.lock();
-		animeManager.closing(this, (Card[])cards.toArray(new Card[0]));
+		animeManager.closing(this, cards);
 		resultPainter.setResult(ResultPainter.NONE);
 		repaint();
 		lock.unlock();

@@ -1,5 +1,7 @@
 package card.anime;
 
+import java.util.List;
+
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
@@ -18,10 +20,10 @@ public class AnimeManager {
 	public AnimeManager(){
 	}
 	
-	public void opening(CardWorks canvas, Card[] red, Card[] blue){
+	public void opening(CardWorks canvas, List<Card> red, List<Card> blue){
 		new OpeningAnime(canvas, this, map.getMap(), red, blue, il).run();
 	}
-	public void closing(CardWorks canvas, Card[] cards){
+	public void closing(CardWorks canvas, List<Card> cards){
 		new ClosingAnime(canvas, map.getMap(), cards).run();
 	}
 	

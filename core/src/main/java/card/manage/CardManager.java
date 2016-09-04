@@ -16,8 +16,8 @@ public class CardManager {
 
 	@Inject AnimeManager anime;
 	@Inject ImageList il;
-	private Card[] red;
-	private Card[] blue;
+	private List<Card> red;
+	private List<Card> blue;
 	
 	@Inject
 	public CardManager(){
@@ -25,19 +25,21 @@ public class CardManager {
 
 	public void setRedCards(CardWorks uw, int[] n){
 		randomize(uw, n);
-		red = new Card[7];
-		for (int i=0; i<red.length; i++) {
-			red[i] = new Card(n[i], 32*(2+i), 32*4, Card.RED, il);
-			uw.addCard(red[i]);
+		red = new ArrayList<>();
+		for (int i=0; i<7; i++) {
+			Card card = new Card(n[i], 32*(2+i), 32*4, Card.RED, il);
+			red.add(card);
+			uw.addCard(card);
 		}
 	}
 	
 	public void setBlueCards(CardWorks uw, int[] n){
 		randomize(uw, n);
-		blue = new Card[7];
-		for (int i=0; i<blue.length; i++) {
-			blue[i] = new Card(n[i], 32*(2+i), 32*8, Card.BLUE, il);
-			uw.addCard(blue[i]);
+		blue = new ArrayList<>();
+		for (int i=0; i<7; i++) {
+			Card card = new Card(n[i], 32*(2+i), 32*8, Card.BLUE, il);
+			blue.add(card);
+			uw.addCard(card);
 		}
 	}
 	
@@ -51,27 +53,27 @@ public class CardManager {
 		return n;
 	}
 
-	public Card[] getRedCards(){
+	public List<Card> getRedCards(){
 		return red;
 	}
 	
-	public Card[] getBlueCards(){
+	public List<Card> getBlueCards(){
 		return blue;
 	}
 	
 	public boolean isOpenedBlue(int n){
-		if (blue[n].getStatus() == Card.OPEN) {
+		if (blue.get(n).getStatus() == Card.OPEN) {
 			return true;
 		} else {
 			return false;
 		}
 	}
 	public boolean openBlue(CardWorks uw, int n){
-		return openCard(uw, blue[n]);
+		return openCard(uw, blue.get(n));
 	}
 	
 	public boolean openRed(CardWorks uw, int n){
-		return openCard(uw, red[n]);
+		return openCard(uw, red.get(n));
 	}
 	
 	private boolean openCard(CardWorks uw, Card card) {
@@ -83,29 +85,29 @@ public class CardManager {
 		}	
 	}
 	
-	public Card[] getOpenRedCards(){
+	public List<Card> getOpenRedCards(){
 		return getOpenCards(red);
 	}
 	
-	public Card[] getOpenBlueCards(){
+	public List<Card> getOpenBlueCards(){
 		return getOpenCards(blue);
 	}
 	
-	private Card[] getOpenCards(Card[] card){
-		List<Card> openCards = new ArrayList<Card>();
-		for (int i=0; i<card.length; i++) {
-			if (card[i].getStatus() == Card.OPEN) {
-				openCards.add(card[i]);
+	private List<Card> getOpenCards(List<Card> cards){
+		List<Card> openCards = new ArrayList<>();
+		for (Card card : cards) {
+			if (card.getStatus() == Card.OPEN) {
+				openCards.add(card);
 			}
 		}
-		return openCards.toArray(new Card[0]);
+		return openCards;
 	}
 	
 	public Card getBlueCard(int n){
-		return blue[n];
+		return blue.get(n);
 	}
 	
 	public Card getRedCard(int n){
-		return red[n];
+		return red.get(n);
 	}
 }
