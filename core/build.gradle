@@ -1,3 +1,13 @@
+buildscript {
+    ext.kotlin_version = '1.0.6'
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
 plugins {
     id 'idea'
     id 'java'
@@ -23,4 +33,13 @@ dependencies {
 
     testCompile group: 'junit', name: 'junit', version: '4.+'
     testCompile group: 'org.mockito', name: 'mockito-all', version: '1.8.4'
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+}
+
+apply plugin: 'kotlin'
+repositories {
+    mavenCentral()
+}
+sourceSets {
+    main.java.srcDirs += 'src/main/kotlin'
 }
