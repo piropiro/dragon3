@@ -1,5 +1,8 @@
 package dragon3.card;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
@@ -46,8 +49,8 @@ public class CardManager implements CardListener {
 		this.bb = bb;
 		MineImage blueImage = im.getBodyImageList().getImage(ba.getImageNum());
 		MineImage redImage = im.getBodyImageList().getImage(bb.getImageNum());
-		int[] blueNum = getNumber(ba);
-		int[] redNum = getNumber(bb);
+		List<Integer> blueNum = getNumber(ba);
+		List<Integer> redNum = getNumber(bb);
 		cardCanvas.setRedChara(redImage, redNum);
 		cardCanvas.setBlueChara(blueImage, blueNum);
 		endFlag = false;
@@ -55,16 +58,16 @@ public class CardManager implements CardListener {
 		pm.displayHelp(new Point(0, 0), GameColor.BLUE, Texts.help[Texts.H_CARD]);
 	}
 
-	private int[] getNumber(Body b) {
+	private List<Integer> getNumber(Body b) {
 
-		int[] num = new int[7];
-		num[0] = b.getStr() / 3;
-		num[1] = b.getDef() / 3;
-		num[2] = b.getMst() / 3;
-		num[3] = b.getMdf() / 3;
-		num[4] = b.getHit() / 3;
-		num[5] = b.getMis() / 3;
-		num[6] = b.getHp() / 3;
+		List<Integer> num = new ArrayList<>();
+		num.add(b.getStr() / 3);
+		num.add(b.getDef() / 3);
+		num.add(b.getMst() / 3);
+		num.add(b.getMdf() / 3);
+		num.add(b.getHit() / 3);
+		num.add(b.getMis() / 3);
+		num.add(b.getHp() / 3);
 		return num;
 	}
 

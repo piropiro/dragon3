@@ -82,7 +82,7 @@ constructor() : JDialog(), CardListener {
         pack()
         MineAwtUtils.setCenter(this)
         isVisible = true
-        cc.setBlueChara(chara[status[0][0]], subarray(status[0], 1, 7))
+        cc.setBlueChara(chara[status[0][0]], status[0].toList().subList(1, 7))
         setRedChara()
 
         thread {
@@ -108,12 +108,6 @@ constructor() : JDialog(), CardListener {
     }
 
     private fun setRedChara() {
-        cc.setRedChara(chara[status[level][0]], subarray(status[level], 1, 7))
-    }
-
-    private fun subarray(src: IntArray, pos: Int, len: Int): IntArray {
-        val dst = IntArray(len)
-        System.arraycopy(src, pos, dst, 0, len)
-        return dst
+        cc.setRedChara(chara[status[level][0]], status[level].toList().subList(1, 7))
     }
 }

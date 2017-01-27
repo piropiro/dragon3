@@ -57,8 +57,8 @@ public class CardCanvas
 	private MineImage blueChara;
 	private MineImage redChara;
 
-	private int[] blueNum;
-	private int[] redNum;
+	private List<Integer> blueNum;
+	private List<Integer> redNum;
 
 	@Inject
 	public CardCanvas(@Named("cardC") PaintComponent panel, MineImageLoader imageLoader){
@@ -110,12 +110,12 @@ public class CardCanvas
 		map.getMap().setTile(Page.CHARA, new MineImage[]{blueChara, redChara}, -1);
 	}
 
-	public void setBlueChara(MineImage blueChara, int[] blueNum){
+	public void setBlueChara(MineImage blueChara, List<Integer> blueNum){
 		this.blueChara = blueChara;
 		this.blueNum = blueNum;
 	}
 
-	public void setRedChara(MineImage redChara, int[] redNum){
+	public void setRedChara(MineImage redChara, List<Integer> redNum){
 		this.redChara = redChara;
 		this.redNum = redNum;
 	}

@@ -10,13 +10,14 @@ class Card(private var n: Int, var x: Int, var y: Int, private val color: Int, i
     private var count: Int = 0
     var status = NONE
 
-    private var open_img = openImage
-    private val close_img = closeImage
 
     private val blueImage = il.blue
     private val redImage = il.red
     private val numImage = il.number
     private val winImage = il.win
+
+    private var open_img = openImage
+    private val close_img = closeImage
 
     /*** Status  */
 

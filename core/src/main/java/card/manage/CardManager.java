@@ -9,6 +9,7 @@ import javax.inject.Singleton;
 import card.CardWorks;
 import card.anime.AnimeManager;
 import card.body.Card;
+import card.body.Enemy;
 import card.common.ImageList;
 
 @Singleton
@@ -16,45 +17,40 @@ public class CardManager {
 
 	@Inject AnimeManager anime;
 	@Inject ImageList il;
-	private List<Card> red;
+
+	private Enemy enemy;
 	private List<Card> blue;
 	
 	@Inject
 	public CardManager(){
 	}
 
-	public void setRedCards(CardWorks uw, int[] n){
+	public void setRedCards(CardWorks uw, List<Integer> n){
 		randomize(uw, n);
-		red = new ArrayList<>();
-		for (int i=0; i<7; i++) {
-			Card card = new Card(n[i], 32*(2+i), 32*4, Card.RED, il);
-			red.add(card);
-			uw.addCard(card);
-		}
+		enemy.setupCard(n, il);
+		enemy.addCards(uw);
 	}
 	
-	public void setBlueCards(CardWorks uw, int[] n){
+	public void setBlueCards(CardWorks uw, List<Integer> n){
 		randomize(uw, n);
 		blue = new ArrayList<>();
 		for (int i=0; i<7; i++) {
-			Card card = new Card(n[i], 32*(2+i), 32*8, Card.BLUE, il);
+			Card card = new Card(n.get(i), 32*(2+i), 32*8, Card.BLUE, il);
 			blue.add(card);
 			uw.addCard(card);
 		}
 	}
 	
-	private int[] randomize(CardWorks uw, int[] n){
-		for (int i=0; i<n.length; i++) {
-			int j = uw.nextInt(n.length);
-			int tmp = n[j];
-			n[j] = n[i];
-			n[i] = tmp;
+	private List<Integer> randomize(CardWorks uw, List<Integer> n){
+		List<Integer> result = new ArrayList<>();
+		while (!n.isEmpty()) {
+			result.add(n.remove(uw.nextInt(n.size())));
 		}
-		return n;
+		return result;
 	}
 
 	public List<Card> getRedCards(){
-		return red;
+		return enemy.getRed();
 	}
 	
 	public List<Card> getBlueCards(){
@@ -62,18 +58,14 @@ public class CardManager {
 	}
 	
 	public boolean isOpenedBlue(int n){
-		if (blue.get(n).getStatus() == Card.OPEN) {
-			return true;
-		} else {
-			return false;
-		}
+		return (blue.get(n).getStatus() == Card.OPEN);
 	}
 	public boolean openBlue(CardWorks uw, int n){
 		return openCard(uw, blue.get(n));
 	}
 	
 	public boolean openRed(CardWorks uw, int n){
-		return openCard(uw, red.get(n));
+		return openCard(uw, enemy.getRed().get(n));
 	}
 	
 	private boolean openCard(CardWorks uw, Card card) {
@@ -86,7 +78,7 @@ public class CardManager {
 	}
 	
 	public List<Card> getOpenRedCards(){
-		return getOpenCards(red);
+		return getOpenCards(enemy.getRed());
 	}
 	
 	public List<Card> getOpenBlueCards(){
@@ -107,7 +99,4 @@ public class CardManager {
 		return blue.get(n);
 	}
 	
-	public Card getRedCard(int n){
-		return red.get(n);
-	}
 }
